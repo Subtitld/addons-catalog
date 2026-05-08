@@ -63,4 +63,24 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add catalog.json
           git commit -m "chore(catalog): rebuild $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+
+          # Concurrency group SHOULD serialize rebuilds, but two events that
+          # arrive within ~1 s of each other can both clear the queue check
+          # and race on push. Re-fetch + rebase + retry handles that without
+          # requiring `cancel-in-progress: true` (which would lose the
+          # second event entirely if they really did represent different
+          # source states). 3 attempts is enough — past that, something
+          # else is wrong and we want CI to scream.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt); rebasing onto fresh main"
+            git fetch origin main
+            # Rebase our single rebuild commit onto whatever just landed.
+            # `-X theirs` would silently overwrite a manual edit; we'd
+            # rather error out and re-run if the rebase ever conflicts.
+            git rebase origin/main
+          done
+          echo "::error::could not push rebuilt catalog after 3 attempts"
+          exit 1
