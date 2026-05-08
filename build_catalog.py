@@ -66,8 +66,18 @@ PLATFORM_FROM_SUFFIX = {
     'macos-arm64':     'macos',
     'windows-x86_64':  'windows',
 }
+# Anchor `plat` to the closed set of known platform suffixes. We can't use
+# a permissive `[a-z0-9_-]+` here because SemVer pre-release versions
+# (e.g. `1.0.0-rc1`) and our platform suffixes (e.g. `1.0.0-linux-x86_64`)
+# are structurally indistinguishable — a greedy version group will eat
+# `-linux` as a pre-release tag and leave only `x86_64` for `plat`.
+# Listing platforms explicitly makes the regex unambiguous: the version
+# group only matches up to the first `-<known-platform>-` boundary.
+_PLATFORM_ALT = '|'.join(re.escape(k) for k in PLATFORM_FROM_SUFFIX)
 ASSET_RE = re.compile(
-    r'^(?P<id>[a-z][a-z0-9-]*)-(?P<version>[0-9]+(?:\.[0-9]+){0,3}(?:[-+][\w.]+)?)-(?P<plat>[a-z0-9_-]+)\.zip$'
+    r'^(?P<id>[a-z][a-z0-9-]*)'
+    r'-(?P<version>[0-9]+(?:\.[0-9]+){0,3}(?:[-+][\w.]+)?)'
+    rf'-(?P<plat>{_PLATFORM_ALT})\.zip$'
 )
 
 
