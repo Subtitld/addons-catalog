@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-08T15:27:47Z",
+  "generated": "2026-05-08T15:28:27Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -10,7 +10,7 @@
       "tasks": [
         "tts.synthesize"
       ],
-      "license": "MIT (add-on glue) + MIT (Piper) + per-model licenses",
+      "license": "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)",
       "homepage": "https://github.com/Subtitld/piper-tts",
       "latest_version": "1.0.0",
       "releases": [
