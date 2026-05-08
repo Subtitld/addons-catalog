@@ -1,0 +1,40 @@
+# Subtitld add-ons catalog source list.
+#
+# Adding an add-on:
+#   1. Push the add-on repo under github.com/Subtitld/<repo>.
+#   2. Append an entry below, fill the `display_name`, `summary`, `tasks`,
+#      `license` fields. These are static metadata and don't change per
+#      release.
+#   3. Cut a GitHub Release in the add-on repo: each release uploads zips
+#      named  <id>-<version>-<platform>.zip  +  .sha256  sidecars.
+#   4. The release workflow triggers a `repository_dispatch` here that
+#      regenerates catalog.json automatically.
+#
+# Field reference — see build_catalog.py for the exact behaviour:
+#   id              required, matches the manifest.json id inside each zip
+#   repo            optional, defaults to `id` (use only if the GitHub repo
+#                   name differs from the add-on id)
+#   owner           optional, defaults to `Subtitld`
+#   display_name    shown in the host UI list
+#   summary         1-2 sentences, also shown in the list
+#   tasks           [tts.synthesize | asr.transcribe | translate.text]+
+#   license         SPDX or short string; per-model licenses live inside
+#                   the zip's manifest.json
+#   homepage        optional, defaults to https://github.com/Subtitld/<repo>
+#   icon            optional URL of a 128x128 PNG
+#   min_subtitld    optional override of the default 0.6.0 floor
+
+min_subtitld: "0.6.0"
+
+addons:
+  - id: piper-tts
+    display_name: "Piper TTS (offline)"
+    summary: "Lightweight offline neural TTS based on Piper. Models around 50 MB each."
+    tasks: [tts.synthesize]
+    license: "MIT (add-on glue) + MIT (Piper) + per-model licenses"
+
+  - id: coqui-xtts
+    display_name: "Coqui XTTS-v2 (offline + voice clone)"
+    summary: "Multilingual neural TTS with 6-second voice cloning. Heavy: ~2 GB model, CPU or CUDA."
+    tasks: [tts.synthesize]
+    license: "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license"

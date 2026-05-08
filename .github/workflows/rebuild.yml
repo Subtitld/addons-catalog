@@ -1,0 +1,66 @@
+name: Rebuild catalog
+
+on:
+  # Add-on release workflows fire this:
+  #   gh api repos/Subtitld/addons-catalog/dispatches -f event_type=catalog-rebuild
+  repository_dispatch:
+    types: [catalog-rebuild]
+
+  # Safety net in case a dispatch is dropped or an add-on workflow forgets
+  # to fire one. Six hours is the slowest acceptable propagation delay
+  # (`installer.CATALOG_CACHE_TTL_SEC` on the host is 1 h).
+  schedule:
+    - cron: "0 */6 * * *"
+
+  # Manual trigger — handy for testing.
+  workflow_dispatch: {}
+
+  # Re-run when the source list changes so a PR adding a new add-on is
+  # reflected the moment it lands.
+  push:
+    branches: [main]
+    paths:
+      - "addons.yml"
+      - "build_catalog.py"
+      - ".github/workflows/rebuild.yml"
+
+permissions:
+  contents: write  # commit catalog.json back to main
+
+concurrency:
+  # Two webhooks landing seconds apart should coalesce — the second run
+  # will just re-read the same release state and produce the same output.
+  group: rebuild-catalog
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Rebuild catalog.json
+        env:
+          # `gh api` reads this automatically; no need for `gh auth login`.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python build_catalog.py
+
+      - name: Commit if changed
+        run: |
+          set -e
+          if git diff --quiet --exit-code -- catalog.json; then
+            echo "catalog.json unchanged; nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json
+          git commit -m "chore(catalog): rebuild $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
