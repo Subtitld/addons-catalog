@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-08T15:28:27Z",
+  "generated": "2026-05-08T16:16:23Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -12,30 +12,30 @@
       ],
       "license": "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)",
       "homepage": "https://github.com/Subtitld/piper-tts",
-      "latest_version": "1.0.0",
+      "latest_version": "1.0.1",
       "releases": [
         {
-          "version": "1.0.0",
+          "version": "1.0.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for piper-tts v1.0.0.",
+          "changelog": "Automated release for piper-tts v1.0.1.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.0/piper-tts-1.0.0-linux-x86_64.zip",
-              "size_bytes": 69902669,
-              "sha256": "2a8680a43a26535724309e6227882fd36b7b3e8dba5065c6adff8053163e9c34"
+              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.1/piper-tts-1.0.1-linux-x86_64.zip",
+              "size_bytes": 69902429,
+              "sha256": "d6eef020700a5afc51da1c47484a668ac7bd4ab453931ebe5422ef03c90b3901"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.0/piper-tts-1.0.0-macos-universal.zip",
-              "size_bytes": 51598458,
-              "sha256": "b4c1b1a51492b0bbcb8f2d06ea46d5e9fc2c462f8b4ef4fd7c008be2619d8d94"
+              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.1/piper-tts-1.0.1-macos-universal.zip",
+              "size_bytes": 51597690,
+              "sha256": "2acc76e1a1c52cd2537b009c43498383d8fb8052cd707b9ebf0cb0c4480c55c0"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.0/piper-tts-1.0.0-windows-x86_64.zip",
-              "size_bytes": 47951622,
-              "sha256": "775c5c0ba64c07a993e5e3317a789c7d43859315b64633e79967a6b8b7f79d57"
+              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.1/piper-tts-1.0.1-windows-x86_64.zip",
+              "size_bytes": 47951327,
+              "sha256": "b48f94bcc48cfdbf43b04bf22382af58db472b018284562cb1b0167e33750132"
             }
           ]
         }
