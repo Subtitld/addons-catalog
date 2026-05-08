@@ -1,6 +1,45 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-08T15:23:13Z",
+  "generated": "2026-05-08T15:25:31Z",
   "min_subtitld": "0.6.0",
-  "addons": []
+  "addons": [
+    {
+      "id": "piper-tts",
+      "display_name": "Piper TTS (offline)",
+      "summary": "Lightweight offline neural TTS based on Piper. Models around 50 MB each.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "license": "MIT (add-on glue) + MIT (Piper) + per-model licenses",
+      "homepage": "https://github.com/Subtitld/piper-tts",
+      "latest_version": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "min_subtitld": "0.6.0",
+          "changelog": "Automated release for piper-tts v1.0.0.",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.0/piper-tts-1.0.0-linux-x86_64.zip",
+              "size_bytes": 69902669,
+              "sha256": "2a8680a43a26535724309e6227882fd36b7b3e8dba5065c6adff8053163e9c34"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.0/piper-tts-1.0.0-macos-universal.zip",
+              "size_bytes": 51598458,
+              "sha256": "b4c1b1a51492b0bbcb8f2d06ea46d5e9fc2c462f8b4ef4fd7c008be2619d8d94"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.0/piper-tts-1.0.0-windows-x86_64.zip",
+              "size_bytes": 47951622,
+              "sha256": "775c5c0ba64c07a993e5e3317a789c7d43859315b64633e79967a6b8b7f79d57"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
