@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-09T15:52:39Z",
+  "generated": "2026-05-09T15:53:02Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -242,6 +242,47 @@
               "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.1/kokoro-1.0.1-windows-x86_64.zip",
               "size_bytes": 236215226,
               "sha256": "832a4579b71716975a7b991457619b74d18070d50ef1e472a603953846bf8240"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parler-tts",
+      "display_name": "Parler-TTS Mini v1 (offline, prompt-driven)",
+      "summary": "Prompt-driven offline TTS. 34 named consistent speakers + free-text voice description. ~2 GB model, ~10-30s per line on CPU, English only.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en"
+      ],
+      "license": "Apache-2.0 (wrapper) + Apache-2.0 (Parler-TTS Mini v1 weights)",
+      "homepage": "https://github.com/Subtitld/addon-parler-tts",
+      "latest_version": "1.0.1",
+      "releases": [
+        {
+          "version": "1.0.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Automated release for parler-tts v1.0.1.",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-parler-tts/releases/download/v1.0.1/parler-tts-1.0.1-linux-x86_64.zip",
+              "size_bytes": 436330677,
+              "sha256": "21307352e43f96d6468fc3eb0510d5c457a5c0cb424c149348ac38783b6c6753"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-parler-tts/releases/download/v1.0.1/parler-tts-1.0.1-macos-universal.zip",
+              "size_bytes": 302926013,
+              "sha256": "4742f016a172d3cefe177c49ad5903cac4b5eaf09269ca656eb9be2579a0ac7b"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-parler-tts/releases/download/v1.0.1/parler-tts-1.0.1-windows-x86_64.zip",
+              "size_bytes": 284347222,
+              "sha256": "b935078eb280afba6b9b82ce1fbfb5272d0743ff83d9df4a8d02ea2d8f575f87"
             }
           ]
         }
