@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-09T16:58:08Z",
+  "generated": "2026-05-09T16:59:51Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -119,30 +119,30 @@
       ],
       "license": "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license",
       "homepage": "https://github.com/Subtitld/addon-coqui-xtts",
-      "latest_version": "1.0.3",
+      "latest_version": "1.0.4",
       "releases": [
         {
-          "version": "1.0.3",
+          "version": "1.0.4",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for coqui-xtts v1.0.3.",
+          "changelog": "Automated release for coqui-xtts v1.0.4.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.3/coqui-xtts-1.0.3-linux-x86_64.zip",
-              "size_bytes": 435251856,
-              "sha256": "edde68de84c9052c627d5acd98b9013796338800011a42881a5ff7029ec6dc7d"
+              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.4/coqui-xtts-1.0.4-linux-x86_64.zip",
+              "size_bytes": 436049142,
+              "sha256": "a52c189781c651109831cf23a08c5b4eb56dcec6f645bb289f2229e39867df8c"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.3/coqui-xtts-1.0.3-macos-universal.zip",
-              "size_bytes": 302233330,
-              "sha256": "fe947154530ca3f9a541aa9b456cd21c1b2395cef3d07fbba867df5cfa355ffc"
+              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.4/coqui-xtts-1.0.4-macos-universal.zip",
+              "size_bytes": 303744030,
+              "sha256": "0f16ff624edd8a0a29efa02de3a927621680ea0d627fed7de88fad0a5d433965"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.3/coqui-xtts-1.0.3-windows-x86_64.zip",
-              "size_bytes": 288352314,
-              "sha256": "60f773e68dd46146c8fbfe189dda74e1134c5ee396011d6101842cc4b755fbda"
+              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.4/coqui-xtts-1.0.4-windows-x86_64.zip",
+              "size_bytes": 289138386,
+              "sha256": "6ad17031acb16b1b53203e942da6928869ce5fed51d0259661be530c3910730b"
             }
           ]
         }
@@ -169,30 +169,30 @@
       ],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Qwen3-TTS weights)",
       "homepage": "https://github.com/Subtitld/addon-qwen3-tts",
-      "latest_version": "1.0.3",
+      "latest_version": "1.0.4",
       "releases": [
         {
-          "version": "1.0.3",
+          "version": "1.0.4",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for qwen3-tts v1.0.3.",
+          "changelog": "Automated release for qwen3-tts v1.0.4.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.3/qwen3-tts-1.0.3-linux-x86_64.zip",
-              "size_bytes": 453248841,
-              "sha256": "dadb35ba707bed07efd1c27cc472122031d7c726c49b46ac55259ddb321d5306"
+              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.4/qwen3-tts-1.0.4-linux-x86_64.zip",
+              "size_bytes": 452960565,
+              "sha256": "dcbba6a43e3b3279cbfb9ee87a82771c11db8ec6cacf214ec49c81bd1644ff2b"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.3/qwen3-tts-1.0.3-macos-universal.zip",
-              "size_bytes": 330353505,
-              "sha256": "5a4dae0f1539a67c904921d24303e6933740794338c46a51909e7d9dd170e456"
+              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.4/qwen3-tts-1.0.4-macos-universal.zip",
+              "size_bytes": 330379310,
+              "sha256": "547f33555b9c538ddeaea0b52b50c514947e6e9e138b0c5e592822f71aad7d69"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.3/qwen3-tts-1.0.3-windows-x86_64.zip",
-              "size_bytes": 307318615,
-              "sha256": "eb90040a70e6bf493a3d557c55cc51d6d4eebbf449572e5ef6d5147a5d7131fa"
+              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.4/qwen3-tts-1.0.4-windows-x86_64.zip",
+              "size_bytes": 307343243,
+              "sha256": "e427ef53dd8e8cbfbb4037002560709070868d247aff15928a5609d0717d76a6"
             }
           ]
         }
