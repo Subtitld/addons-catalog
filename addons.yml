@@ -68,3 +68,21 @@ addons:
     tasks: [tts.synthesize]
     languages: [en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko]
     license: "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license"
+
+  - id: qwen3-tts
+    repo: addon-qwen3-tts        # See note on piper-tts above.
+    display_name: "Qwen3-TTS (offline, 1.7B)"
+    # Twin to coqui-xtts but Apache-2.0, so it lights up the dub workflow
+    # for users who can't accept CPML's non-commercial restriction. Two
+    # voice modes: 9 fixed timbres baked into the CustomVoice variant, and
+    # a `qwen3-clone` voice that switches the addon to the Base variant
+    # for 3-second voice cloning. Single-active-model cache keeps RAM
+    # ~4 GB instead of ~7 GB.
+    summary: "Multilingual neural TTS with 9 premium timbres + 3-second voice cloning. Heavy: ~3.5 GB model, 8+ GB RAM, CPU or CUDA."
+    tasks: [tts.synthesize]
+    # 10 languages per the Qwen3-TTS-12Hz model card. Using BCP-47 short
+    # tags (no -region) since Qwen doesn't differentiate dialect in the
+    # voice list — the AddonsDialog's RFC 4647 prefix matcher will still
+    # surface this addon for `en-us`, `pt-br`, etc.
+    languages: [zh-cn, en, ja, ko, de, fr, ru, pt, es, it]
+    license: "Apache-2.0 (wrapper) + Apache-2.0 (Qwen3-TTS weights)"
