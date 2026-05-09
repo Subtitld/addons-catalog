@@ -86,3 +86,65 @@ addons:
     # surface this addon for `en-us`, `pt-br`, etc.
     languages: [zh-cn, en, ja, ko, de, fr, ru, pt, es, it]
     license: "Apache-2.0 (wrapper) + Apache-2.0 (Qwen3-TTS weights)"
+
+  - id: kokoro
+    repo: addon-kokoro           # See note on piper-tts above.
+    display_name: "Kokoro 82M (offline, lightweight)"
+    # The light end of the catalog. ~80 MB on disk, sub-second per line
+    # on a midrange CPU, no GPU required. 54 preset voices spread
+    # across 9 languages — Kokoro doesn't have an audio-encoder path
+    # so it can't clone, but it makes up for it with breadth at a tiny
+    # footprint. Good first install for users who just want a working
+    # offline TTS with multiple language coverage.
+    summary: "Lightweight offline neural TTS. ~80 MB model, sub-second per line on CPU, 54 preset voices across 9 languages. No voice cloning."
+    tasks: [tts.synthesize]
+    # Kokoro's pipeline lang_code is single-letter (a/b/j/z/e/f/h/i/p),
+    # but we map them to BCP-47 in the manifest so the host's RFC 4647
+    # prefix matcher works the same as for the other addons.
+    languages: [en-us, en-gb, ja, zh, es, fr, hi, it, pt-br]
+    license: "Apache-2.0 (wrapper) + Apache-2.0 (Kokoro 82M weights)"
+
+  - id: f5-tts
+    repo: addon-f5-tts           # See note on piper-tts above.
+    display_name: "F5-TTS (offline, voice clone)"
+    # Voice-clone-only — there are no preset voices. Every request
+    # needs a 6-15 second reference WAV (per-request voice_ref_audio
+    # or addon-config-level fallback). Catalog UI should make this
+    # constraint visible: without a reference, the addon can't
+    # synthesize at all. The single voice id is `f5-clone`.
+    #
+    # Trained on Emilia ZH-EN (~100k h), so en+zh are the only
+    # officially-supported languages. Community checkpoints exist for
+    # ja/fr/de/hi/it/ru/es/fi but require swapping the model file —
+    # out of scope for v1, would be a sibling addon.
+    #
+    # Model weights are CC-BY-NC-4.0 (non-commercial only). We surface
+    # this in the license string so the AddonsDialog can warn users
+    # before they install — same pattern as coqui-xtts's CPML clause.
+    summary: "Voice-clone neural TTS. Single 'f5-clone' voice; every request needs a 6-15s reference clip. ~1.5 GB model, en+zh only."
+    tasks: [tts.synthesize]
+    languages: [en, zh]
+    license: "MIT (wrapper) + CC-BY-NC-4.0 (F5TTS_v1_Base weights, non-commercial only)"
+
+  - id: parler-tts
+    repo: addon-parler-tts       # See note on piper-tts above.
+    display_name: "Parler-TTS Mini v1 (offline, prompt-driven)"
+    # Unusual model — no preset voices, no reference-audio cloning.
+    # Voice is described in plain English ("A female speaker with a
+    # slightly low-pitched voice, clear close-mic recording, no
+    # background noise.") and the model produces speech matching the
+    # description. To fit Subtitld's voice-id-driven UI, we expose
+    # 34 named consistent speakers the Parler team trained on (Jon,
+    # Lea, Gary, Jenna, Mike, Laura recommended). Each id maps to a
+    # description template that bakes in the speaker name.
+    #
+    # Users can override the description via the per-speaker
+    # voice_description config field or the per-request `description`
+    # parameter.
+    #
+    # English only — multilingual variants are planned upstream but
+    # not yet released as Apache-2.0 weights.
+    summary: "Prompt-driven offline TTS. 34 named consistent speakers + free-text voice description. ~2 GB model, ~10-30s per line on CPU, English only."
+    tasks: [tts.synthesize]
+    languages: [en]
+    license: "Apache-2.0 (wrapper) + Apache-2.0 (Parler-TTS Mini v1 weights)"
