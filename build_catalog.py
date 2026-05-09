@@ -224,6 +224,13 @@ def build_addon_entry(addon_cfg: dict) -> dict | None:
         'display_name': addon_cfg.get('display_name', addon_id),
         'summary': addon_cfg.get('summary', ''),
         'tasks': addon_cfg.get('tasks', []),
+        # `languages` lets the host's AddonsDialog filter catalog rows
+        # by language at *browse* time. Sourced from addons.yml — see the
+        # field reference comment there. Empty list is fine for add-ons
+        # whose languages aren't a meaningful filter (e.g. non-locale
+        # tasks like translation pipelines), but we still emit the key
+        # so the host can rely on it being present.
+        'languages': list(addon_cfg.get('languages') or []),
         'license': addon_cfg.get('license', ''),
         'homepage': addon_cfg.get('homepage', f'https://github.com/{owner_repo}'),
         'latest_version': version,

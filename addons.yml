@@ -18,6 +18,14 @@
 #   display_name    shown in the host UI list
 #   summary         1-2 sentences, also shown in the list
 #   tasks           [tts.synthesize | asr.transcribe | translate.text]+
+#   languages       BCP-47 tags the add-on's voices/models support, e.g.
+#                   [en-us, pt-br]. Powers the language filter dropdown
+#                   in the host AddonsDialog at *browse* time, before
+#                   the user installs the add-on. Should mirror the
+#                   `languages` field of the manifest.json shipped in
+#                   the release zip; the host honours the installed
+#                   manifest once installed, but until then this is the
+#                   only source.
 #   license         SPDX or short string; per-model licenses live inside
 #                   the zip's manifest.json
 #   homepage        optional, defaults to https://github.com/Subtitld/<repo>
@@ -36,6 +44,7 @@ addons:
     display_name: "Piper TTS (offline)"
     summary: "Lightweight offline neural TTS based on Piper. Models around 50 MB each."
     tasks: [tts.synthesize]
+    languages: [en-us, pt-br, es-es, fr-fr, de-de]
     # Upstream relicensed at piper1-gpl: the python wrapper we link against
     # ships GPL-3.0-or-later. We invoke it as a separate process, not a
     # shared library, so GPL doesn't propagate to Subtitld's MIT codebase.
@@ -46,4 +55,5 @@ addons:
     display_name: "Coqui XTTS-v2 (offline + voice clone)"
     summary: "Multilingual neural TTS with 6-second voice cloning. Heavy: ~2 GB model, CPU or CUDA."
     tasks: [tts.synthesize]
+    languages: [en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko]
     license: "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license"

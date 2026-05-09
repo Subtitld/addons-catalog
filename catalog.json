@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-09T03:24:58Z",
+  "generated": "2026-05-09T03:40:05Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -9,6 +9,13 @@
       "summary": "Lightweight offline neural TTS based on Piper. Models around 50 MB each.",
       "tasks": [
         "tts.synthesize"
+      ],
+      "languages": [
+        "en-us",
+        "pt-br",
+        "es-es",
+        "fr-fr",
+        "de-de"
       ],
       "license": "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)",
       "homepage": "https://github.com/Subtitld/addon-piper-tts",
