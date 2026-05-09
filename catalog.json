@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-08T19:39:56Z",
+  "generated": "2026-05-09T03:24:31Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -11,7 +11,7 @@
         "tts.synthesize"
       ],
       "license": "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)",
-      "homepage": "https://github.com/Subtitld/piper-tts",
+      "homepage": "https://github.com/Subtitld/addon-piper-tts",
       "latest_version": "1.0.2",
       "releases": [
         {
@@ -21,19 +21,19 @@
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.2/piper-tts-1.0.2-linux-x86_64.zip",
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v1.0.2/piper-tts-1.0.2-linux-x86_64.zip",
               "size_bytes": 69904824,
               "sha256": "c2779d227a46d7ab0034bdb759c5cb0b6f52d65ffdb64387269bdf9ba8bea970"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.2/piper-tts-1.0.2-macos-universal.zip",
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v1.0.2/piper-tts-1.0.2-macos-universal.zip",
               "size_bytes": 51600177,
               "sha256": "04ac24a3e39b3fef5f0a168b23ab1456d861ecff983468a7dc2b2dd456dcb677"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/piper-tts/releases/download/v1.0.2/piper-tts-1.0.2-windows-x86_64.zip",
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v1.0.2/piper-tts-1.0.2-windows-x86_64.zip",
               "size_bytes": 47955545,
               "sha256": "69c6d7fd87d92a6a89c7b2b3dcd219c285950071ac0cca5cf96977ae22d1de4e"
             }

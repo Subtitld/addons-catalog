@@ -28,6 +28,11 @@ min_subtitld: "0.6.0"
 
 addons:
   - id: piper-tts
+    repo: addon-piper-tts        # GitHub repo name; the addon `id` is the
+                                  # stable manifest identifier and stays bare,
+                                  # but the repo carries the `addon-` prefix
+                                  # so it sorts together with sibling add-ons
+                                  # under the Subtitld org.
     display_name: "Piper TTS (offline)"
     summary: "Lightweight offline neural TTS based on Piper. Models around 50 MB each."
     tasks: [tts.synthesize]
@@ -37,6 +42,7 @@ addons:
     license: "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)"
 
   - id: coqui-xtts
+    repo: addon-coqui-xtts       # See note on piper-tts above.
     display_name: "Coqui XTTS-v2 (offline + voice clone)"
     summary: "Multilingual neural TTS with 6-second voice cloning. Heavy: ~2 GB model, CPU or CUDA."
     tasks: [tts.synthesize]
