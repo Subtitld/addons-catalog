@@ -42,9 +42,20 @@ addons:
                                   # so it sorts together with sibling add-ons
                                   # under the Subtitld org.
     display_name: "Piper TTS (offline)"
-    summary: "Lightweight offline neural TTS based on Piper. Models around 50 MB each."
+    summary: "Lightweight offline neural TTS based on Piper. 158 voices across 49 languages; per-voice models range 20-110 MB."
     tasks: [tts.synthesize]
-    languages: [en-us, pt-br, es-es, fr-fr, de-de]
+    # Full BCP-47 language list mirrors the upstream rhasspy/piper-voices
+    # catalog. Kept in sync by regenerating from voices.json — see
+    # tools/regen_piper_manifest.py in the addon-piper-tts repo. The host's
+    # AddonsDialog uses RFC 4647 prefix matching, so a user filtering by
+    # `pt` will still match `pt-br` / `pt-pt` rows.
+    languages: [
+      ar-jo, bg-bg, ca-es, cs-cz, cy-gb, da-dk, de-de, el-gr, en-gb, en-us,
+      es-ar, es-es, es-mx, eu-es, fa-ir, fi-fi, fr-fr, hi-in, hu-hu, id-id,
+      is-is, it-it, ka-ge, kk-kz, ku-tr, lb-lu, lv-lv, ml-in, ne-np, nl-be,
+      nl-nl, no-no, pl-pl, pt-br, pt-pt, ro-ro, ru-ru, sk-sk, sl-si, sq-al,
+      sr-rs, sv-se, sw-cd, te-in, tr-tr, uk-ua, ur-pk, vi-vn, zh-cn
+    ]
     # Upstream relicensed at piper1-gpl: the python wrapper we link against
     # ships GPL-3.0-or-later. We invoke it as a separate process, not a
     # shared library, so GPL doesn't propagate to Subtitld's MIT codebase.
