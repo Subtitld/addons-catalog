@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-10T01:04:45Z",
+  "generated": "2026-05-10T01:06:19Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -218,30 +218,30 @@
       ],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Kokoro 82M weights)",
       "homepage": "https://github.com/Subtitld/addon-kokoro",
-      "latest_version": "1.0.2",
+      "latest_version": "1.0.3",
       "releases": [
         {
-          "version": "1.0.2",
+          "version": "1.0.3",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for kokoro v1.0.2.",
+          "changelog": "Automated release for kokoro v1.0.3.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.2/kokoro-1.0.2-linux-x86_64.zip",
-              "size_bytes": 371131793,
-              "sha256": "578988845a5a45fc8951324a92e12578708e5aee00f1bd24e7cc8319b686ac10"
+              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.3/kokoro-1.0.3-linux-x86_64.zip",
+              "size_bytes": 371378689,
+              "sha256": "48b4ee1162f5ecc341d9163d33277bb99a733edc240bc140e524a88da9022b08"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.2/kokoro-1.0.2-macos-universal.zip",
-              "size_bytes": 249421570,
-              "sha256": "5e463acac59e80081e9c38c007f6678f89143f8bacb8749901be2ad3099a79f5"
+              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.3/kokoro-1.0.3-macos-universal.zip",
+              "size_bytes": 249668399,
+              "sha256": "4919185d0954e23e20cbb111d52370418f8597c97147fb5af038818d7f85c61b"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.2/kokoro-1.0.2-windows-x86_64.zip",
-              "size_bytes": 236213273,
-              "sha256": "2b4fb63146bf0c0bf58e1996eb1ee72e2bc0d2d400aaf3ceca9d912b31d26d8c"
+              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.3/kokoro-1.0.3-windows-x86_64.zip",
+              "size_bytes": 236458843,
+              "sha256": "de1f70a63fb499793759f9a3f214c03ed0e37e2ecd926401a33561d2321c0e90"
             }
           ]
         }
