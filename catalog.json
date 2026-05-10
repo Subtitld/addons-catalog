@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-10T02:19:40Z",
+  "generated": "2026-05-10T02:23:29Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -260,30 +260,30 @@
       ],
       "license": "MIT (wrapper) + CC-BY-NC-4.0 (F5TTS_v1_Base weights, non-commercial only)",
       "homepage": "https://github.com/Subtitld/addon-f5-tts",
-      "latest_version": "1.0.3",
+      "latest_version": "1.0.4",
       "releases": [
         {
-          "version": "1.0.3",
+          "version": "1.0.4",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for f5-tts v1.0.3.",
+          "changelog": "Automated release for f5-tts v1.0.4.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.3/f5-tts-1.0.3-linux-x86_64.zip",
-              "size_bytes": 644441570,
-              "sha256": "8484f8a8821a79088d40f2dd69fe96beb461dba187c555653257928e62ca3017"
+              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.4/f5-tts-1.0.4-linux-x86_64.zip",
+              "size_bytes": 644944365,
+              "sha256": "7242a126e778e0f0f9418115be4ab1d728d5538af7b6d0ce59ba019dbe66d681"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.3/f5-tts-1.0.3-macos-universal.zip",
-              "size_bytes": 417742347,
-              "sha256": "2f98e7e17796d30be1deb2b4eb805a048e2c37f1f1d55792f49d2e41d4efab99"
+              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.4/f5-tts-1.0.4-macos-universal.zip",
+              "size_bytes": 418181187,
+              "sha256": "6a700a17a7efdca6bcc16b277dc6273a127e5ae1d831a0c3b2c9a38828bbc551"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.3/f5-tts-1.0.3-windows-x86_64.zip",
-              "size_bytes": 423386174,
-              "sha256": "e55f534518e0f28129abdd3d539043341203c4316410f8890d5ee5c1aed45c51"
+              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.4/f5-tts-1.0.4-windows-x86_64.zip",
+              "size_bytes": 423842444,
+              "sha256": "c1428c11da4188f9fed75572a1f75a544a7f92056a8f870b3f845f74a6da47cd"
             }
           ]
         }
