@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-09T19:15:03Z",
+  "generated": "2026-05-10T01:04:45Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -119,30 +119,30 @@
       ],
       "license": "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license",
       "homepage": "https://github.com/Subtitld/addon-coqui-xtts",
-      "latest_version": "1.0.4",
+      "latest_version": "1.0.5",
       "releases": [
         {
-          "version": "1.0.4",
+          "version": "1.0.5",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for coqui-xtts v1.0.4.",
+          "changelog": "Automated release for coqui-xtts v1.0.5.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.4/coqui-xtts-1.0.4-linux-x86_64.zip",
-              "size_bytes": 436049142,
-              "sha256": "a52c189781c651109831cf23a08c5b4eb56dcec6f645bb289f2229e39867df8c"
+              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.5/coqui-xtts-1.0.5-linux-x86_64.zip",
+              "size_bytes": 436048602,
+              "sha256": "751f689939d5880a24f96e65e0cec87597dc6d159cb8e89e5bb2baee79acba71"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.4/coqui-xtts-1.0.4-macos-universal.zip",
-              "size_bytes": 303744030,
-              "sha256": "0f16ff624edd8a0a29efa02de3a927621680ea0d627fed7de88fad0a5d433965"
+              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.5/coqui-xtts-1.0.5-macos-universal.zip",
+              "size_bytes": 303743529,
+              "sha256": "497a2a77cf884a6fd81b7fb9f88361460b7393b9abd2bd7c02f5b56c5531df91"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.4/coqui-xtts-1.0.4-windows-x86_64.zip",
-              "size_bytes": 289138386,
-              "sha256": "6ad17031acb16b1b53203e942da6928869ce5fed51d0259661be530c3910730b"
+              "url": "https://github.com/Subtitld/addon-coqui-xtts/releases/download/v1.0.5/coqui-xtts-1.0.5-windows-x86_64.zip",
+              "size_bytes": 289139158,
+              "sha256": "68948a6323b9a33b86aeb7d6aeea44a0087d38434a1e79d44e4325131e50aef9"
             }
           ]
         }
