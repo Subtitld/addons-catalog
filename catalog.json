@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-12T23:06:41Z",
+  "generated": "2026-05-12T23:45:44Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -325,6 +325,45 @@
               "url": "https://github.com/Subtitld/addon-parler-tts/releases/download/v1.0.2/parler-tts-1.0.2-windows-x86_64.zip",
               "size_bytes": 284347620,
               "sha256": "3461508ae7ce194c35662b102b4da4eb3881c0c8c8e83217033444d470e4ebdc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audio-separator",
+      "display_name": "audio-separator (UVR / MDX / Demucs)",
+      "summary": "High-quality vocal/music separation using UVR, MDX-Net, BS-Roformer, and Demucs models. Quality > the built-in ffmpeg mid/side trick at the cost of a one-shot model download (~50-500 MB) and a few seconds of inference per minute.",
+      "tasks": [
+        "audio.separate"
+      ],
+      "languages": [],
+      "license": "MIT (wrapper) + MIT (python-audio-separator) + per-model licenses (some UVR/MDX checkpoints are CC-BY-NC for non-commercial use)",
+      "homepage": "https://github.com/Subtitld/addon-audio-separator",
+      "latest_version": "0.0.2",
+      "releases": [
+        {
+          "version": "0.0.2",
+          "min_subtitld": "0.6.0",
+          "changelog": "Automated release for audio-separator v0.0.2.",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.2/audio-separator-0.0.2-linux-x86_64.zip",
+              "size_bytes": 432425661,
+              "sha256": "ae23c8c0542838b17d5a1e7a9183d635ac23709f6b4f5eeb8c8333e44678d07e"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.2/audio-separator-0.0.2-macos-universal.zip",
+              "size_bytes": 296783380,
+              "sha256": "2872c8df2301dcf4d206469cdec236eb6018426882d7c7020059c6a600460106"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.2/audio-separator-0.0.2-windows-x86_64.zip",
+              "size_bytes": 286334789,
+              "sha256": "4fba51eaa30fc8824183127054c76f9cb11ec13d30f617994cf81067f12cdc24"
             }
           ]
         }
