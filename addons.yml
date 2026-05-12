@@ -148,3 +148,24 @@ addons:
     tasks: [tts.synthesize]
     languages: [en]
     license: "Apache-2.0 (wrapper) + Apache-2.0 (Parler-TTS Mini v1 weights)"
+
+  - id: audio-separator
+    repo: addon-audio-separator  # See note on piper-tts above.
+    display_name: "audio-separator (UVR / MDX / Demucs)"
+    # Subprocess sibling to the host's built-in `ffmpeg-separator` (which
+    # uses a stereo mid/side trick — fast, zero deps, mediocre quality on
+    # tracks with center-panned instruments). Same output contract
+    # (`{vocals, background}`), much better quality at the cost of a
+    # one-shot model download and a few seconds of inference per minute.
+    # Default model `Kim_Inst.onnx` (~67 MB) is the standard high-quality
+    # MDX-Net instrumental model; users can switch to BS-Roformer (top
+    # quality, slow) or Demucs (4-stem) via the per-addon config.
+    summary: "High-quality vocal/music separation using UVR, MDX-Net, BS-Roformer, and Demucs models. Quality > the built-in ffmpeg mid/side trick at the cost of a one-shot model download (~50-500 MB) and a few seconds of inference per minute."
+    tasks: [audio.separate]
+    # Audio separation operates on the waveform, not the language track.
+    # Leave `languages` empty intentionally — the AddonsDialog's language
+    # filter would hide this row when the user picks a specific tag, which
+    # is correct: a user shopping for "pt-br" providers cares about TTS /
+    # ASR coverage, not the separator. Under "Any language" (the default)
+    # the empty-languages row passes through and the user sees it.
+    license: "MIT (wrapper) + MIT (python-audio-separator) + per-model licenses (some UVR/MDX checkpoints are CC-BY-NC for non-commercial use)"
