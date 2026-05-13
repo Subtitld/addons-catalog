@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-13T21:05:14Z",
+  "generated": "2026-05-13T21:09:05Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -218,30 +218,30 @@
       ],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Kokoro 82M weights)",
       "homepage": "https://github.com/Subtitld/addon-kokoro",
-      "latest_version": "1.0.5",
+      "latest_version": "1.0.6",
       "releases": [
         {
-          "version": "1.0.5",
+          "version": "1.0.6",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for kokoro v1.0.5.",
+          "changelog": "Automated release for kokoro v1.0.6.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.5/kokoro-1.0.5-linux-x86_64.zip",
-              "size_bytes": 382159668,
-              "sha256": "5b43116a1c2d1ab0e6739bca7df983f08f14fb1a14fbbc2ceba597322e07eb44"
+              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.6/kokoro-1.0.6-linux-x86_64.zip",
+              "size_bytes": 384864625,
+              "sha256": "8cdeb943f1bf5a232f5fdb287d68b3bdcc6cf76f823a131b2846510ab15522e6"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.5/kokoro-1.0.5-macos-universal.zip",
-              "size_bytes": 260204606,
-              "sha256": "91cb4ab9b67bc7eaf4e2141f14e36a92ddedc474ef5373c7bed0c3dada2d80ca"
+              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.6/kokoro-1.0.6-macos-universal.zip",
+              "size_bytes": 275613887,
+              "sha256": "8792b2ac715a4ef7d1de8dea4f1d634eeff57e90c9d12ed138a4225ce733751b"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.5/kokoro-1.0.5-windows-x86_64.zip",
-              "size_bytes": 246566769,
-              "sha256": "c4e799f3209e0c42c148e5acceab14cfa7d7d9e367aaa80d9179237491c18540"
+              "url": "https://github.com/Subtitld/addon-kokoro/releases/download/v1.0.6/kokoro-1.0.6-windows-x86_64.zip",
+              "size_bytes": 255750548,
+              "sha256": "4473f5011c8ebe2c0c25d9ab19168505e12b30847f924b8eec62a3b41559fe3d"
             }
           ]
         }
@@ -260,30 +260,30 @@
       ],
       "license": "MIT (wrapper) + CC-BY-NC-4.0 (F5TTS_v1_Base weights, non-commercial only)",
       "homepage": "https://github.com/Subtitld/addon-f5-tts",
-      "latest_version": "1.0.5",
+      "latest_version": "1.0.6",
       "releases": [
         {
-          "version": "1.0.5",
+          "version": "1.0.6",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for f5-tts v1.0.5.",
+          "changelog": "Automated release for f5-tts v1.0.6.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.5/f5-tts-1.0.5-linux-x86_64.zip",
-              "size_bytes": 647835557,
-              "sha256": "562850e83c04f6aa07609fa1cbfdee3dd1cb716fd40979e6a3b26c7e5bfb4a81"
+              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.6/f5-tts-1.0.6-linux-x86_64.zip",
+              "size_bytes": 647836482,
+              "sha256": "3cbd2d5ff5cb7477afab55dab171ee6c129ca10a89f7dab5d3effc8e76ac7858"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.5/f5-tts-1.0.5-macos-universal.zip",
-              "size_bytes": 433771858,
-              "sha256": "0d55ec51045c901c70fa63ec00ce2ad896c2b4ab26d2fd9412284a5dcb89d267"
+              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.6/f5-tts-1.0.6-macos-universal.zip",
+              "size_bytes": 433773074,
+              "sha256": "fe9f3347761cdab90c0a49d39f5ba6cc953355406f847140c37fbc87d6a4ca60"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.5/f5-tts-1.0.5-windows-x86_64.zip",
-              "size_bytes": 433205406,
-              "sha256": "390b62a0a2b17720600ff0a89a124e43ae019d194bff72df552021dae642811a"
+              "url": "https://github.com/Subtitld/addon-f5-tts/releases/download/v1.0.6/f5-tts-1.0.6-windows-x86_64.zip",
+              "size_bytes": 433206778,
+              "sha256": "c5d3747e4b9f067689cccf2202545003864716c9e2a38c2b9e95568f6328fb41"
             }
           ]
         }
