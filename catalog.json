@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-13T20:45:30Z",
+  "generated": "2026-05-13T21:05:14Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -169,30 +169,30 @@
       ],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Qwen3-TTS weights)",
       "homepage": "https://github.com/Subtitld/addon-qwen3-tts",
-      "latest_version": "1.0.4",
+      "latest_version": "1.0.5",
       "releases": [
         {
-          "version": "1.0.4",
+          "version": "1.0.5",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for qwen3-tts v1.0.4.",
+          "changelog": "Automated release for qwen3-tts v1.0.5.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.4/qwen3-tts-1.0.4-linux-x86_64.zip",
-              "size_bytes": 452960565,
-              "sha256": "dcbba6a43e3b3279cbfb9ee87a82771c11db8ec6cacf214ec49c81bd1644ff2b"
+              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.5/qwen3-tts-1.0.5-linux-x86_64.zip",
+              "size_bytes": 455679885,
+              "sha256": "fd3549df0284a4423f2f263f898b51ae3bada59be1f26da224f80f2f202fcf8e"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.4/qwen3-tts-1.0.4-macos-universal.zip",
-              "size_bytes": 330379310,
-              "sha256": "547f33555b9c538ddeaea0b52b50c514947e6e9e138b0c5e592822f71aad7d69"
+              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.5/qwen3-tts-1.0.5-macos-universal.zip",
+              "size_bytes": 345801415,
+              "sha256": "86d2e35c17402093e4b6b8246b15e1693b76382d3bdc704802647f4fa5295600"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.4/qwen3-tts-1.0.4-windows-x86_64.zip",
-              "size_bytes": 307343243,
-              "sha256": "e427ef53dd8e8cbfbb4037002560709070868d247aff15928a5609d0717d76a6"
+              "url": "https://github.com/Subtitld/addon-qwen3-tts/releases/download/v1.0.5/qwen3-tts-1.0.5-windows-x86_64.zip",
+              "size_bytes": 316536465,
+              "sha256": "493e3b2cb38b728d7ad998a6be13ccedd0e81c181c5bf83da9f9380b020a0d7e"
             }
           ]
         }
