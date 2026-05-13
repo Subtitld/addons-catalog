@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-13T00:15:55Z",
+  "generated": "2026-05-13T01:51:17Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -340,30 +340,30 @@
       "languages": [],
       "license": "MIT (wrapper) + MIT (python-audio-separator) + per-model licenses (some UVR/MDX checkpoints are CC-BY-NC for non-commercial use)",
       "homepage": "https://github.com/Subtitld/addon-audio-separator",
-      "latest_version": "0.0.3",
+      "latest_version": "0.0.4",
       "releases": [
         {
-          "version": "0.0.3",
+          "version": "0.0.4",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for audio-separator v0.0.3.",
+          "changelog": "Automated release for audio-separator v0.0.4.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.3/audio-separator-0.0.3-linux-x86_64.zip",
-              "size_bytes": 432427648,
-              "sha256": "b471e76d4ff52f9b2aa04d0d14a1b533208df9c1043afb879dbfda45e933f50a"
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.4/audio-separator-0.0.4-linux-x86_64.zip",
+              "size_bytes": 432426742,
+              "sha256": "01222150c7f585eb6581da53cbeac56002e0e5f3d4dac7ac822937bdb367ae10"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.3/audio-separator-0.0.3-macos-universal.zip",
-              "size_bytes": 296781453,
-              "sha256": "adc7b37ae0d7aec28c77f72cef11eca93331af207f08238a4ae688f1a896bff5"
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.4/audio-separator-0.0.4-macos-universal.zip",
+              "size_bytes": 296785122,
+              "sha256": "641b60f132f48416e86e66efcea0d205a93dc49c035488799b19438f3e12fc18"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.3/audio-separator-0.0.3-windows-x86_64.zip",
-              "size_bytes": 286335792,
-              "sha256": "f374160bec6071db0b1f7a6a37b994035e2681b067a8ae371b347bc5a4b8d473"
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.4/audio-separator-0.0.4-windows-x86_64.zip",
+              "size_bytes": 286337715,
+              "sha256": "38ca267e5bba38f42a13d794505b93200c358d9a4c578689f3bb124506cdece3"
             }
           ]
         }
