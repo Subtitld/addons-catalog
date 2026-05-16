@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-05-16T14:46:54Z",
+  "generated": "2026-05-16T15:15:09Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -372,30 +372,30 @@
       ],
       "license": "MIT (wrapper) + MIT (supertonic-py) + OpenRAIL-M (Supertonic-3 weights)",
       "homepage": "https://github.com/Subtitld/addon-supertonic",
-      "latest_version": "0.0.1",
+      "latest_version": "0.0.2",
       "releases": [
         {
-          "version": "0.0.1",
+          "version": "0.0.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for supertonic v0.0.1.",
+          "changelog": "Automated release for supertonic v0.0.2.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-supertonic/releases/download/v0.0.1/supertonic-0.0.1-linux-x86_64.zip",
-              "size_bytes": 78071413,
-              "sha256": "989652d3e1d4d50bfb4001699e0e21fc13479fff0bcfe7e48b2f0c207232a0fa"
+              "url": "https://github.com/Subtitld/addon-supertonic/releases/download/v0.0.2/supertonic-0.0.2-linux-x86_64.zip",
+              "size_bytes": 78074801,
+              "sha256": "cede246141b8250905ea39af4d94aa964842c7b427c1338af0b14c503edee71b"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-supertonic/releases/download/v0.0.1/supertonic-0.0.1-macos-universal.zip",
-              "size_bytes": 49087130,
-              "sha256": "85cc3ed7d4dd8c14232ee344fd308edadd77c2eccbb87d906f4531f4a0b6b12b"
+              "url": "https://github.com/Subtitld/addon-supertonic/releases/download/v0.0.2/supertonic-0.0.2-macos-universal.zip",
+              "size_bytes": 49089160,
+              "sha256": "68283fce5ac09c53a258cb252d17a30dd1a8c320a114da8cce24fee866088b4a"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-supertonic/releases/download/v0.0.1/supertonic-0.0.1-windows-x86_64.zip",
-              "size_bytes": 45638763,
-              "sha256": "76225a1f2cfe77a9abd5aec51b2a77e54940588564c147101df0873061734532"
+              "url": "https://github.com/Subtitld/addon-supertonic/releases/download/v0.0.2/supertonic-0.0.2-windows-x86_64.zip",
+              "size_bytes": 45640044,
+              "sha256": "aafa692469656358cb1dc2cda144cda6e8e44259a92ec4dd315a2ebaa927e5a1"
             }
           ]
         }
