@@ -149,6 +149,33 @@ addons:
     languages: [en]
     license: "Apache-2.0 (wrapper) + Apache-2.0 (Parler-TTS Mini v1 weights)"
 
+  - id: supertonic
+    repo: addon-supertonic       # See note on piper-tts above.
+    display_name: "Supertonic (on-device, ONNX, 99M)"
+    # Lightest neural TTS on the catalog — pure onnxruntime, no torch
+    # dependency tree. Bundle is ~200 MB and the Supertonic-3 model is
+    # ~400 MB downloaded on first synthesis from Hugging Face. 10
+    # preset timbres only (M1-M5, F1-F5) — no clone-from-audio at
+    # request time because the upstream `supertonic` Python SDK
+    # doesn't expose a runtime cloning API; cloning happens out-of-band
+    # via Supertone's Voice Builder web UI, exporting a JSON the
+    # add-on can load via its `voice_style_json` config option. Pitched
+    # as the "low-overhead default" — when users want voice clones or
+    # accent control they should reach for coqui-xtts / qwen3-tts /
+    # f5-tts instead.
+    summary: "Lightning-fast on-device multilingual TTS. 99M-parameter ONNX model, ~400 MB download, 31 languages, 10 preset voices. No GPU required."
+    tasks: [tts.synthesize]
+    # All 31 supported ISO codes, surfaced as plain language tags so
+    # the AddonsDialog's RFC 4647 prefix matcher catches `pt-br` /
+    # `pt-pt` filters under `pt`, etc. The literal `na` (language-
+    # agnostic) is a synthesis option inside the addon, not a real
+    # language — kept out of the filter list intentionally.
+    languages: [
+      ar, bg, hr, cs, da, nl, en, et, fi, fr, de, el, hi, hu, id,
+      it, ja, ko, lv, lt, pl, pt, ro, ru, sk, sl, es, sv, tr, uk, vi
+    ]
+    license: "MIT (wrapper) + MIT (supertonic-py) + OpenRAIL-M (Supertonic-3 weights)"
+
   - id: audio-separator
     repo: addon-audio-separator  # See note on piper-tts above.
     display_name: "audio-separator (UVR / MDX / Demucs)"
