@@ -196,3 +196,26 @@ addons:
     # ASR coverage, not the separator. Under "Any language" (the default)
     # the empty-languages row passes through and the user sees it.
     license: "MIT (wrapper) + MIT (python-audio-separator) + per-model licenses (some UVR/MDX checkpoints are CC-BY-NC for non-commercial use)"
+
+  - id: vosk
+    repo: addon-vosk
+    display_name: "Vosk (offline ASR)"
+    # Lightweight offline speech-to-text via Vosk Kaldi recognizers. CPU-only,
+    # no torch; per-language models download on demand (~40 MB small models,
+    # up to ~1.8 GB full). Sibling to the heavier whisper-based ASR add-ons.
+    summary: "Offline speech-to-text using Vosk Kaldi recognizers. Lightweight and CPU-only; per-language models download on demand (~40 MB small, up to ~1.8 GB full)."
+    tasks: [asr.transcribe]
+    languages: [en, en-us, pt, pt-br, es, es-es, fr, fr-fr, de, de-de, it, it-it, ru, zh, zh-cn, ja]
+    license: "Apache-2.0 (wrapper + Vosk); some full models are GPL-3.0"
+
+  - id: realtimestt
+    repo: addon-realtimestt
+    display_name: "RealtimeSTT (faster-whisper)"
+    # Recording-based STT for Record mode: the host streams mic audio and the
+    # add-on transcribes live via RealtimeSTT (faster-whisper + VAD). Serves
+    # both the batch asr.transcribe and the live asr.stream task. GPU-accel
+    # when available; the chosen whisper model downloads on first use.
+    summary: "Recording-based speech-to-text via RealtimeSTT (faster-whisper + VAD) for Record mode; also transcribes imported audio. GPU-accelerated when available."
+    tasks: [asr.transcribe, asr.stream]
+    languages: [en, en-us, pt, pt-br, es, fr, de, it, nl, ru, zh, ja, ko]
+    license: "MIT (wrapper + RealtimeSTT + faster-whisper); Whisper weights MIT"
