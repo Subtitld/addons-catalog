@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-07-18T13:37:50Z",
+  "generated": "2026-07-18T18:27:18Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -435,6 +435,62 @@
               "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.5/audio-separator-0.0.5-windows-x86_64.zip",
               "size_bytes": 295499546,
               "sha256": "b5845c28914373d5944e512a6fc13a7c82dec086b3ba6abf743172749f205a71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vosk",
+      "display_name": "Vosk (offline ASR)",
+      "summary": "Offline speech-to-text using Vosk Kaldi recognizers. Lightweight and CPU-only; per-language models download on demand (~40 MB small, up to ~1.8 GB full).",
+      "tasks": [
+        "asr.transcribe"
+      ],
+      "languages": [
+        "en",
+        "en-us",
+        "pt",
+        "pt-br",
+        "es",
+        "es-es",
+        "fr",
+        "fr-fr",
+        "de",
+        "de-de",
+        "it",
+        "it-it",
+        "ru",
+        "zh",
+        "zh-cn",
+        "ja"
+      ],
+      "license": "Apache-2.0 (wrapper + Vosk); some full models are GPL-3.0",
+      "homepage": "https://github.com/Subtitld/addon-vosk",
+      "latest_version": "1.0.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "min_subtitld": "0.6.0",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-vosk/commits/v1.0.0",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v1.0.0/vosk-1.0.0-linux-x86_64.zip",
+              "size_bytes": 30574890,
+              "sha256": "893adf97b8acd6e6067b39e7e2960a296fd0bf7c951c12609e77eb12a6b9156e"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v1.0.0/vosk-1.0.0-macos-arm64.zip",
+              "size_bytes": 15806454,
+              "sha256": "9a259da1c902242845fb9e6363ef9d506c3e5b96ed76217a2e86528d4698e5f6"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v1.0.0/vosk-1.0.0-windows-x86_64.zip",
+              "size_bytes": 24007918,
+              "sha256": "b8aae42dd29ccc5d4719adb319e34d396e76521b5ac3b7123f9fca4d243bb03d"
             }
           ]
         }
