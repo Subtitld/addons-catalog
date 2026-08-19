@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-08-19T06:55:27Z",
+  "generated": "2026-08-19T12:59:41Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -70,6 +70,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "Automated release for piper-tts v1.0.3.",
           "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v1.0.3/piper-tts-1.0.3-linux-x86_64.zip",
+              "size_bytes": 70009753,
+              "sha256": "300ef4174ccff1b5f3a2610f2b47efdc0cd58dafee6954e41b18e2004bda7d69"
+            },
             {
               "platform": "macos",
               "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v1.0.3/piper-tts-1.0.3-macos-universal.zip",
@@ -412,6 +418,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "Automated release for audio-separator v0.0.5.",
           "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.5/audio-separator-0.0.5-linux-x86_64.zip",
+              "size_bytes": 432429362,
+              "sha256": "a7561c98172b73618bd182178936453cf71d9aca62bdc19cedc3d0064a3fc595"
+            },
             {
               "platform": "macos",
               "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.5/audio-separator-0.0.5-macos-universal.zip",
