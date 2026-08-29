@@ -219,3 +219,15 @@ addons:
     tasks: [asr.transcribe, asr.stream]
     languages: [en, en-us, pt, pt-br, es, fr, de, it, nl, ru, zh, ja, ko]
     license: "MIT (wrapper + RealtimeSTT + faster-whisper); Whisper weights MIT"
+
+  - id: translate-offline
+    repo: addon-translate-offline
+    display_name: "Offline Translate (CTranslate2)"
+    # Fully offline text translation via CTranslate2 + SentencePiece. Torch-free,
+    # CPU-only; per-language-pair OPUS/Argos models download once (~60-80 MB) then
+    # run locally with no rate limits. An always-available alternative to the
+    # rate-limited free Google/MyMemory web engines.
+    summary: "Fully offline subtitle translation using small per-language-pair NMT models (OPUS-MT via CTranslate2). No cloud, no API key, no rate limits; models download once on first use."
+    tasks: [translate.text]
+    languages: [en, pt, es, fr, de, it, nl, ru, uk, pl, tr, ar, zh, ja, ko, hi, cs, sv, da, fi, el, hu, ro, id, ca]
+    license: "MIT (wrapper); OPUS-MT/Argos models MIT/CC"
