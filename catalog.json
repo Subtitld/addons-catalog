@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-08-29T16:22:31Z",
+  "generated": "2026-08-29T16:24:17Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -545,6 +545,71 @@
               "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.1/realtimestt-0.1.1-windows-x86_64.zip",
               "size_bytes": 264143550,
               "sha256": "cd8aba713010a19eb5faaaa54f3ce1400f7c720555e72bb4310b274a1fc3af86"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "translate-offline",
+      "display_name": "Offline Translate (CTranslate2)",
+      "summary": "Fully offline subtitle translation using small per-language-pair NMT models (OPUS-MT via CTranslate2). No cloud, no API key, no rate limits; models download once on first use.",
+      "tasks": [
+        "translate.text"
+      ],
+      "languages": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "nl",
+        "ru",
+        "uk",
+        "pl",
+        "tr",
+        "ar",
+        "zh",
+        "ja",
+        "ko",
+        "hi",
+        "cs",
+        "sv",
+        "da",
+        "fi",
+        "el",
+        "hu",
+        "ro",
+        "id",
+        "ca"
+      ],
+      "license": "MIT (wrapper); OPUS-MT/Argos models MIT/CC",
+      "homepage": "https://github.com/Subtitld/addon-translate-offline",
+      "latest_version": "0.1.0",
+      "releases": [
+        {
+          "version": "0.1.0",
+          "min_subtitld": "0.6.0",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-translate-offline/commits/v0.1.0",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-linux-x86_64.zip",
+              "size_bytes": 110811832,
+              "sha256": "35b85a8c70e93437259b9723f78101cbe7deb784b4bab0144b13c2643dcb336e"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-macos-arm64.zip",
+              "size_bytes": 22760799,
+              "sha256": "61b35e571b35d1950c35a6549ffdb47a4b738aa5c2332f8350feb215f98a9813"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-windows-x86_64.zip",
+              "size_bytes": 40955600,
+              "sha256": "06e0fb3b1820913290fd7d862d1d1228bb8618801218aef51bc2ef2c776e7335"
             }
           ]
         }
