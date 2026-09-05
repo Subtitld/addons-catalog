@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-05T11:32:24Z",
+  "generated": "2026-09-05T11:51:40Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -610,6 +610,45 @@
               "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-windows-x86_64.zip",
               "size_bytes": 40955600,
               "sha256": "06e0fb3b1820913290fd7d862d1d1228bb8618801218aef51bc2ef2c776e7335"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wav2lip",
+      "display_name": "Wav2Lip (offline lip-sync)",
+      "summary": "Offline generative lip-sync (visual dubbing) via Wav2Lip ONNX. Torch-free, CPU-capable; regenerates the mouth to match dubbed audio. Weights are research/non-commercial.",
+      "tasks": [
+        "video.lipsync"
+      ],
+      "languages": [],
+      "license": "MIT (wrapper); Wav2Lip weights research/non-commercial only",
+      "homepage": "https://github.com/Subtitld/addon-wav2lip",
+      "latest_version": "0.1.0",
+      "releases": [
+        {
+          "version": "0.1.0",
+          "min_subtitld": "0.6.0",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-wav2lip/commits/v0.1.0",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-wav2lip/releases/download/v0.1.0/wav2lip-0.1.0-linux-x86_64.zip",
+              "size_bytes": 273594018,
+              "sha256": "cdd3f76f217a716eaeced39fad3b1e534f8975aaf8e8f9a145c5a8b773cae7e9"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-wav2lip/releases/download/v0.1.0/wav2lip-0.1.0-macos-arm64.zip",
+              "size_bytes": 202433546,
+              "sha256": "ef8a05377fe80b1bbd7ac31e954544c4d4adc7819abee6c40e04b4369f56be6a"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-wav2lip/releases/download/v0.1.0/wav2lip-0.1.0-windows-x86_64.zip",
+              "size_bytes": 175928754,
+              "sha256": "844698acdfff690a4ca7dec9a6cee44253dc9fc175d645f7b889dd3194aaa261"
             }
           ]
         }
