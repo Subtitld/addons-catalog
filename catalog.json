@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-05T11:51:40Z",
+  "generated": "2026-09-05T12:09:00Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -649,6 +649,33 @@
               "url": "https://github.com/Subtitld/addon-wav2lip/releases/download/v0.1.0/wav2lip-0.1.0-windows-x86_64.zip",
               "size_bytes": 175928754,
               "sha256": "844698acdfff690a4ca7dec9a6cee44253dc9fc175d645f7b889dd3194aaa261"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musetalk",
+      "display_name": "MuseTalk (GPU lip-sync)",
+      "summary": "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU; MIT-licensed and commercial-OK. Regenerates the mouth to match dubbed audio.",
+      "tasks": [
+        "video.lipsync"
+      ],
+      "languages": [],
+      "license": "MIT",
+      "homepage": "https://github.com/Subtitld/addon-musetalk",
+      "latest_version": "0.1.0",
+      "releases": [
+        {
+          "version": "0.1.0",
+          "min_subtitld": "0.6.0",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-musetalk/commits/v0.1.0",
+          "downloads": [
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-musetalk/releases/download/v0.1.0/musetalk-0.1.0-windows-x86_64.zip",
+              "size_bytes": 362760968,
+              "sha256": "a8fc18720c2f5ef59b11964f29119959e9ed743407a9036db6563d16d8bbb2d7"
             }
           ]
         }
