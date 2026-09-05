@@ -249,9 +249,16 @@ addons:
     repo: addon-musetalk
     display_name: "MuseTalk (GPU lip-sync)"
     # Higher-quality generative lip-sync via MuseTalk (latent-space inpainting).
-    # Requires an NVIDIA GPU (CUDA); torch/diffusers, multi-GB models downloaded
-    # on first use. MIT — commercial use OK. Language-agnostic.
-    summary: "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU; MIT-licensed and commercial-OK. Regenerates the mouth to match dubbed audio."
+    # Requires an NVIDIA GPU (CUDA); MIT — commercial use OK. Language-agnostic.
+    #
+    # From 0.2.0 the download is deliberately tiny (a stdlib-only bootstrap):
+    # the torch/CUDA runtime is pip-installed into a private cache venv on
+    # first use, then the multi-GB weights download. That is what lets the
+    # linux build exist at all — a frozen CUDA bundle exceeds GitHub's 2 GiB
+    # release-asset limit. The trade-off is a long, network-dependent first
+    # run needing Python 3.10+ on the machine, so the summary says so up
+    # front: the small size in the browse list would otherwise mislead.
+    summary: "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU (CUDA) and Python 3.10+. Small download: the PyTorch runtime and multi-GB models install on first use. MIT-licensed and commercial-OK."
     tasks: [video.lipsync]
     languages: []
     license: "MIT"
