@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-05T20:13:34Z",
+  "generated": "2026-09-05T20:21:24Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -657,7 +657,7 @@
     {
       "id": "musetalk",
       "display_name": "MuseTalk (GPU lip-sync)",
-      "summary": "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU; MIT-licensed and commercial-OK. Regenerates the mouth to match dubbed audio.",
+      "summary": "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU (CUDA) and Python 3.10+. Small download: the PyTorch runtime and multi-GB models install on first use. MIT-licensed and commercial-OK.",
       "tasks": [
         "video.lipsync"
       ],
