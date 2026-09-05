@@ -231,3 +231,27 @@ addons:
     tasks: [translate.text]
     languages: [en, pt, es, fr, de, it, nl, ru, uk, pl, tr, ar, zh, ja, ko, hi, cs, sv, da, fi, el, hu, ro, id, ca]
     license: "MIT (wrapper); OPUS-MT/Argos models MIT/CC"
+
+  - id: wav2lip
+    repo: addon-wav2lip
+    display_name: "Wav2Lip (offline lip-sync)"
+    # Generative "visual dubbing": regenerates the mouth in a video to match a
+    # dubbed audio track. Torch-free (ONNX + onnxruntime), CPU-capable; the
+    # Wav2Lip-256 model + SCRFD face detector download once (~220 MB) then run
+    # locally. NOTE: the pretrained Wav2Lip weights are research/non-commercial
+    # only. Language-agnostic (works on any speech audio).
+    summary: "Offline generative lip-sync (visual dubbing) via Wav2Lip ONNX. Torch-free, CPU-capable; regenerates the mouth to match dubbed audio. Weights are research/non-commercial."
+    tasks: [video.lipsync]
+    languages: []
+    license: "MIT (wrapper); Wav2Lip weights research/non-commercial only"
+
+  - id: musetalk
+    repo: addon-musetalk
+    display_name: "MuseTalk (GPU lip-sync)"
+    # Higher-quality generative lip-sync via MuseTalk (latent-space inpainting).
+    # Requires an NVIDIA GPU (CUDA); torch/diffusers, multi-GB models downloaded
+    # on first use. MIT — commercial use OK. Language-agnostic.
+    summary: "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU; MIT-licensed and commercial-OK. Regenerates the mouth to match dubbed audio."
+    tasks: [video.lipsync]
+    languages: []
+    license: "MIT"
