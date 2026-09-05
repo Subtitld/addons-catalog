@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-05T14:59:56Z",
+  "generated": "2026-09-05T20:13:34Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -664,18 +664,24 @@
       "languages": [],
       "license": "MIT",
       "homepage": "https://github.com/Subtitld/addon-musetalk",
-      "latest_version": "0.1.0",
+      "latest_version": "0.2.0",
       "releases": [
         {
-          "version": "0.1.0",
+          "version": "0.2.0",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-musetalk/commits/v0.1.0",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-musetalk/compare/v0.1.0...v0.2.0",
           "downloads": [
             {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-musetalk/releases/download/v0.2.0/musetalk-0.2.0-linux-x86_64.zip",
+              "size_bytes": 17677869,
+              "sha256": "41286326da6d68e2786ac727acf3c7edc1d4fcd67d46c4de962b2059d3ac147b"
+            },
+            {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-musetalk/releases/download/v0.1.0/musetalk-0.1.0-windows-x86_64.zip",
-              "size_bytes": 362760968,
-              "sha256": "a8fc18720c2f5ef59b11964f29119959e9ed743407a9036db6563d16d8bbb2d7"
+              "url": "https://github.com/Subtitld/addon-musetalk/releases/download/v0.2.0/musetalk-0.2.0-windows-x86_64.zip",
+              "size_bytes": 8622243,
+              "sha256": "43e4bc7288bad5261a9012d2e0b4613ccf06634ff51d9cbfdcdb8c7616657676"
             }
           ]
         }
