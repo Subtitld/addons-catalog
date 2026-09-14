@@ -220,6 +220,22 @@ addons:
     languages: [en, en-us, pt, pt-br, es, fr, de, it, nl, ru, zh, ja, ko]
     license: "MIT (wrapper + RealtimeSTT + faster-whisper); Whisper weights MIT"
 
+  - id: assemblyai
+    repo: addon-assemblyai
+    display_name: "AssemblyAI (Subtitld Cloud)"
+    # The ONLY cloud-routed ASR in the catalog, and deliberately not a
+    # built-in: a stock Subtitld ships no third-party service integration.
+    # Audio leaves the machine — it is re-encoded to Opus, uploaded to
+    # Subtitld Cloud, and relayed to AssemblyAI. The add-on never holds an
+    # AssemblyAI key; it authenticates to the cloud with the user's own
+    # Subtitld Cloud key (shared with every other cloud-backed add-on) and
+    # the cloud bills that account. Tiny download (~20 MB, stdlib-only) with
+    # no models to fetch, since inference is server-side.
+    summary: "Cloud speech-to-text via AssemblyAI, routed through Subtitld Cloud. High accuracy with speaker diarization; requires a Subtitld Cloud API key, credit, and an internet connection — your audio is uploaded for processing."
+    tasks: [asr.transcribe]
+    languages: [en, en-us, en-gb, en-au, es, fr, de, it, pt, pt-br, nl, hi, ja, zh, fi, ko, pl, ru, tr, uk, vi]
+    license: "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms"
+
   - id: translate-offline
     repo: addon-translate-offline
     display_name: "Offline Translate (CTranslate2)"
