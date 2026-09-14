@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-14T02:04:37Z",
+  "generated": "2026-09-14T02:40:56Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -553,7 +553,7 @@
     {
       "id": "assemblyai",
       "display_name": "AssemblyAI (Subtitld Cloud)",
-      "summary": "Cloud speech-to-text via AssemblyAI, routed through Subtitld Cloud. High accuracy with speaker diarization; requires a Subtitld Cloud API key, credit, and an internet connection — your audio is uploaded for processing.",
+      "summary": "Cloud speech-to-text via AssemblyAI, routed through Subtitld Cloud. High accuracy with speaker diarization; your audio is uploaded for processing. NOT USABLE YET — Subtitld Cloud is not publicly deployed, so this needs a Subtitld Cloud server URL, an API key, and credit.",
       "tasks": [
         "asr.transcribe"
       ],
@@ -582,30 +582,30 @@
       ],
       "license": "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms",
       "homepage": "https://github.com/Subtitld/addon-assemblyai",
-      "latest_version": "1.0.0",
+      "latest_version": "1.0.1",
       "releases": [
         {
-          "version": "1.0.0",
+          "version": "1.0.1",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-assemblyai/commits/v1.0.0",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-assemblyai/compare/v1.0.0...v1.0.1",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v1.0.0/assemblyai-1.0.0-linux-x86_64.zip",
-              "size_bytes": 17676530,
-              "sha256": "a3b3ad6c5bd1ec3cbcef5de2efbbdb6d6da87759eb4bfedb7ae22ae202945a4b"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v1.0.1/assemblyai-1.0.1-linux-x86_64.zip",
+              "size_bytes": 17680399,
+              "sha256": "e300009187229177398d2dcb19fac1ec647ca0e0b1ecd50e9b200b26fa625ea9"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v1.0.0/assemblyai-1.0.0-macos-arm64.zip",
-              "size_bytes": 14534381,
-              "sha256": "d6de692760f87cda8a418e0082fa83d1c02bb3109cdff514fa5caff0d7560e83"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v1.0.1/assemblyai-1.0.1-macos-arm64.zip",
+              "size_bytes": 14537235,
+              "sha256": "40bfa02478d879e8ffe96104c7cb07b32882b75cc725ef294ef3ca7eae791e46"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v1.0.0/assemblyai-1.0.0-windows-x86_64.zip",
-              "size_bytes": 8629771,
-              "sha256": "5f437367e64c89390f09bbffc7aec3dfbfa341979143c4151ccc32316c6321ca"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v1.0.1/assemblyai-1.0.1-windows-x86_64.zip",
+              "size_bytes": 8635146,
+              "sha256": "a62e8f3669174e324176c2d48123dae3b7c23a6ac3c574e1fb0f6652e73e2d01"
             }
           ]
         }

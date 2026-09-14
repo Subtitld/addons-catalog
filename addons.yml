@@ -231,7 +231,7 @@ addons:
     # Subtitld Cloud key (shared with every other cloud-backed add-on) and
     # the cloud bills that account. Tiny download (~20 MB, stdlib-only) with
     # no models to fetch, since inference is server-side.
-    summary: "Cloud speech-to-text via AssemblyAI, routed through Subtitld Cloud. High accuracy with speaker diarization; requires a Subtitld Cloud API key, credit, and an internet connection — your audio is uploaded for processing."
+    summary: "Cloud speech-to-text via AssemblyAI, routed through Subtitld Cloud. High accuracy with speaker diarization; your audio is uploaded for processing. NOT USABLE YET — Subtitld Cloud is not publicly deployed, so this needs a Subtitld Cloud server URL, an API key, and credit."
     tasks: [asr.transcribe]
     languages: [en, en-us, en-gb, en-au, es, fr, de, it, pt, pt-br, nl, hi, ja, zh, fi, ko, pl, ru, tr, uk, vi]
     license: "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms"
