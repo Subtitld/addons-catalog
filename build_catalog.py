@@ -35,6 +35,7 @@ import json
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 try:
@@ -84,19 +85,63 @@ ASSET_RE = re.compile(
 # ---------------------------------------------------------------------------
 # GitHub helpers
 # ---------------------------------------------------------------------------
+# The GitHub API fails transiently — secondary rate limits, 5xx, a dropped
+# connection. Retrying a handful of times with backoff turns "the catalog
+# lost a platform today" into "the rebuild took four seconds longer".
+_API_ATTEMPTS = 4
+_API_BACKOFF_SEC = 2.0
+
+# 404 is a real answer, not a blip: `fetch_latest_release` asks about repos
+# that legitimately have no release yet. Retrying it wastes 8 seconds per
+# such repo and still ends up where it started.
+_PERMANENT_MARKERS = ('HTTP 404', 'Not Found')
+
+
+class SidecarError(RuntimeError):
+    """A platform zip exists but its digest could not be established.
+
+    Raised rather than returning None because the old behaviour — skip the
+    asset, carry on, exit 0 — published a catalog silently missing a platform.
+    Users on that platform then simply could not install the add-on, and
+    nothing anywhere reported a failure.
+    """
+
+
+def _run_gh(args: list[str]) -> subprocess.CompletedProcess:
+    """Run `gh` with retries, returning the first successful attempt.
+
+    Returns the LAST failed attempt if every try fails, so callers can decide
+    whether that failure is fatal.
+    """
+    proc = None
+    for attempt in range(1, _API_ATTEMPTS + 1):
+        proc = subprocess.run(args, check=False, capture_output=True)
+        if proc.returncode == 0:
+            return proc
+        stderr = proc.stderr.decode('utf-8', errors='replace')
+        if any(marker in stderr for marker in _PERMANENT_MARKERS):
+            return proc  # a definite "no", not worth retrying
+        if attempt < _API_ATTEMPTS:
+            delay = _API_BACKOFF_SEC * attempt
+            sys.stderr.write(
+                f'  gh call failed (attempt {attempt}/{_API_ATTEMPTS}); '
+                f'retrying in {delay:.0f}s: {stderr.strip()[:160]}\n'
+            )
+            time.sleep(delay)
+    return proc
+
+
 def gh_api(path: str) -> dict | list:
     """Run `gh api <path>` and return the parsed JSON. Bubbles up errors so
     the caller (or CI) sees the actual failure rather than a silent empty
     catalog."""
-    proc = subprocess.run(
-        ['gh', 'api', path, '-H', 'Accept: application/vnd.github+json'],
-        check=False, capture_output=True, text=True,
-    )
+    proc = _run_gh(['gh', 'api', path, '-H', 'Accept: application/vnd.github+json'])
     if proc.returncode != 0:
         raise RuntimeError(
-            f'gh api {path!r} failed (exit {proc.returncode}): {proc.stderr.strip()}'
+            f'gh api {path!r} failed (exit {proc.returncode}): '
+            f'{proc.stderr.decode("utf-8", errors="replace").strip()}'
         )
-    return json.loads(proc.stdout)
+    return json.loads(proc.stdout.decode('utf-8', errors='replace'))
 
 
 def fetch_latest_release(owner: str, repo: str) -> dict | None:
@@ -112,22 +157,33 @@ def fetch_latest_release(owner: str, repo: str) -> dict | None:
     return rel if isinstance(rel, dict) else None
 
 
-def fetch_sha256_sidecar(asset: dict) -> str | None:
-    """Download the `.sha256` sidecar text body for an asset and return the
-    hex digest. Returns None if the sidecar isn't reachable — the asset is
-    skipped rather than getting a placeholder."""
-    proc = subprocess.run(
+def fetch_sha256_sidecar(asset: dict) -> str:
+    """Download the `.sha256` sidecar body and return the hex digest.
+
+    Raises `SidecarError` when the digest cannot be established after retries.
+    A missing digest must never be silently tolerated: the digest is what the
+    host verifies a download against, so an entry without one is either
+    unpublishable or unsafe.
+    """
+    proc = _run_gh(
         ['gh', 'api', f'/repos/{asset["_owner_repo"]}/releases/assets/{asset["id"]}',
-         '-H', 'Accept: application/octet-stream'],
-        check=False, capture_output=True,
+         '-H', 'Accept: application/octet-stream']
     )
     if proc.returncode != 0:
-        return None
+        raise SidecarError(
+            f'could not download sidecar {asset["name"]!r} after '
+            f'{_API_ATTEMPTS} attempts: '
+            f'{proc.stderr.decode("utf-8", errors="replace").strip()[:200]}'
+        )
     text = proc.stdout.decode('utf-8', errors='replace').strip()
     # Sidecar may be `<digest>  <filename>` (sha256sum format) or just the
     # bare digest. Take the first 64-char hex token either way.
     m = re.search(r'\b([a-f0-9]{64})\b', text)
-    return m.group(1) if m else None
+    if not m:
+        raise SidecarError(
+            f'sidecar {asset["name"]!r} contains no sha256 digest: {text[:120]!r}'
+        )
+    return m.group(1)
 
 
 # ---------------------------------------------------------------------------
@@ -166,16 +222,18 @@ def parse_assets(release: dict, owner_repo: str) -> tuple[str, list[dict]]:
         sidecar_name = f'{name}.sha256'
         sidecar = by_name.get(sidecar_name)
         if sidecar is None:
-            sys.stderr.write(f'  skip asset {name}: no {sidecar_name} sidecar uploaded\n')
-            continue
+            # The zip shipped but its digest did not. Skipping would drop this
+            # platform from the catalog with nothing failing, so refuse to
+            # publish instead — the release needs fixing, not papering over.
+            raise SidecarError(
+                f'{owner_repo}: asset {name} has no {sidecar_name} sidecar; '
+                f'the release is incomplete'
+            )
         # Tag the sidecar with its repo so fetch_sha256_sidecar can hit the
         # raw asset endpoint.
         sidecar = dict(sidecar)
         sidecar['_owner_repo'] = owner_repo
-        sha = fetch_sha256_sidecar(sidecar)
-        if not sha:
-            sys.stderr.write(f'  skip asset {name}: failed to read sidecar body\n')
-            continue
+        sha = fetch_sha256_sidecar(sidecar)   # raises SidecarError on failure
 
         downloads.append({
             'platform': platform,
@@ -256,6 +314,12 @@ def build_catalog() -> dict:
     for addon_cfg in addons_cfg:
         try:
             entry = build_addon_entry(addon_cfg)
+        except SidecarError:
+            # Deliberately NOT swallowed like other per-add-on errors. Every
+            # other failure mode here costs us one add-on that was already
+            # unpublishable; this one silently costs a PLATFORM of an add-on
+            # that is otherwise fine, which is invisible in the output.
+            raise
         except Exception as exc:
             sys.stderr.write(f'  ERROR: {exc}\n')
             entry = None
@@ -287,7 +351,19 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    catalog = build_catalog()
+    try:
+        catalog = build_catalog()
+    except SidecarError as exc:
+        # Leave the existing catalog.json untouched. A stale-but-complete
+        # catalog beats a fresh one missing a platform: the stale one just
+        # lacks the newest release, while the broken one makes an add-on
+        # uninstallable for a whole OS with no error anywhere.
+        sys.stderr.write(f'\nFATAL: {exc}\n')
+        sys.stderr.write(
+            'Refusing to write a catalog that would be missing a download.\n'
+            'Re-run once the release assets are complete and reachable.\n'
+        )
+        return 2
     serialized = json.dumps(catalog, ensure_ascii=False, indent=2) + '\n'
 
     if args.check:
