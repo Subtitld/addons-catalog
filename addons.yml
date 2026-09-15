@@ -176,6 +176,30 @@ addons:
     ]
     license: "MIT (wrapper) + MIT (supertonic-py) + OpenRAIL-M (Supertonic-3 weights)"
 
+  - id: sanotts
+    repo: addon-sanotts
+    display_name: "sanoTTS (ultra-light offline TTS)"
+    # The smallest TTS in the catalog by an order of magnitude: voices are
+    # 294k-2.3M parameters and inference is pure numpy — no torch, no
+    # onnxruntime. Voice packs are 0.3-9 MB and download on first use, after
+    # which synthesis is local and sub-second on CPU.
+    #
+    # ALSO the only GPL-3.0 add-on here, and deliberately so: 10 of its 14
+    # languages phonemize through espeak-ng, which is frozen into the bundle,
+    # making the archive a combined work. Every release ships Corresponding
+    # Source per GPL-3.0 6(d) plus a THIRD_PARTY_LICENSES tree. Subtitld is
+    # itself GPL-3.0 so this changes nothing for the host — but this add-on
+    # must never be pre-bundled into an installer/MSIX/flatpak, or Subtitld
+    # inherits the source-offer duty.
+    #
+    # Linux + macOS only for now. Windows is held back until the espeak
+    # symlink workaround has run on a real Windows machine; the failure it
+    # guards against presents as a hang, not an error.
+    summary: "Offline neural text-to-speech at 294k-2.3M parameters — pure numpy, no torch, no GPU. 28 voices across 14 languages, each 0.3-9 MB, downloaded on first use and fully offline after that."
+    tasks: [tts.synthesize]
+    languages: [ar-jo, cs-cz, de-de, en-us, es-es, fr-fr, id-id, it-it, pt-br, ro-ro, ru-ru, tr-tr, vi-vn, zh-cn]
+    license: "GPL-3.0-or-later (add-on + bundled espeak-ng phonemizer); sanoTTS runtime is MIT; voice weights download on first use and are GPL-3.0"
+
   - id: audio-separator
     repo: addon-audio-separator  # See note on piper-tts above.
     display_name: "audio-separator (UVR / MDX / Demucs)"
