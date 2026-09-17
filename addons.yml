@@ -260,6 +260,30 @@ addons:
     languages: [en, en-us, en-gb, en-au, es, fr, de, it, pt, pt-br, nl, hi, ja, zh, fi, ko, pl, ru, tr, uk, vi]
     license: "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms"
 
+
+  - id: whispercpp
+    repo: addon-whispercpp
+    display_name: "Whisper (offline)"
+    # Offline Whisper via whisper.cpp (pywhispercpp): CPU-only, no torch.
+    # This was Subtitld's built-in speech-to-text until it moved out to keep
+    # the app download small. Same id, settings and model files: it reuses the
+    # models the built-in already downloaded (the host exports
+    # SUBTITLD_MODELS_DIR; the fallback is the same cache path).
+    # Language tags are quoted: bare `no` (Norwegian) is a YAML boolean.
+    summary: "Offline speech-to-text using whisper.cpp. CPU-only, no torch; ~35 MB download plus the chosen model on first use (base ~142 MB, large-v3 ~3.1 GB). Reuses models already downloaded by Subtitld."
+    tasks: [asr.transcribe]
+    languages: [
+      "af", "am", "ar", "as", "az", "ba", "be", "bg", "bn", "bo", "br",
+      "bs", "ca", "cs", "cy", "da", "de", "el", "en", "es", "et", "eu",
+      "fa", "fi", "fo", "fr", "gl", "gu", "ha", "haw", "he", "hi", "hr",
+      "ht", "hu", "hy", "id", "is", "it", "ja", "jw", "ka", "kk", "km",
+      "kn", "ko", "la", "lb", "ln", "lo", "lt", "lv", "mg", "mi", "mk",
+      "ml", "mn", "mr", "ms", "mt", "my", "ne", "nl", "nn", "no", "oc",
+      "pa", "pl", "ps", "pt", "ro", "ru", "sa", "sd", "si", "sk", "sl",
+      "sn", "so", "sq", "sr", "su", "sv", "sw", "ta", "te", "tg", "th",
+      "tk", "tl", "tr", "tt", "uk", "ur", "uz", "vi", "yi", "yo", "zh"
+    ]
+    license: "Apache-2.0 (add-on glue) + MIT (whisper.cpp, pywhispercpp, pybind11 BSD-3); Whisper GGML weights MIT"
   - id: translate-offline
     repo: addon-translate-offline
     display_name: "Offline Translate (CTranslate2)"
