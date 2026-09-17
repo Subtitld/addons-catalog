@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-09-16T21:11:05Z",
+  "generated": "2026-09-17T01:23:45Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -569,30 +569,30 @@
       ],
       "license": "MIT (wrapper + RealtimeSTT + faster-whisper); Whisper weights MIT",
       "homepage": "https://github.com/Subtitld/addon-realtimestt",
-      "latest_version": "0.1.1",
+      "latest_version": "0.1.2",
       "releases": [
         {
-          "version": "0.1.1",
+          "version": "0.1.2",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-realtimestt/compare/v0.1.0...v0.1.1",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-realtimestt/compare/v0.1.1...v0.1.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.1/realtimestt-0.1.1-linux-x86_64.zip",
-              "size_bytes": 459132510,
-              "sha256": "9d241bcb87bfa061c1a05245ec35fdcc4d61bbdb3c5121a5dd4e19451a94a7fd"
+              "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.2/realtimestt-0.1.2-linux-x86_64.zip",
+              "size_bytes": 482722831,
+              "sha256": "520a06f27db73b7d14ab0224a9f957439bd1af9943e4925b2ab43e8916a766fe"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.1/realtimestt-0.1.1-macos-arm64.zip",
-              "size_bytes": 324039384,
-              "sha256": "5076f7529dd4b8e98f02743d404986ae5f568c10c3b9efdc33535db1f9407121"
+              "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.2/realtimestt-0.1.2-macos-arm64.zip",
+              "size_bytes": 377047543,
+              "sha256": "198997d208f51f7dff3bca1fed7f399080306bd232b6e20dc3e12ff9509e921a"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.1/realtimestt-0.1.1-windows-x86_64.zip",
-              "size_bytes": 264143550,
-              "sha256": "cd8aba713010a19eb5faaaa54f3ce1400f7c720555e72bb4310b274a1fc3af86"
+              "url": "https://github.com/Subtitld/addon-realtimestt/releases/download/v0.1.2/realtimestt-0.1.2-windows-x86_64.zip",
+              "size_bytes": 280639240,
+              "sha256": "8a411166f88d6d0d33a3c58912ff413053c533011a8e0f423296047470b5a7a3"
             }
           ]
         }
