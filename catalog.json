@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-17T19:46:45Z",
+  "generated": "2026-10-17T19:47:19Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -793,6 +793,53 @@
               "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v0.0.1/whispercpp-0.0.1-windows-x86_64.zip",
               "size_bytes": 21707681,
               "sha256": "ebf1b02dc6a5a2bc127c57279d3a493b5b6abb7e24ccbebeac2c7c4d1fca326c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whistle",
+      "display_name": "Whistle (offline)",
+      "summary": "Offline speech-to-text with the Whistle model: 16.9 MB bundled, CPU only, word timestamps. Transcribes English, German, French, Spanish, Italian, Dutch and Polish. Nothing downloads on first use.",
+      "tasks": [
+        "asr.transcribe"
+      ],
+      "languages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "nl",
+        "pl"
+      ],
+      "license": "Apache-2.0 (add-on glue, Whistle weights and Needle engine)",
+      "homepage": "https://github.com/Subtitld/addon-whistle",
+      "latest_version": "0.0.2",
+      "releases": [
+        {
+          "version": "0.0.2",
+          "min_subtitld": "0.6.0",
+          "changelog": "Offline speech-to-text for Subtitld with Cactus Compute's Whistle model, in\nEnglish, German, French, Spanish, Italian, Dutch and Polish.\n\nThe 16.9 MB model and the Needle engine are inside each archive, pinned by\nsha256. Nothing downloads on first use, and the add-on sends nothing anywhere.\n\nThe add-on, the Whistle weights and the Needle engine are Apache-2.0. Each\narchive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it, indexed by file in its README.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-whistle/compare/v0.0.1...v0.0.2",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-whistle/releases/download/v0.0.2/whistle-0.0.2-linux-x86_64.zip",
+              "size_bytes": 30750402,
+              "sha256": "39519285279f8e8cd711b6470a98fe788963a79938687a5d6851e2df161dff62"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-whistle/releases/download/v0.0.2/whistle-0.0.2-macos-arm64.zip",
+              "size_bytes": 28687853,
+              "sha256": "69f48cdf599810ba3827544efc604d7008c3c06ca58eadc5ec28901f8e959662"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-whistle/releases/download/v0.0.2/whistle-0.0.2-windows-x86_64.zip",
+              "size_bytes": 22561505,
+              "sha256": "12ca697a0959e3ed5c974bc209566a6851cf7ea183ad9ce5f7c47538d39a8e34"
             }
           ]
         }
