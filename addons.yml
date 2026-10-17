@@ -295,6 +295,20 @@ addons:
     tasks: [asr.transcribe]
     languages: [en, de, fr, es, it, nl, pl]
     license: "Apache-2.0 (add-on glue, Whistle weights and Needle engine)"
+  - id: phonon2
+    repo: addon-phonon2
+    display_name: "Phonon-2 (offline, English)"
+    # Offline English speech-to-text with Fermion Research's Phonon-2, run by the
+    # fermion-research CPU engine. The 164 MB model downloads once on first use
+    # into Subtitld's shared model cache, checked against a sha256 pinned in
+    # fermion-research. English only; Whisper (offline) covers the others. Linux
+    # only for now (glibc 2.28 and newer): the engine needs torch, so the zip is
+    # ~340 MB. The LGPL sources it ships (libquadmath, libsndfile) are attached
+    # to each release.
+    summary: "Offline English speech-to-text with Phonon-2 (Fermion Research): a 164 MB model that runs on the CPU, downloaded once on first use. English only; Linux for now, ~340 MB download."
+    tasks: [asr.transcribe]
+    languages: [en]
+    license: "Apache-2.0 (add-on glue, Phonon engine); Phonon-2 weights CC-BY-4.0; LGPL libquadmath and libsndfile, sources attached to the release"
   - id: translate-offline
     repo: addon-translate-offline
     display_name: "Offline Translate (CTranslate2)"
