@@ -284,6 +284,17 @@ addons:
       "tk", "tl", "tr", "tt", "uk", "ur", "uz", "vi", "yi", "yo", "zh"
     ]
     license: "Apache-2.0 (add-on glue) + MIT (whisper.cpp, pywhispercpp, pybind11 BSD-3); Whisper GGML weights MIT"
+  - id: whistle
+    repo: addon-whistle
+    display_name: "Whistle (offline)"
+    # Offline speech-to-text with Cactus Compute's Whistle model, run by Needle's
+    # native engine. The model and the engine are bundled in the zip: nothing
+    # downloads on first use, and the add-on sends no telemetry. Seven languages
+    # only; the Whisper (offline) add-on covers the others.
+    summary: "Offline speech-to-text with the Whistle model: 16.9 MB bundled, CPU only, word timestamps. Transcribes English, German, French, Spanish, Italian, Dutch and Polish. Nothing downloads on first use."
+    tasks: [asr.transcribe]
+    languages: [en, de, fr, es, it, nl, pl]
+    license: "Apache-2.0 (add-on glue, Whistle weights and Needle engine)"
   - id: translate-offline
     repo: addon-translate-offline
     display_name: "Offline Translate (CTranslate2)"
