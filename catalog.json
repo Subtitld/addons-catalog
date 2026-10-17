@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-17T20:26:07Z",
+  "generated": "2026-10-17T21:02:51Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -840,6 +840,35 @@
               "url": "https://github.com/Subtitld/addon-whistle/releases/download/v0.0.2/whistle-0.0.2-windows-x86_64.zip",
               "size_bytes": 22561505,
               "sha256": "12ca697a0959e3ed5c974bc209566a6851cf7ea183ad9ce5f7c47538d39a8e34"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phonon2",
+      "display_name": "Phonon-2 (offline, English)",
+      "summary": "Offline English speech-to-text with Phonon-2 (Fermion Research): a 164 MB model that runs on the CPU, downloaded once on first use. English only; Linux for now, ~340 MB download.",
+      "tasks": [
+        "asr.transcribe"
+      ],
+      "languages": [
+        "en"
+      ],
+      "license": "Apache-2.0 (add-on glue, Phonon engine); Phonon-2 weights CC-BY-4.0; LGPL libquadmath and libsndfile, sources attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-phonon2",
+      "latest_version": "0.0.1",
+      "releases": [
+        {
+          "version": "0.0.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Offline English speech-to-text for Subtitld with Phonon-2 from Fermion Research (fermion-research 0.2.11).\n\nLinux x86-64 for now. The archive runs on glibc 2.28 and newer, and was tested from the archive in clean Ubuntu 22.04, Debian 10, Fedora 44 and Arch Linux containers, with a real transcription in each. macOS and Windows builds are not done yet.\n\nThe model is not included: Phonon-2 (164 MB, CC-BY-4.0) downloads once on first use into Subtitld's shared model cache, checked against a sha256 pinned in fermion-research. English only; the Whisper (offline) add-on covers other languages. The engine runs on torch, so the download is large, about 340 MB.\n\nThe add-on is Apache-2.0. The archive contains `THIRD_PARTY_LICENSES/` with the licences of everything frozen into it; `INDEX.txt` lists every shared library and the notice that covers it. The Phonon engine and transformers are Apache-2.0, torch and numpy are BSD-3-Clause, and the Python runtime and its libraries are under their own licences.\n\nThe archive also ships LGPL code, and its complete source is attached here:\n\n- libquadmath (LGPL-2.1-or-later), in two builds, linked by the GCC Fortran runtime of numpy's and scipy's OpenBLAS: `phonon2-addon-0.0.1-libquadmath-source.tar.gz`.\n- libsndfile (LGPL-2.1-or-later) from soundfile, with LAME and mpg123 (LGPL) and libFLAC, libogg, libvorbis and Opus (BSD) linked into it: `phonon2-addon-0.0.1-libsndfile-source.tar.gz`.\n\nEach tarball's README says which build it is and how to rebuild it. The add-on's own source is `phonon2-addon-0.0.1-source.tar.gz`.\n\n**Full Changelog**: https://github.com/Subtitld/addon-phonon2/commits/v0.0.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-phonon2/releases/download/v0.0.1/phonon2-0.0.1-linux-x86_64.zip",
+              "size_bytes": 341812369,
+              "sha256": "4b317bcd09676a203aff9182b45c67df89b12bf267429fb0e960ba3ec78b06f3"
             }
           ]
         }
