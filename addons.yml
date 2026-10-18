@@ -200,6 +200,30 @@ addons:
     languages: [ar-jo, cs-cz, de-de, en-us, es-es, fr-fr, id-id, it-it, pt-br, ro-ro, ru-ru, tr-tr, vi-vn, zh-cn]
     license: "GPL-3.0-or-later (add-on + bundled espeak-ng phonemizer); sanoTTS runtime is MIT; voice weights download on first use and are GPL-3.0"
 
+  - id: voxcpm
+    repo: addon-voxcpm
+    display_name: "VoxCPM2 (offline, voice clone, 30 languages)"
+    # OpenBMB's VoxCPM2 (2.4B), Apache-2.0 weights included, so it is the
+    # commercial-OK clone option with the widest language reach (qwen3-tts
+    # covers 10). Clones the speaker from the clip Subtitld cuts from the video;
+    # with the subtitle text spoken in it, VoxCPM2 continues from the clip, much
+    # closer to the speaker (hosts from subtitld 43566b5 on forward that text as
+    # voice_ref_text; older ones get a timbre-only clone). Described
+    # voices are made once per speaker and cloned by every line. Heavy: a
+    # 4.96 GB model downloaded on first use, pinned and sha256-checked, ~7 GB
+    # of memory, and on a CPU 5-6 s per second of speech (i7-13700T). CPU
+    # PyTorch build; MPS on Apple Silicon; no CUDA.
+    summary: "Neural TTS in 30 languages at 48 kHz, in the speaker's own voice cloned from the video or in a described voice. Heavy: 4.96 GB model downloaded on first use, about 7 GB of memory, several seconds per second of speech on a CPU."
+    tasks: [tts.synthesize]
+    # The 30 languages of the VoxCPM2 model card. Quoted: bare `no`
+    # (Norwegian) is a YAML boolean.
+    languages: [
+      "ar", "my", "zh", "da", "nl", "en", "fi", "fr", "de", "el", "he", "hi",
+      "id", "it", "ja", "km", "ko", "lo", "ms", "no", "pl", "pt", "ru", "es",
+      "sw", "sv", "tl", "th", "tr", "vi"
+    ]
+    license: "Apache-2.0 (add-on, VoxCPM code and VoxCPM2 weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+
   - id: audio-separator
     repo: addon-audio-separator  # See note on piper-tts above.
     display_name: "audio-separator (UVR / MDX / Demucs)"
