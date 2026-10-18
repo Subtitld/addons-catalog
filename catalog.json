@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-18T01:44:58Z",
+  "generated": "2026-10-18T01:47:08Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -444,6 +444,76 @@
               "url": "https://github.com/Subtitld/addon-sanotts/releases/download/v0.1.0/sanotts-0.1.0-macos-arm64.zip",
               "size_bytes": 37633589,
               "sha256": "4781bbdac08c50126090730993306a21f7cdc4cf8e905283de35768f67230311"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voxcpm",
+      "display_name": "VoxCPM2 (offline, voice clone, 30 languages)",
+      "summary": "Neural TTS in 30 languages at 48 kHz, in the speaker's own voice cloned from the video or in a described voice. Heavy: 4.96 GB model downloaded on first use, about 7 GB of memory, several seconds per second of speech on a CPU.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "ar",
+        "my",
+        "zh",
+        "da",
+        "nl",
+        "en",
+        "fi",
+        "fr",
+        "de",
+        "el",
+        "he",
+        "hi",
+        "id",
+        "it",
+        "ja",
+        "km",
+        "ko",
+        "lo",
+        "ms",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "es",
+        "sw",
+        "sv",
+        "tl",
+        "th",
+        "tr",
+        "vi"
+      ],
+      "license": "Apache-2.0 (add-on, VoxCPM code and VoxCPM2 weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-voxcpm",
+      "latest_version": "0.0.1",
+      "releases": [
+        {
+          "version": "0.0.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Text-to-speech for Subtitld with OpenBMB's VoxCPM2: 30 languages at 48 kHz, in\nthe speaker's own voice cloned from the video, or in a voice made from a\ndescription.\n\nThe archive holds the add-on and a CPU build of PyTorch. The 4.96 GB model\ndownloads on the first synthesis, at a pinned revision, checked by sha256.\nPlan for about 7 GB of free memory; on a CPU each second of speech takes\nseveral seconds to make.\n\nThe add-on, VoxCPM and the VoxCPM2 weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it. The Linux\narchive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`voxcpm-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-voxcpm/commits/v0.0.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-voxcpm/releases/download/v0.0.1/voxcpm-0.0.1-linux-x86_64.zip",
+              "size_bytes": 312035646,
+              "sha256": "164ef39cc210f36c1e109ca24fe37fb9c0694b0e052b59e6591fa0bc0239dc08"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-voxcpm/releases/download/v0.0.1/voxcpm-0.0.1-macos-arm64.zip",
+              "size_bytes": 317995916,
+              "sha256": "82fdea2ed8d2b9bb320ee25098ad3828a50174cd2c5eb27b0214320af940a906"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-voxcpm/releases/download/v0.0.1/voxcpm-0.0.1-windows-x86_64.zip",
+              "size_bytes": 204648033,
+              "sha256": "9ac59d693bc693b7da9c7bbc739de39e6b8a302aa87f22ceabae9c9a82e3c4ff"
             }
           ]
         }
