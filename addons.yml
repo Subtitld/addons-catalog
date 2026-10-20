@@ -26,6 +26,18 @@
 #                   the release zip; the host honours the installed
 #                   manifest once installed, but until then this is the
 #                   only source.
+#   compute         what it runs on, for the host's hardware chip and its
+#                   "Runs on this computer" filter. One of:
+#                     cpu            made for the processor
+#                     gpu_preferred  runs on the processor, much faster on a
+#                                    graphics card
+#                     gpu_required   does not run without a graphics card
+#                     remote         runs on a server (cloud add-ons)
+#                   Should mirror the manifest's `compute`; the host honours
+#                   the installed manifest's when it has one.
+#   accelerators    the graphics cards it can use: [cuda] (NVIDIA), [mps]
+#                   (Apple), or both. The host only says an add-on will use
+#                   a computer's card when the card is named here.
 #   license         SPDX or short string; per-model licenses live inside
 #                   the zip's manifest.json
 #   homepage        optional, defaults to https://github.com/Subtitld/<repo>
@@ -44,6 +56,7 @@ addons:
     display_name: "Piper TTS (offline)"
     summary: "Lightweight offline neural TTS based on Piper. 158 voices across 49 languages; per-voice models range 20-110 MB."
     tasks: [tts.synthesize]
+    compute: cpu
     # Full BCP-47 language list mirrors the upstream rhasspy/piper-voices
     # catalog. Kept in sync by regenerating from voices.json — see
     # tools/regen_piper_manifest.py in the addon-piper-tts repo. The host's
@@ -66,6 +79,8 @@ addons:
     display_name: "Coqui XTTS-v2 (offline + voice clone)"
     summary: "Multilingual neural TTS with 6-second voice cloning. Heavy: ~2 GB model, CPU or CUDA."
     tasks: [tts.synthesize]
+    compute: gpu_preferred
+    accelerators: [cuda]
     languages: [en, es, fr, de, it, pt, pl, tr, ru, nl, cs, ar, zh-cn, ja, hu, ko]
     license: "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license"
 
@@ -80,6 +95,8 @@ addons:
     # ~4 GB instead of ~7 GB.
     summary: "Multilingual neural TTS with 9 premium timbres + 3-second voice cloning. Heavy: ~3.5 GB model, 8+ GB RAM, CPU or CUDA."
     tasks: [tts.synthesize]
+    compute: gpu_preferred
+    accelerators: [cuda]
     # 10 languages per the Qwen3-TTS-12Hz model card. Using BCP-47 short
     # tags (no -region) since Qwen doesn't differentiate dialect in the
     # voice list — the AddonsDialog's RFC 4647 prefix matcher will still
@@ -98,6 +115,7 @@ addons:
     # offline TTS with multiple language coverage.
     summary: "Lightweight offline neural TTS. ~80 MB model, sub-second per line on CPU, 54 preset voices across 9 languages. No voice cloning."
     tasks: [tts.synthesize]
+    compute: cpu
     # Kokoro's pipeline lang_code is single-letter (a/b/j/z/e/f/h/i/p),
     # but we map them to BCP-47 in the manifest so the host's RFC 4647
     # prefix matcher works the same as for the other addons.
@@ -123,6 +141,7 @@ addons:
     # before they install — same pattern as coqui-xtts's CPML clause.
     summary: "Voice-clone neural TTS. Single 'f5-clone' voice; every request needs a 6-15s reference clip. ~1.5 GB model, en+zh only."
     tasks: [tts.synthesize]
+    compute: gpu_preferred
     languages: [en, zh]
     license: "MIT (wrapper) + CC-BY-NC-4.0 (F5TTS_v1_Base weights, non-commercial only)"
 
@@ -146,6 +165,7 @@ addons:
     # not yet released as Apache-2.0 weights.
     summary: "Prompt-driven offline TTS. 34 named consistent speakers + free-text voice description. ~2 GB model, ~10-30s per line on CPU, English only."
     tasks: [tts.synthesize]
+    compute: gpu_preferred
     languages: [en]
     license: "Apache-2.0 (wrapper) + Apache-2.0 (Parler-TTS Mini v1 weights)"
 
@@ -165,6 +185,7 @@ addons:
     # f5-tts instead.
     summary: "Lightning-fast on-device multilingual TTS. 99M-parameter ONNX model, ~400 MB download, 31 languages, 10 preset voices. No GPU required."
     tasks: [tts.synthesize]
+    compute: cpu
     # All 31 supported ISO codes, surfaced as plain language tags so
     # the AddonsDialog's RFC 4647 prefix matcher catches `pt-br` /
     # `pt-pt` filters under `pt`, etc. The literal `na` (language-
@@ -197,6 +218,7 @@ addons:
     # guards against presents as a hang, not an error.
     summary: "Offline neural text-to-speech at 294k-2.3M parameters — pure numpy, no torch, no GPU. 28 voices across 14 languages, each 0.3-9 MB, downloaded on first use and fully offline after that."
     tasks: [tts.synthesize]
+    compute: cpu
     languages: [ar-jo, cs-cz, de-de, en-us, es-es, fr-fr, id-id, it-it, pt-br, ro-ro, ru-ru, tr-tr, vi-vn, zh-cn]
     license: "GPL-3.0-or-later (add-on + bundled espeak-ng phonemizer); sanoTTS runtime is MIT; voice weights download on first use and are GPL-3.0"
 
@@ -215,6 +237,8 @@ addons:
     # PyTorch build; MPS on Apple Silicon; no CUDA.
     summary: "Neural TTS in 30 languages at 48 kHz, in the speaker's own voice cloned from the video or in a described voice. Heavy: 4.96 GB model downloaded on first use, about 7 GB of memory, several seconds per second of speech on a CPU."
     tasks: [tts.synthesize]
+    compute: gpu_preferred
+    accelerators: [mps]
     # The 30 languages of the VoxCPM2 model card. Quoted: bare `no`
     # (Norwegian) is a YAML boolean.
     languages: [
@@ -237,6 +261,7 @@ addons:
     # quality, slow) or Demucs (4-stem) via the per-addon config.
     summary: "High-quality vocal/music separation using UVR, MDX-Net, BS-Roformer, and Demucs models. Quality > the built-in ffmpeg mid/side trick at the cost of a one-shot model download (~50-500 MB) and a few seconds of inference per minute."
     tasks: [audio.separate]
+    compute: gpu_preferred
     # Audio separation operates on the waveform, not the language track.
     # Leave `languages` empty intentionally — the AddonsDialog's language
     # filter would hide this row when the user picks a specific tag, which
@@ -253,6 +278,7 @@ addons:
     # up to ~1.8 GB full). Sibling to the heavier whisper-based ASR add-ons.
     summary: "Offline speech-to-text using Vosk Kaldi recognizers. Lightweight and CPU-only; per-language models download on demand (~40 MB small, up to ~1.8 GB full)."
     tasks: [asr.transcribe]
+    compute: cpu
     languages: [en, en-us, pt, pt-br, es, es-es, fr, fr-fr, de, de-de, it, it-it, ru, zh, zh-cn, ja]
     license: "Apache-2.0 (wrapper + Vosk); some full models are GPL-3.0"
 
@@ -265,6 +291,8 @@ addons:
     # when available; the chosen whisper model downloads on first use.
     summary: "Recording-based speech-to-text via RealtimeSTT (faster-whisper + VAD) for Record mode; also transcribes imported audio. GPU-accelerated when available."
     tasks: [asr.transcribe, asr.stream]
+    compute: gpu_preferred
+    accelerators: [cuda]
     languages: [en, en-us, pt, pt-br, es, fr, de, it, nl, ru, zh, ja, ko]
     license: "MIT (wrapper + RealtimeSTT + faster-whisper); Whisper weights MIT"
 
@@ -281,6 +309,7 @@ addons:
     # no models to fetch, since inference is server-side.
     summary: "Cloud speech-to-text via AssemblyAI, routed through Subtitld Cloud. High accuracy with speaker diarization; your audio is uploaded for processing. NOT USABLE YET — Subtitld Cloud is not publicly deployed, so this needs a Subtitld Cloud server URL, an API key, and credit."
     tasks: [asr.transcribe]
+    compute: remote
     languages: [en, en-us, en-gb, en-au, es, fr, de, it, pt, pt-br, nl, hi, ja, zh, fi, ko, pl, ru, tr, uk, vi]
     license: "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms"
 
@@ -296,6 +325,7 @@ addons:
     # Language tags are quoted: bare `no` (Norwegian) is a YAML boolean.
     summary: "Offline speech-to-text using whisper.cpp. CPU-only, no torch; ~35 MB download plus the chosen model on first use (base ~142 MB, large-v3 ~3.1 GB). Reuses models already downloaded by Subtitld."
     tasks: [asr.transcribe]
+    compute: cpu
     languages: [
       "af", "am", "ar", "as", "az", "ba", "be", "bg", "bn", "bo", "br",
       "bs", "ca", "cs", "cy", "da", "de", "el", "en", "es", "et", "eu",
@@ -317,6 +347,7 @@ addons:
     # only; the Whisper (offline) add-on covers the others.
     summary: "Offline speech-to-text with the Whistle model: 16.9 MB bundled, CPU only, word timestamps. Transcribes English, German, French, Spanish, Italian, Dutch and Polish. Nothing downloads on first use."
     tasks: [asr.transcribe]
+    compute: cpu
     languages: [en, de, fr, es, it, nl, pl]
     license: "Apache-2.0 (add-on glue, Whistle weights and Needle engine)"
   - id: phonon2
@@ -331,6 +362,7 @@ addons:
     # to each release.
     summary: "Offline English speech-to-text with Phonon-2 (Fermion Research): a 164 MB model that runs on the CPU, downloaded once on first use. English only; Linux for now, ~340 MB download."
     tasks: [asr.transcribe]
+    compute: cpu
     languages: [en]
     license: "Apache-2.0 (add-on glue, Phonon engine); Phonon-2 weights CC-BY-4.0; LGPL libquadmath and libsndfile, sources attached to the release"
   - id: translate-offline
@@ -342,6 +374,7 @@ addons:
     # rate-limited free Google/MyMemory web engines.
     summary: "Fully offline subtitle translation using small per-language-pair NMT models (OPUS-MT via CTranslate2). No cloud, no API key, no rate limits; models download once on first use."
     tasks: [translate.text]
+    compute: cpu
     languages: [en, pt, es, fr, de, it, nl, ru, uk, pl, tr, ar, zh, ja, ko, hi, cs, sv, da, fi, el, hu, ro, id, ca]
     license: "MIT (wrapper); OPUS-MT/Argos models MIT/CC"
 
@@ -355,6 +388,7 @@ addons:
     # only. Language-agnostic (works on any speech audio).
     summary: "Offline generative lip-sync (visual dubbing) via Wav2Lip ONNX. Torch-free, CPU-capable; regenerates the mouth to match dubbed audio. Weights are research/non-commercial."
     tasks: [video.lipsync]
+    compute: gpu_preferred
     languages: []
     license: "MIT (wrapper); Wav2Lip weights research/non-commercial only"
 
@@ -373,5 +407,7 @@ addons:
     # front: the small size in the browse list would otherwise mislead.
     summary: "High-quality generative lip-sync (visual dubbing) via MuseTalk. Requires an NVIDIA GPU (CUDA) and Python 3.10+. Small download: the PyTorch runtime and multi-GB models install on first use. MIT-licensed and commercial-OK."
     tasks: [video.lipsync]
+    compute: gpu_required
+    accelerators: [cuda]
     languages: []
     license: "MIT"
