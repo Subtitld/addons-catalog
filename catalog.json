@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-20T11:19:58Z",
+  "generated": "2026-10-20T11:36:07Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -929,7 +929,7 @@
         {
           "version": "26.10.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline speech-to-text for Subtitld with Cactus Compute's Whistle model, in\nEnglish, German, French, Spanish, Italian, Dutch and Polish.\n\nThe 16.9 MB model and the Needle engine are inside each archive, pinned by\nsha256. Nothing downloads on first use, and the add-on sends nothing anywhere.\n\nThe add-on, the Whistle weights and the Needle engine are Apache-2.0. Each\narchive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it, indexed by file in its README.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-whistle/compare/v0.0.2...v26.10.1",
+          "changelog": "Long audio no longer looks stuck at 20%.\n\nWhistle used to transcribe the whole file in one go: the progress bar stopped at 20% until it finished, Cancel had to wait for the end, and long files slowed down more than their length (20 minutes took about 3 minutes). The audio is now transcribed about a minute at a time, cut at quiet moments so no word is split:\n\n- The progress bar moves after every minute of audio.\n- Cancel takes effect within a minute.\n- 20 minutes of audio take about 2 minutes instead of 3, with the same words.\n- With no language set, the first stretch of speech sets the language for the rest of the file.\n\nVersions now follow Subtitld's own: year, month and the release of that month. 26.10.1 comes after 0.0.2, and Subtitld offers it as an update.\n\nThe model, the engine and the add-on are unchanged otherwise: Apache-2.0, offline, CPU only.\n\n**Full Changelog**: https://github.com/Subtitld/addon-whistle/compare/v0.0.2...v26.10.1",
           "downloads": [
             {
               "platform": "linux",
