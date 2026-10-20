@@ -248,6 +248,21 @@ addons:
       "sw", "sv", "tl", "th", "tr", "vi"
     ]
     license: "Apache-2.0 (add-on, VoxCPM code and VoxCPM2 weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: pocket-tts
+    repo: addon-pocket-tts
+    display_name: "Pocket TTS (offline, 7 languages)"
+    # Kyutai's Pocket TTS, run by Kyutai's own standalone binary (MIT); no
+    # torch, ~24 MB zip. Each language's model (CC-BY-4.0, ~220 MB) downloads
+    # on its first line, pinned and sha256-checked. Built-in voices only: the
+    # cloning model is gated by Kyutai, so the add-on uses the repository
+    # without it. 23 voices, each usable in every language; the four of
+    # Kyutai's 27 with NC or unstated licences are left out. About 3x faster
+    # than real time on a CPU (i7-13700T); x86 needs AVX2 and FMA.
+    summary: "Offline TTS from Kyutai in English, French, German, Portuguese, Italian, Spanish and Dutch: 23 voices, several times faster than real time on a CPU. Each language's model, about 220 MB, downloads on first use. No voice cloning."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en, fr, de, pt, it, es, nl]
+    license: "Apache-2.0 (add-on) + MIT (Pocket TTS binary); CC-BY-4.0 weights; voices CC0 or CC-BY-4.0"
 
   - id: audio-separator
     repo: addon-audio-separator  # See note on piper-tts above.
