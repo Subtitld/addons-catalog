@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-20T16:57:14Z",
+  "generated": "2026-10-20T18:16:07Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -71,30 +71,30 @@
       "accelerators": [],
       "license": "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)",
       "homepage": "https://github.com/Subtitld/addon-piper-tts",
-      "latest_version": "26.10.1",
+      "latest_version": "26.10.2",
       "releases": [
         {
-          "version": "26.10.1",
+          "version": "26.10.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for piper-tts v26.10.1.",
+          "changelog": "Automated release for piper-tts v26.10.2.",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v26.10.1/piper-tts-26.10.1-linux-x86_64.zip",
-              "size_bytes": 93270871,
-              "sha256": "91fb2c70d51aa5cef1de906c7f51c3ea4be850ccdc09650f5b9ab13ace956ddb"
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v26.10.2/piper-tts-26.10.2-linux-x86_64.zip",
+              "size_bytes": 93291143,
+              "sha256": "d4581de6147b7b89d570f0143d55e7f99d0fc0df8f45d48ed6c81aaec6d801ac"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v26.10.1/piper-tts-26.10.1-macos-universal.zip",
-              "size_bytes": 74549812,
-              "sha256": "7162e9cc8e175e478ff0f3aa075d2b359b7f7b76e72482b351a6bec74358fdab"
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v26.10.2/piper-tts-26.10.2-macos-universal.zip",
+              "size_bytes": 74573603,
+              "sha256": "efac282ba7e55efdaadcb298d8e29ee3fc0c41779d367b9699b093d8b6e8174c"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v26.10.1/piper-tts-26.10.1-windows-x86_64.zip",
-              "size_bytes": 70350514,
-              "sha256": "8f3f2d71304415b89596a157a0ced46cd4537719075986958924595f2e60600f"
+              "url": "https://github.com/Subtitld/addon-piper-tts/releases/download/v26.10.2/piper-tts-26.10.2-windows-x86_64.zip",
+              "size_bytes": 70372644,
+              "sha256": "47cba5912a3143849dd8cd4773837e9ab44fe747051ce21329cf0005b9cd43ed"
             }
           ]
         }
