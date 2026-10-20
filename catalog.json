@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-20T18:16:07Z",
+  "generated": "2026-10-20T18:17:03Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
       "id": "piper-tts",
       "display_name": "Piper TTS (offline)",
-      "summary": "Lightweight offline neural TTS based on Piper. 172 voices across 55 languages, 25 of them with several speakers to choose from; per-voice models range 20-130 MB.",
+      "summary": "Lightweight offline neural TTS based on Piper. 177 voices across 59 languages, including curated community voices for Tamil, Sinhala, Kannada and Kurmanji; 26 voices offer a choice of speaker. Per-voice models range 20-130 MB.",
       "tasks": [
         "tts.synthesize"
       ],
@@ -39,7 +39,9 @@
         "it-it",
         "ka-ge",
         "kk-kz",
+        "kn-in",
         "ko-kr",
+        "ku",
         "ku-tr",
         "lb-lu",
         "lv-lv",
@@ -54,12 +56,14 @@
         "pt-pt",
         "ro-ro",
         "ru-ru",
+        "si-lk",
         "sk-sk",
         "sl-si",
         "sq-al",
         "sr-rs",
         "sv-se",
         "sw-cd",
+        "ta-in",
         "te-in",
         "tr-tr",
         "uk-ua",
