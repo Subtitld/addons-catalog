@@ -289,6 +289,11 @@ def build_addon_entry(addon_cfg: dict) -> dict | None:
         # tasks like translation pipelines), but we still emit the key
         # so the host can rely on it being present.
         'languages': list(addon_cfg.get('languages') or []),
+        # What it runs on (cpu | gpu_preferred | gpu_required | remote) and
+        # the graphics cards it can use, so the host can say at browse time
+        # what it will run on there. See the field reference in addons.yml.
+        'compute': addon_cfg.get('compute'),
+        'accelerators': list(addon_cfg.get('accelerators') or []),
         'license': addon_cfg.get('license', ''),
         'homepage': addon_cfg.get('homepage', f'https://github.com/{owner_repo}'),
         'latest_version': version,
