@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-20T04:30:30Z",
+  "generated": "2026-10-20T04:48:16Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -61,6 +61,8 @@
         "vi-vn",
         "zh-cn"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "MIT (add-on glue) + GPL-3.0-or-later (Piper, OHF-voice/piper1-gpl) + per-model licenses (often CC-BY)",
       "homepage": "https://github.com/Subtitld/addon-piper-tts",
       "latest_version": "1.0.3",
@@ -117,6 +119,10 @@
         "hu",
         "ko"
       ],
+      "compute": "gpu_preferred",
+      "accelerators": [
+        "cuda"
+      ],
       "license": "MPL 2.0 (XTTS) + CPML for the v2 model — non-commercial without a Coqui license",
       "homepage": "https://github.com/Subtitld/addon-coqui-xtts",
       "latest_version": "1.0.7",
@@ -167,6 +173,10 @@
         "es",
         "it"
       ],
+      "compute": "gpu_preferred",
+      "accelerators": [
+        "cuda"
+      ],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Qwen3-TTS weights)",
       "homepage": "https://github.com/Subtitld/addon-qwen3-tts",
       "latest_version": "1.0.6",
@@ -216,6 +226,8 @@
         "it",
         "pt-br"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Kokoro 82M weights)",
       "homepage": "https://github.com/Subtitld/addon-kokoro",
       "latest_version": "1.0.6",
@@ -258,6 +270,8 @@
         "en",
         "zh"
       ],
+      "compute": "gpu_preferred",
+      "accelerators": [],
       "license": "MIT (wrapper) + CC-BY-NC-4.0 (F5TTS_v1_Base weights, non-commercial only)",
       "homepage": "https://github.com/Subtitld/addon-f5-tts",
       "latest_version": "1.0.6",
@@ -299,6 +313,8 @@
       "languages": [
         "en"
       ],
+      "compute": "gpu_preferred",
+      "accelerators": [],
       "license": "Apache-2.0 (wrapper) + Apache-2.0 (Parler-TTS Mini v1 weights)",
       "homepage": "https://github.com/Subtitld/addon-parler-tts",
       "latest_version": "1.0.2",
@@ -370,6 +386,8 @@
         "uk",
         "vi"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "MIT (wrapper) + MIT (supertonic-py) + OpenRAIL-M (Supertonic-3 weights)",
       "homepage": "https://github.com/Subtitld/addon-supertonic",
       "latest_version": "0.0.2",
@@ -424,6 +442,8 @@
         "vi-vn",
         "zh-cn"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "GPL-3.0-or-later (add-on + bundled espeak-ng phonemizer); sanoTTS runtime is MIT; voice weights download on first use and are GPL-3.0",
       "homepage": "https://github.com/Subtitld/addon-sanotts",
       "latest_version": "0.1.0",
@@ -488,6 +508,10 @@
         "tr",
         "vi"
       ],
+      "compute": "gpu_preferred",
+      "accelerators": [
+        "mps"
+      ],
       "license": "Apache-2.0 (add-on, VoxCPM code and VoxCPM2 weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
       "homepage": "https://github.com/Subtitld/addon-voxcpm",
       "latest_version": "0.0.1",
@@ -527,6 +551,8 @@
         "audio.separate"
       ],
       "languages": [],
+      "compute": "gpu_preferred",
+      "accelerators": [],
       "license": "MIT (wrapper) + MIT (python-audio-separator) + per-model licenses (some UVR/MDX checkpoints are CC-BY-NC for non-commercial use)",
       "homepage": "https://github.com/Subtitld/addon-audio-separator",
       "latest_version": "0.0.5",
@@ -583,6 +609,8 @@
         "zh-cn",
         "ja"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "Apache-2.0 (wrapper + Vosk); some full models are GPL-3.0",
       "homepage": "https://github.com/Subtitld/addon-vosk",
       "latest_version": "1.0.0",
@@ -636,6 +664,10 @@
         "zh",
         "ja",
         "ko"
+      ],
+      "compute": "gpu_preferred",
+      "accelerators": [
+        "cuda"
       ],
       "license": "MIT (wrapper + RealtimeSTT + faster-whisper); Whisper weights MIT",
       "homepage": "https://github.com/Subtitld/addon-realtimestt",
@@ -698,6 +730,8 @@
         "uk",
         "vi"
       ],
+      "compute": "remote",
+      "accelerators": [],
       "license": "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms",
       "homepage": "https://github.com/Subtitld/addon-assemblyai",
       "latest_version": "1.0.2",
@@ -837,6 +871,8 @@
         "yo",
         "zh"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "Apache-2.0 (add-on glue) + MIT (whisper.cpp, pywhispercpp, pybind11 BSD-3); Whisper GGML weights MIT",
       "homepage": "https://github.com/Subtitld/addon-whispercpp",
       "latest_version": "0.0.1",
@@ -884,6 +920,8 @@
         "nl",
         "pl"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "Apache-2.0 (add-on glue, Whistle weights and Needle engine)",
       "homepage": "https://github.com/Subtitld/addon-whistle",
       "latest_version": "26.10.1",
@@ -925,6 +963,8 @@
       "languages": [
         "en"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "Apache-2.0 (add-on glue, Phonon engine); Phonon-2 weights CC-BY-4.0; LGPL libquadmath and libsndfile, sources attached to the release",
       "homepage": "https://github.com/Subtitld/addon-phonon2",
       "latest_version": "0.0.1",
@@ -978,6 +1018,8 @@
         "id",
         "ca"
       ],
+      "compute": "cpu",
+      "accelerators": [],
       "license": "MIT (wrapper); OPUS-MT/Argos models MIT/CC",
       "homepage": "https://github.com/Subtitld/addon-translate-offline",
       "latest_version": "0.1.0",
@@ -1017,6 +1059,8 @@
         "video.lipsync"
       ],
       "languages": [],
+      "compute": "gpu_preferred",
+      "accelerators": [],
       "license": "MIT (wrapper); Wav2Lip weights research/non-commercial only",
       "homepage": "https://github.com/Subtitld/addon-wav2lip",
       "latest_version": "0.1.0",
@@ -1056,6 +1100,10 @@
         "video.lipsync"
       ],
       "languages": [],
+      "compute": "gpu_required",
+      "accelerators": [
+        "cuda"
+      ],
       "license": "MIT",
       "homepage": "https://github.com/Subtitld/addon-musetalk",
       "latest_version": "0.2.0",
