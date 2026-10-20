@@ -54,7 +54,7 @@ addons:
                                   # so it sorts together with sibling add-ons
                                   # under the Subtitld org.
     display_name: "Piper TTS (offline)"
-    summary: "Lightweight offline neural TTS based on Piper. 172 voices across 55 languages, 25 of them with several speakers to choose from; per-voice models range 20-130 MB."
+    summary: "Lightweight offline neural TTS based on Piper. 177 voices across 59 languages, including curated community voices for Tamil, Sinhala, Kannada and Kurmanji; 26 voices offer a choice of speaker. Per-voice models range 20-130 MB."
     tasks: [tts.synthesize]
     compute: cpu
     # Full BCP-47 language list mirrors the upstream rhasspy/piper-voices
@@ -65,10 +65,10 @@ addons:
     languages: [
       ar-jo, bg-bg, bn-bd, ca-es, cs-cz, cy-gb, da-dk, de-de, el-gr, en-gb,
       en-us, es-ar, es-es, es-mx, et-ee, eu-es, fa-ir, fi-fi, fr-fr, he-il,
-      hi-in, hu-hu, hy-am, id-id, is-is, it-it, ka-ge, kk-kz, ko-kr, ku-tr,
-      lb-lu, lv-lv, ml-in, mr-in, ne-np, nl-be, nl-nl, no-no, pl-pl, pt-br,
-      pt-pt, ro-ro, ru-ru, sk-sk, sl-si, sq-al, sr-rs, sv-se, sw-cd, te-in,
-      tr-tr, uk-ua, ur-pk, vi-vn, zh-cn
+      hi-in, hu-hu, hy-am, id-id, is-is, it-it, ka-ge, kk-kz, kn-in, ko-kr,
+      ku, ku-tr, lb-lu, lv-lv, ml-in, mr-in, ne-np, nl-be, nl-nl, no-no,
+      pl-pl, pt-br, pt-pt, ro-ro, ru-ru, si-lk, sk-sk, sl-si, sq-al, sr-rs,
+      sv-se, sw-cd, ta-in, te-in, tr-tr, uk-ua, ur-pk, vi-vn, zh-cn
     ]
     # Upstream relicensed at piper1-gpl: the python wrapper we link against
     # ships GPL-3.0-or-later. We invoke it as a separate process, not a
