@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-20T16:56:18Z",
+  "generated": "2026-10-20T16:57:14Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -544,6 +544,55 @@
               "url": "https://github.com/Subtitld/addon-voxcpm/releases/download/v0.0.1/voxcpm-0.0.1-windows-x86_64.zip",
               "size_bytes": 204648033,
               "sha256": "9ac59d693bc693b7da9c7bbc739de39e6b8a302aa87f22ceabae9c9a82e3c4ff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pocket-tts",
+      "display_name": "Pocket TTS (offline, 7 languages)",
+      "summary": "Offline TTS from Kyutai in English, French, German, Portuguese, Italian, Spanish and Dutch: 23 voices, several times faster than real time on a CPU. Each language's model, about 220 MB, downloads on first use. No voice cloning.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "fr",
+        "de",
+        "pt",
+        "it",
+        "es",
+        "nl"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on) + MIT (Pocket TTS binary); CC-BY-4.0 weights; voices CC0 or CC-BY-4.0",
+      "homepage": "https://github.com/Subtitld/addon-pocket-tts",
+      "latest_version": "26.10.1",
+      "releases": [
+        {
+          "version": "26.10.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "The first release: offline text-to-speech with Kyutai's Pocket TTS.\n\n- Speaks English, French, German, Portuguese, Italian, Spanish and Dutch at\n  24 kHz, in 23 built-in voices; every voice speaks every language.\n- Runs on the CPU, about three times faster than real time, with about\n  660 MB of memory. No GPU, no torch.\n- Each language's model, about 220 MB (CC-BY-4.0), downloads on its first\n  line, checked by sha256, and resumes if interrupted.\n- Model sizes in Configure: Standard; Small, English only (112 MB, about\n  twice as fast); and Kyutai's large previews.\n- No voice cloning: Kyutai gates that model.\n- On x86, needs a processor with AVX2 and FMA (Intel since 2013, AMD since\n  2015).\n\nBuilt on Kyutai's pocket-tts binary from release v4.0.0 (MIT).\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-pocket-tts/commits/v26.10.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.10.1/pocket-tts-26.10.1-linux-x86_64.zip",
+              "size_bytes": 25300949,
+              "sha256": "9937fee17c58a94e8ccef9ff78b2dddeb2438221d3a290f99e7e8c2c11bc3ca5"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.10.1/pocket-tts-26.10.1-macos-arm64.zip",
+              "size_bytes": 21887152,
+              "sha256": "1a22cb90a73fa42bc1c1b5b41a16b4d1d9f2b7d17561d58c65a85b67700e9aff"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.10.1/pocket-tts-26.10.1-windows-x86_64.zip",
+              "size_bytes": 16437488,
+              "sha256": "36eb22593d4980b1423cdda6f3c520d93844183a59944bfd2057e048f2cf3c11"
             }
           ]
         }
