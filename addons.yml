@@ -427,3 +427,19 @@ addons:
     accelerators: [cuda]
     languages: []
     license: "MIT"
+  - id: sopro
+    repo: addon-sopro
+    display_name: "Sopro (offline, voice clone, 4 languages)"
+    # Sopro V2 Turbo (120M, Apache-2.0 code and weights) on ONNX Runtime; no
+    # torch, ~36-50 MB zips. The add-on is a Python port of the offline path
+    # of upstream's ONNX runtime, checked against its JavaScript. Clones the
+    # speaker from the clip Subtitld cuts from the video, or speaks one of 8
+    # presets (LibriVox readers: public domain; English ones via LibriTTS-R,
+    # CC-BY-4.0). The 336 MB model downloads on the first line, pinned and
+    # sha256-checked. About 2.5x real time on a CPU (i7-13700T), ~1 GB of
+    # memory. Portuguese is European Portuguese.
+    summary: "Offline TTS in English, European Portuguese, French and German, in the speaker's own voice cloned from a few seconds of the video or in one of 8 preset voices. About twice as fast as real time on a CPU; the 336 MB model downloads on first use."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en, pt, fr, de]
+    license: "Apache-2.0 (add-on, Sopro code and weights); preset clips public domain (LibriVox) and CC-BY-4.0 (LibriTTS-R); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
