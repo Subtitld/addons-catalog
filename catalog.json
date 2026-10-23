@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-23T23:27:30Z",
+  "generated": "2026-10-23T23:29:47Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1183,6 +1183,52 @@
               "url": "https://github.com/Subtitld/addon-musetalk/releases/download/v0.2.0/musetalk-0.2.0-windows-x86_64.zip",
               "size_bytes": 8622243,
               "sha256": "43e4bc7288bad5261a9012d2e0b4613ccf06634ff51d9cbfdcdb8c7616657676"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sopro",
+      "display_name": "Sopro (offline, voice clone, 4 languages)",
+      "summary": "Offline TTS in English, European Portuguese, French and German, in the speaker's own voice cloned from a few seconds of the video or in one of 8 preset voices. About twice as fast as real time on a CPU; the 336 MB model downloads on first use.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "pt",
+        "fr",
+        "de"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, Sopro code and weights); preset clips public domain (LibriVox) and CC-BY-4.0 (LibriTTS-R); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-sopro",
+      "latest_version": "26.10.1",
+      "releases": [
+        {
+          "version": "26.10.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Voice-cloning text-to-speech for Subtitld with Sopro V2 Turbo: English, European\nPortuguese, French and German at 24 kHz, in the speaker's own voice cloned from\nthe video, or in a preset voice.\n\nThe archive holds the add-on, ONNX Runtime and the preset voice clips. The 336 MB\nmodel downloads on the first line, at a pinned revision, checked by sha256. It\nruns on the CPU, about twice as fast as real time.\n\nThe add-on and the Sopro model are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and the\npreset clips are credited in `bin/_internal/sopro_addon/presets/README.md`. The\nLinux archive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`sopro-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-sopro/commits/v26.10.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-sopro/releases/download/v26.10.1/sopro-26.10.1-linux-x86_64.zip",
+              "size_bytes": 61136555,
+              "sha256": "c71610239d7f4db6cab7c89ddc1e7ebbe26c5e6bb172d7de9b5d654fea695a28"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-sopro/releases/download/v26.10.1/sopro-26.10.1-macos-arm64.zip",
+              "size_bytes": 43151029,
+              "sha256": "981bd34b8826d165383f3f957dc5213db635bb6809394eafd3d86c378154ead8"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-sopro/releases/download/v26.10.1/sopro-26.10.1-windows-x86_64.zip",
+              "size_bytes": 38087952,
+              "sha256": "d8a85d52ec95b6c4463ce36ede9c5756a85fe67fd86e0b81bbfbe8935f2420d2"
             }
           ]
         }
