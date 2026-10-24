@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-24T01:52:27Z",
+  "generated": "2026-10-24T01:53:57Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1229,6 +1229,64 @@
               "url": "https://github.com/Subtitld/addon-sopro/releases/download/v26.10.1/sopro-26.10.1-windows-x86_64.zip",
               "size_bytes": 38087952,
               "sha256": "d8a85d52ec95b6c4463ce36ede9c5756a85fe67fd86e0b81bbfbe8935f2420d2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kittentts",
+      "display_name": "KittenTTS 2 (offline, voice clone, 16 languages)",
+      "summary": "Offline TTS in 16 languages, in the speaker's own voice cloned from the video or in 115 built-in voices, at about real time on a CPU. The 1.66 GB model downloads on first use. The weights are under the Stellon Labs Community License: commercial use is free only below US$1M a year in revenue or funding.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "ru",
+        "zh",
+        "ja",
+        "ko",
+        "ar",
+        "hi",
+        "tr",
+        "nl",
+        "pl",
+        "id"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on); MIT and Apache-2.0 (KittenML runtime, reference encoder); BSD-3-Clause (LibTorch); KittenTTS 2 weights under the Stellon Labs Community License, downloaded by the user",
+      "homepage": "https://github.com/Subtitld/addon-kittentts",
+      "latest_version": "26.10.1",
+      "releases": [
+        {
+          "version": "26.10.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Offline text-to-speech for Subtitld with KittenML's KittenTTS 2, in 16 languages (English, Spanish, French, German, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, Hindi, Turkish, Dutch, Polish and Indonesian), at 24 kHz.\n\n- **The speaker's own voice.** Cloned from the clip Subtitld cuts from the video, and spoken in another language too. With the subtitle text Subtitld sends with the clip, KittenTTS continues from it, which is closest to the speaker; \"Clone the timbre only\" leaves the words out.\n- **115 built-in voices.** 50 in English, 2 to 7 in each other language.\n- **About real time on a CPU.** A second of speech takes 1.1 to 1.5 seconds on an i7-13700T, with about 2.3 GB of memory. x86-64 needs AVX2, FMA and F16C; Apple Silicon works.\n- **Downloads on first use.** The model, 1.66 GB, from KittenML's repository on the first line; the reference encoder, 542 MB, from this repository's ref-encoder-1 prerelease, on the first cloned line. Both are pinned and checked by sha256.\n\n**The weights are not open source.** KittenTTS 2 is under the Stellon Labs Community License. Commercial use, dubbing for pay included, is free only below US$1,000,000 in annual revenue and in total funding, and requires registering with Stellon Labs. Use must also follow an Acceptable Use Policy that is not published, and the licence is revocable. The add-on ships none of KittenML's weights; read the licence before using it for paid work. Powered by KittenML.\n\nBuilt on KittenML's C++ runtime (kitten-tts-2-cpp) with LibTorch 2.14.1, patched to end a line whose model scores go non-finite, and with the CPU flash-attention path off (it produced such lines depending on the thread count). A line that falls into silence is retried with another seed, up to three times, and the silence around each line is trimmed.\n\nEach archive was installed in CI the way Subtitld installs add-ons, on Linux, macOS (Apple Silicon) and Windows, and spoke English, Portuguese and Chinese lines and a cross-lingual clone through the add-on protocol.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-kittentts/compare/ref-encoder-1...v26.10.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-kittentts/releases/download/v26.10.1/kittentts-26.10.1-linux-x86_64.zip",
+              "size_bytes": 136130858,
+              "sha256": "23d68e6fa4d15e18ee3a336327a19bc3918590938f3198e22b9a89f9deb29fcd"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-kittentts/releases/download/v26.10.1/kittentts-26.10.1-macos-arm64.zip",
+              "size_bytes": 109249025,
+              "sha256": "8c263924a6357e581fb0ea3ab4e3eeea3cb36f7b48258e01e63e03ea4e78a34f"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-kittentts/releases/download/v26.10.1/kittentts-26.10.1-windows-x86_64.zip",
+              "size_bytes": 96407103,
+              "sha256": "ee05cab205f0f8a9574c46f99831459d452369413068fd79c7f2bfb9b4a9ff45"
             }
           ]
         }
