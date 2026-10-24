@@ -443,3 +443,24 @@ addons:
     compute: cpu
     languages: [en, pt, fr, de]
     license: "Apache-2.0 (add-on, Sopro code and weights); preset clips public domain (LibriVox) and CC-BY-4.0 (LibriTTS-R); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: kittentts
+    repo: addon-kittentts
+    display_name: "KittenTTS 2 (offline, voice clone, 16 languages)"
+    # KittenML's KittenTTS 2 (1.7B, ternary) run by KittenML's own C++
+    # runtime (kitten-tts-2-cpp: llama.cpp + LibTorch for the S3 decoder),
+    # ~130 MB zips. Clones the speaker from the clip Subtitld cuts from the
+    # video, across languages, with this add-on's TorchScript reference
+    # encoder (MIT parts of chatterbox-turbo and pyannote, 542 MB, attached to
+    # the add-on's ref-encoder-1 prerelease); or speaks one of 115 built-in
+    # voices. About real time on a CPU (RTF 1.1-1.5, i7-13700T), ~2.3 GB of
+    # memory; x86 needs AVX2/FMA/F16C. The weights (1.66 GB) download from
+    # KittenML on first use, pinned and sha256-checked, and are NOT open:
+    # Stellon Labs Community License (free commercial use only below $1M
+    # revenue or funding, registration with Stellon Labs, unpublished AUP,
+    # revocable). The add-on redistributes none of them; cloning fetches the
+    # 2 MB speaker head by byte range.
+    summary: "Offline TTS in 16 languages, in the speaker's own voice cloned from the video or in 115 built-in voices, at about real time on a CPU. The 1.66 GB model downloads on first use. The weights are under the Stellon Labs Community License: commercial use is free only below US$1M a year in revenue or funding."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en, es, fr, de, it, pt, ru, zh, ja, ko, ar, hi, tr, nl, pl, id]
+    license: "Apache-2.0 (add-on); MIT and Apache-2.0 (KittenML runtime, reference encoder); BSD-3-Clause (LibTorch); KittenTTS 2 weights under the Stellon Labs Community License, downloaded by the user"
