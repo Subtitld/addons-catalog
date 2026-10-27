@@ -464,3 +464,18 @@ addons:
     compute: cpu
     languages: [en, es, fr, de, it, pt, ru, zh, ja, ko, ar, hi, tr, nl, pl, id]
     license: "Apache-2.0 (add-on); MIT and Apache-2.0 (KittenML runtime, reference encoder); BSD-3-Clause (LibTorch); KittenTTS 2 weights under the Stellon Labs Community License, downloaded by the user"
+  - id: bark3
+    repo: addon-bark3
+    display_name: "Bark 3.0 (offline, English)"
+    # Conway Research's Underdog Bark 3.0 (fine-tunes of NVIDIA's
+    # parakeet-tdt-0.6b-v3, CC-BY-4.0) on ONNX Runtime, no torch, ~33-49 MB
+    # zips. The zips carry the encoder graph without weights; the chosen
+    # model (Bark 3.0 163 MB by default; Plus, Clean, Pro 1.25 GB on demand)
+    # downloads from Conway Research on first use, pinned and sha256-checked,
+    # and is converted on the device once (~650 MB). About 5% of real time on
+    # a CPU (i7-13700T), ~1.2 GB of memory. English only.
+    summary: "Offline English speech-to-text with punctuation and capitals, on the CPU at many times real time. The 163 MB Bark 3.0 model downloads on first use; Plus, Clean (leaves out um and uh) and Pro download only when picked."
+    tasks: [asr.transcribe]
+    compute: cpu
+    languages: [en]
+    license: "Apache-2.0 (add-on); MIT (ONNX Runtime); Bark 3.0 weights CC-BY-4.0 (Conway Research, from NVIDIA Parakeet), downloaded by the user; the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
