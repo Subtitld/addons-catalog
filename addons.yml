@@ -468,7 +468,7 @@ addons:
     repo: addon-bark3
     display_name: "Bark 3.0 (offline, English)"
     # Conway Research's Underdog Bark 3.0 (fine-tunes of NVIDIA's
-    # parakeet-tdt-0.6b-v3, CC-BY-4.0) on ONNX Runtime, no torch, ~33-49 MB
+    # parakeet-tdt-0.6b-v3, CC-BY-4.0) on ONNX Runtime, no torch, ~33-55 MB
     # zips. The zips carry the encoder graph without weights; the chosen
     # model (Bark 3.0 163 MB by default; Plus, Clean, Pro 1.25 GB on demand)
     # downloads from Conway Research on first use, pinned and sha256-checked,
