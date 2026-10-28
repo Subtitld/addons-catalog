@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-27T22:03:38Z",
+  "generated": "2026-10-28T00:05:01Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1306,30 +1306,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on); MIT (ONNX Runtime); Bark 3.0 weights CC-BY-4.0 (Conway Research, from NVIDIA Parakeet), downloaded by the user; the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
       "homepage": "https://github.com/Subtitld/addon-bark3",
-      "latest_version": "26.10.1",
+      "latest_version": "26.10.2",
       "releases": [
         {
-          "version": "26.10.1",
+          "version": "26.10.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline English speech-to-text for Subtitld with Conway Research's Bark 3.0, a\nfine-tune of NVIDIA's parakeet-tdt-0.6b-v3, with word times. On the CPU, no torch.\n\nThe archive holds the add-on, ONNX Runtime and the encoder's graph without\nweights. The chosen model (Bark 3.0 163 MB by default; Plus 180 MB, Clean 179 MB,\nPro 1.25 GB) downloads from Conway Research's Hugging Face repositories on first\nuse, at a pinned revision, checked by sha256, and is converted once for the graph.\n\nThe add-on is Apache-2.0; the Bark 3.0 models and NVIDIA's tokenizer are CC-BY-4.0.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything frozen\ninto it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `bark3-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bark3/commits/v26.10.1",
+          "changelog": "**New in 26.10.2:** a *One cue per sentence* setting, on by default, as in the AssemblyAI add-on: each sentence is one subtitle, however long. Turn it off to split long sentences into subtitles of about two lines or 7 seconds, as 26.10.1 did.\n\nOffline English speech-to-text for Subtitld with Conway Research's Bark 3.0, a\nfine-tune of NVIDIA's parakeet-tdt-0.6b-v3, with word times. On the CPU, no torch.\n\nThe archive holds the add-on, ONNX Runtime and the encoder's graph without\nweights. The chosen model (Bark 3.0 163 MB by default; Plus 180 MB, Clean 179 MB,\nPro 1.25 GB) downloads from Conway Research's Hugging Face repositories on first\nuse, at a pinned revision, checked by sha256, and is converted once for the graph.\n\nThe add-on is Apache-2.0; the Bark 3.0 models and NVIDIA's tokenizer are CC-BY-4.0.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything frozen\ninto it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `bark3-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bark3/compare/v26.10.1...v26.10.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.1/bark3-26.10.1-linux-x86_64.zip",
-              "size_bytes": 57877285,
-              "sha256": "8f14aca01289db4519234592ded8083f0c7a0af11ce7c5bc38775e009785f23d"
+              "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.2/bark3-26.10.2-linux-x86_64.zip",
+              "size_bytes": 57880367,
+              "sha256": "f23db5fdd8554613d58c7fd8e78bbbad840f39e43ac47d870f710d9ff95e82a4"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.1/bark3-26.10.1-macos-arm64.zip",
-              "size_bytes": 39805503,
-              "sha256": "ace1537d66a0dfdb772fce8d67fdfbdff0eb5812d222143a605a9df5bae58d7f"
+              "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.2/bark3-26.10.2-macos-arm64.zip",
+              "size_bytes": 39807566,
+              "sha256": "11b80177e8b2944ffb8a8d382e66068ec5a6b622536289abceae0932851070f6"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.1/bark3-26.10.1-windows-x86_64.zip",
-              "size_bytes": 34669332,
-              "sha256": "26acb0515d2e88d7dc0c11db6b7266acbd859d9ebf2c789bef0f257bf0003cf1"
+              "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.2/bark3-26.10.2-windows-x86_64.zip",
+              "size_bytes": 34669114,
+              "sha256": "fbfff8be845cbed904efbc46f3d5e6f8648b51be59562261e8dc7950cd2f69b5"
             }
           ]
         }
