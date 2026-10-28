@@ -497,3 +497,22 @@ addons:
     compute: cpu
     languages: [zh, en, ja, ko, de, fr, es]
     license: "Apache-2.0 (add-on); MIT (Ming-3.0-tts code and 0.5B weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: chatterbox
+    repo: addon-chatterbox
+    display_name: "Chatterbox (offline, voice clone, 20 languages)"
+    # Resemble AI's Chatterbox (MIT code and weights) on ONNX Runtime, no
+    # torch, ~37-54 MB zips. Two models: Multilingual (0.5B, onnx-community's
+    # export of the first t3_23lang checkpoint, 1.26 GB with the decoder,
+    # default) and Turbo (350M, Resemble AI's export, 725 MB, English only,
+    # paralinguistic tags; other languages fall back to Multilingual). Both
+    # use 4-bit language models and Turbo's two-step decoder, greedy decoding
+    # with a retry when a line gets stuck. Clones the speaker from the clip
+    # Subtitld cuts from the video, across languages, or speaks one of 8
+    # presets (the Sopro add-on's LibriVox clips). About real time on a CPU
+    # (i7-13700T), ~1.7 GB of memory (Turbo 1 GB). No Perth watermark. Hebrew,
+    # Japanese and Chinese are left out.
+    summary: "Offline TTS in 20 languages, in the speaker's own voice cloned from a few seconds of the video or in one of 8 preset voices, at about real time on a CPU. The Multilingual model (1.26 GB) downloads on first use; the English-only Turbo model (725 MB), which takes [laugh] and [sigh] tags, only when picked."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [ar, da, de, el, en, es, fi, fr, hi, it, ko, ms, nl, 'no', pl, pt, ru, sv, sw, tr]
+    license: "Apache-2.0 (add-on); MIT (Chatterbox code and weights); preset clips public domain (LibriVox) and CC-BY-4.0 (LibriTTS-R); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
