@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-28T22:27:28Z",
+  "generated": "2026-10-28T22:38:03Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1379,6 +1379,68 @@
               "url": "https://github.com/Subtitld/addon-ming/releases/download/v26.10.1/ming-26.10.1-windows-x86_64.zip",
               "size_bytes": 216384240,
               "sha256": "c5ccb998e3304f3f1cda1bd9ebd2875d8abdf376c1e44f2fdbd1de48b5ff935e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chatterbox",
+      "display_name": "Chatterbox (offline, voice clone, 20 languages)",
+      "summary": "Offline TTS in 20 languages, in the speaker's own voice cloned from a few seconds of the video or in one of 8 preset voices, at about real time on a CPU. The Multilingual model (1.26 GB) downloads on first use; the English-only Turbo model (725 MB), which takes [laugh] and [sigh] tags, only when picked.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "ar",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "hi",
+        "it",
+        "ko",
+        "ms",
+        "nl",
+        "no",
+        "pl",
+        "pt",
+        "ru",
+        "sv",
+        "sw",
+        "tr"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on); MIT (Chatterbox code and weights); preset clips public domain (LibriVox) and CC-BY-4.0 (LibriTTS-R); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-chatterbox",
+      "latest_version": "26.10.1",
+      "releases": [
+        {
+          "version": "26.10.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Voice-cloning text-to-speech for Subtitld with Resemble AI's Chatterbox: 20\nlanguages at 24 kHz with Chatterbox Multilingual, or English with Chatterbox Turbo,\nin the speaker's own voice cloned from the video, or in a preset voice.\n\nThe archive holds the add-on, ONNX Runtime and the preset voice clips. A model\n(Multilingual 1.3 GB, Turbo 0.7 GB) downloads on its first line, at a pinned\nrevision, checked by sha256. It runs on the CPU at about real time.\n\nThe add-on is Apache-2.0; the Chatterbox models are MIT. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and the\npreset clips are credited in `bin/_internal/chatterbox_addon/presets/README.md`. The\nLinux archive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`chatterbox-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-chatterbox/commits/v26.10.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-chatterbox/releases/download/v26.10.1/chatterbox-26.10.1-linux-x86_64.zip",
+              "size_bytes": 62455942,
+              "sha256": "6f0c0fd0b8b46b2b61160050f74c52b135eea23fa7ffb76fd53ded12c77f3cb1"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-chatterbox/releases/download/v26.10.1/chatterbox-26.10.1-macos-arm64.zip",
+              "size_bytes": 43726706,
+              "sha256": "0cea9809cf82a1675e353233b970f90381f0df549b7dbe945230e8a8948f6403"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-chatterbox/releases/download/v26.10.1/chatterbox-26.10.1-windows-x86_64.zip",
+              "size_bytes": 38675150,
+              "sha256": "08c83c7c09d974640b9e221c60d5bf25969b155c0886c1725ba0bbaeec1cbdaf"
             }
           ]
         }
