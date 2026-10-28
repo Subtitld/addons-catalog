@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-10-28T00:07:41Z",
+  "generated": "2026-10-28T00:08:55Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1330,6 +1330,55 @@
               "url": "https://github.com/Subtitld/addon-bark3/releases/download/v26.10.2/bark3-26.10.2-windows-x86_64.zip",
               "size_bytes": 34669114,
               "sha256": "fbfff8be845cbed904efbc46f3d5e6f8648b51be59562261e8dc7950cd2f69b5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ming",
+      "display_name": "Ming-3.0-tts (offline, voice clone, 7 languages)",
+      "summary": "Neural TTS in Chinese, English, Japanese, Korean, German, French and Spanish, in the speaker's own voice cloned from the video, a built-in voice or a described voice, with emotion and speed settings. Heavy: 2.99 GB model downloaded on first use, about 5 GB of memory, several seconds per second of speech on a CPU.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "zh",
+        "en",
+        "ja",
+        "ko",
+        "de",
+        "fr",
+        "es"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on); MIT (Ming-3.0-tts code and 0.5B weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-ming",
+      "latest_version": "26.10.1",
+      "releases": [
+        {
+          "version": "26.10.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Text-to-speech for Subtitld with inclusionAI's Ming-3.0-tts-0.5B: Chinese,\nEnglish, Japanese, Korean, German, French and Spanish at 44.1 kHz, in the\nspeaker's own voice cloned from the video, in a built-in voice, or in a voice\nmade from a description, with emotion and speed controls.\n\nThe archive holds the add-on and a CPU build of PyTorch. The 2.99 GB model\ndownloads on the first synthesis, at a pinned revision, checked by sha256.\nPlan for about 5 GB of free memory; on a CPU each second of speech takes\nabout four seconds to make.\n\nThe add-on is Apache-2.0; Ming-3.0-tts's code and weights are MIT. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it. The Linux\narchive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`ming-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-ming/commits/v26.10.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-ming/releases/download/v26.10.1/ming-26.10.1-linux-x86_64.zip",
+              "size_bytes": 321218339,
+              "sha256": "7385368864d80401860b9d01c45284403676e55d0a6ecfdac34c12c4d2c28489"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-ming/releases/download/v26.10.1/ming-26.10.1-macos-arm64.zip",
+              "size_bytes": 335650569,
+              "sha256": "4fde9585274b72acd19c4d22e8edd2a49c0b83b4b7af11e92fc0cece866a0ecd"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-ming/releases/download/v26.10.1/ming-26.10.1-windows-x86_64.zip",
+              "size_bytes": 216384240,
+              "sha256": "c5ccb998e3304f3f1cda1bd9ebd2875d8abdf376c1e44f2fdbd1de48b5ff935e"
             }
           ]
         }
