@@ -17,7 +17,8 @@
 #   owner           optional, defaults to `Subtitld`
 #   display_name    shown in the host UI list
 #   summary         1-2 sentences, also shown in the list
-#   tasks           [tts.synthesize | asr.transcribe | translate.text]+
+#   tasks           [tts.synthesize | asr.transcribe | translate.text |
+#                   ocr.recognize]+
 #   languages       BCP-47 tags the add-on's voices/models support, e.g.
 #                   [en-us, pt-br]. Powers the language filter dropdown
 #                   in the host AddonsDialog at *browse* time, before
@@ -568,3 +569,32 @@ addons:
     compute: cpu
     languages: [en, fr, de, es, pt, it, nl, ca, gl, eu, pl, cs, sk, sl, hr, bs, hu, tr, fi, sv, da, 'no', nb, nn, is, et, lt, sq, ga, id, ms, sw, tl, fil, af, la, oc, uz, jv, su, zu, zh, cmn, yue, ja, ko, ru, uk, be, bg, sr, mk, kk, ky, mn, tt, tg, ba, cv, el, ar, fa, ur, ps, ku, ug, sd, hi, mr, ne, sa, mai, bho, new, th, ta, te]
     license: "Apache-2.0 (add-on); Apache-2.0 (PP-OCRv5 models by PaddlePaddle, ONNX conversion by RapidAI); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: tesseract
+    repo: addon-tesseract
+    display_name: "Tesseract OCR (picture subtitles)"
+    # Reads the text in picture subtitles: Subtitld decodes DVD VobSub
+    # (.idx/.sub), Blu-ray PGS (.sup) and the picture tracks of videos into
+    # one picture per subtitle and asks this add-on (task ocr.recognize) for
+    # the text. Tesseract 5.5.4 with Leptonica 1.87.0 built as one library
+    # with no image codecs, called through ctypes; LSTM engine, tessdata_fast
+    # models. English is bundled; the other languages download once into
+    # Subtitld's model cache (1-12 MB each), sha256-pinned. Linux needs
+    # glibc 2.35 or newer (bundle built on Ubuntu 22.04).
+    # Only Subtitld builds that know ocr.recognize can use it; older ones
+    # list it and skip it once installed.
+    summary: "Reads DVD (VobSub) and Blu-ray (PGS) picture subtitles as text with Tesseract 5.5, so Subtitld can open and edit them. Offline, CPU only. English is included; any of 100 other languages downloads once, when first needed (1-12 MB)."
+    tasks: [ocr.recognize]
+    compute: cpu
+    languages: [
+      "af", "am", "ar", "as", "az", "be", "bg", "bn", "bo", "br", "bs", "ca",
+      "ceb", "chr", "co", "cs", "cy", "da", "de", "dv", "dz", "el", "en",
+      "eo", "es", "et", "eu", "fa", "fi", "fil", "fo", "fr", "fy", "ga", "gd",
+      "gl", "gu", "he", "hi", "hr", "ht", "hu", "hy", "id", "is", "it", "iu",
+      "ja", "jv", "ka", "kk", "km", "kn", "ko", "ku", "ky", "la", "lb", "lo",
+      "lt", "lv", "mi", "mk", "ml", "mn", "mr", "ms", "mt", "my", "ne", "nl",
+      "no", "oc", "or", "pa", "pl", "ps", "pt", "qu", "ro", "ru", "sa", "sd",
+      "si", "sk", "sl", "sq", "sr", "su", "sv", "sw", "syr", "ta", "te", "tg",
+      "th", "ti", "to", "tr", "tt", "ug", "uk", "ur", "uz", "vi", "yi", "yo",
+      "zh"
+    ]
+    license: "Apache-2.0 (add-on, Tesseract, tessdata_fast models); BSD-2-Clause (Leptonica); GCC runtime library exception (static C++ runtime)"
