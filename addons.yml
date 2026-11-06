@@ -550,3 +550,21 @@ addons:
     compute: cpu
     languages: [en-us]
     license: "GPL-3.0-or-later (add-on, because it bundles espeak-ng); Inflect v2 weights Apache-2.0, downloaded by the user; the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: ppocr
+    repo: addon-ppocr
+    display_name: "PP-OCRv5 (offline OCR)"
+    # PaddleOCR's PP-OCRv5 mobile recognition models (Apache-2.0), RapidAI's
+    # ONNX export from ModelScope (tag v3.10.0, sha256-pinned), on ONNX
+    # Runtime, no torch. All 12 script models are in the zip (112 MB); no
+    # detection model: Subtitld sends one cropped grayscale PGM per subtitle
+    # and lines are split at blank rows. Serves ocr.recognize, which only
+    # Subtitld builds with picture-subtitle support (branch ocr-addon) use;
+    # older builds list the add-on but have nothing that calls it. About
+    # 25 ms a line on a CPU. Romanian, Vietnamese, Latvian, Welsh, Hebrew
+    # and others are left out (letters missing from the dictionaries or no
+    # model).
+    summary: "Reads picture subtitles (DVD's VobSub, Blu-ray's PGS, as files or video tracks) as text, so Subtitld can open and edit them. Offline, on the CPU, about a minute or two for a film: Latin-script languages, Chinese, Japanese, Korean, Russian and other Cyrillic, Greek, Arabic script, Devanagari, Thai, Tamil and Telugu."
+    tasks: [ocr.recognize]
+    compute: cpu
+    languages: [en, fr, de, es, pt, it, nl, ca, gl, eu, pl, cs, sk, sl, hr, bs, hu, tr, fi, sv, da, 'no', nb, nn, is, et, lt, sq, ga, id, ms, sw, tl, fil, af, la, oc, uz, jv, su, zu, zh, cmn, yue, ja, ko, ru, uk, be, bg, sr, mk, kk, ky, mn, tt, tg, ba, cv, el, ar, fa, ur, ps, ku, ug, sd, hi, mr, ne, sa, mai, bho, new, th, ta, te]
+    license: "Apache-2.0 (add-on); Apache-2.0 (PP-OCRv5 models by PaddlePaddle, ONNX conversion by RapidAI); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
