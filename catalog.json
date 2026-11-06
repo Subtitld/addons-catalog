@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-06T15:21:40Z",
+  "generated": "2026-11-06T15:46:44Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1806,6 +1806,54 @@
               "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.1/tesseract-26.11.1-windows-x86_64.zip",
               "size_bytes": 12854593,
               "sha256": "451cd00c76a5cc1a790dba1578bf3a4d0067043b3ce3b967601b3e1b572b2e07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scyllasband",
+      "display_name": "Scylla's Band (offline, 6 languages)",
+      "summary": "Fourteen natural voices, each speaking English, Spanish, Italian, French, German and Vietnamese, many times faster than real time on a CPU. Intensity, pace and pitch controls. The model (240 MB) downloads on the first line. No voice cloning.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "es",
+        "it",
+        "fr",
+        "de",
+        "vi"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, libscyllasband, LiteRT and the Scylla's Band weights, downloaded by the user)",
+      "homepage": "https://github.com/Subtitld/addon-scyllasband",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Offline text-to-speech with Scylla's Band: fourteen voices, each speaking English, Spanish, Italian, French, German and Vietnamese at 24 kHz. Eleven voices speak American English and three (Ink, Orpheus, Tuesday) British English.\n\n- The model, about 240 MB, downloads on the first line, checked against pinned sha256 sums; an interrupted download resumes.\n- Runs on the CPU, many times faster than real time, in about 500 MB of memory.\n- Intensity, pace and pitch in Configure, each from -2 to 2.\n- The same seed gives the same take, so a regenerated line keeps its delivery.\n- Built-in voices only: Scylla's Band does not clone a speaker's voice.\n\nLinux x86_64, macOS arm64 and Windows x86_64.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-scyllasband/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.1/scyllasband-26.11.1-linux-x86_64.zip",
+              "size_bytes": 22410199,
+              "sha256": "050ba100773e8a134e204f35d728906cb362fa07bd19e655854d2376d2205666"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.1/scyllasband-26.11.1-macos-arm64.zip",
+              "size_bytes": 18481723,
+              "sha256": "2e5edf7964039cf38160810b2e5d9adcef19d73727c78b8a521e222f3bb6cdc8"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.1/scyllasband-26.11.1-windows-x86_64.zip",
+              "size_bytes": 13559123,
+              "sha256": "1b7059d59717fde9ca77bb77d9a8dfd5a39b8597ed702a05f52c1a0e9d8197c4"
             }
           ]
         }
