@@ -533,3 +533,20 @@ addons:
     compute: cpu
     languages: [zh, yue, nl, en, fr, de, it, ja, ko, pl, es]
     license: "Apache-2.0 (add-on, Audio8 TTS code and weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+
+  - id: inflect
+    repo: addon-inflect
+    display_name: "Inflect (offline, lightweight English)"
+    # Owen Song's Inflect v2 (VITS-style; Micro 9.4M and Nano 4.0M parameters,
+    # Apache-2.0 weights) on ONNX Runtime, no torch, ~35-45 MB zips. The
+    # add-on ports upstream's English frontend and phonemizes through a
+    # bundled espeak-ng (GPL-3.0-or-later), which makes the add-on GPL; the
+    # Corresponding Source is attached to each release. One fixed synthetic
+    # American voice, no cloning. Each model (38 / 16 MB) downloads the first
+    # time its voice speaks, pinned and sha256-checked. Micro about 13x real
+    # time on a CPU with 8 threads, Nano about 30x; under 300 MB of memory.
+    summary: "Natural American English speech from a tiny model, many times faster than real time on a CPU. Two voices: Micro (best quality, 38 MB) and Nano (16 MB, faster), each downloaded the first time it speaks. English only, no voice cloning."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en-us]
+    license: "GPL-3.0-or-later (add-on, because it bundles espeak-ng); Inflect v2 weights Apache-2.0, downloaded by the user; the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
