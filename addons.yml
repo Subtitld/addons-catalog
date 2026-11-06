@@ -598,3 +598,20 @@ addons:
       "zh"
     ]
     license: "Apache-2.0 (add-on, Tesseract, tessdata_fast models); BSD-2-Clause (Leptonica); GCC runtime library exception (static C++ runtime)"
+
+  - id: scyllasband
+    repo: addon-scyllasband
+    display_name: "Scylla's Band (offline, 6 languages)"
+    # spybyscript's Scylla's Band v3 (release v3-20261104, litert/ bundle,
+    # 240 MB, Apache-2.0 with MIT notices for Vocos and DeepPhonemizer) on
+    # its own C++ runtime, libscyllasband, with Google's prebuilt LiteRT 2.2.0,
+    # loaded in-process through ctypes: no numpy, no torch, ~13-22 MB zips.
+    # 14 built-in voices, each speaking en/es/it/fr/de/vi (ink, orpheus and
+    # tuesday speak British English); intensity, pace and pitch in Configure;
+    # no cloning. About 14x real time on a CPU with 4 threads, ~500 MB of
+    # memory; Whisper-small WER 0.054 over the six languages.
+    summary: "Fourteen natural voices, each speaking English, Spanish, Italian, French, German and Vietnamese, many times faster than real time on a CPU. Intensity, pace and pitch controls. The model (240 MB) downloads on the first line. No voice cloning."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en, es, it, fr, de, vi]
+    license: "Apache-2.0 (add-on, libscyllasband, LiteRT and the Scylla's Band weights, downloaded by the user)"
