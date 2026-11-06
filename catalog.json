@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-06T14:20:55Z",
+  "generated": "2026-11-06T15:03:39Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1441,6 +1441,59 @@
               "url": "https://github.com/Subtitld/addon-chatterbox/releases/download/v26.10.1/chatterbox-26.10.1-windows-x86_64.zip",
               "size_bytes": 38675150,
               "sha256": "08c83c7c09d974640b9e221c60d5bf25969b155c0886c1725ba0bbaeec1cbdaf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audio8",
+      "display_name": "Audio8 TTS (offline, voice clone, 11 languages)",
+      "summary": "Offline TTS in 11 languages, including Chinese, Cantonese, Japanese and Korean, in the speaker's own voice cloned from a few seconds of the video, at 44.1 kHz. Slow on a CPU: a second of speech takes two to three seconds. The 1 GB model downloads on first use.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "zh",
+        "yue",
+        "nl",
+        "en",
+        "fr",
+        "de",
+        "it",
+        "ja",
+        "ko",
+        "pl",
+        "es"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, Audio8 TTS code and weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-audio8",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Voice-cloning text-to-speech for Subtitld with Audio8 TTS Preview 0.6B: 11 languages\n(Chinese, Cantonese, Dutch, English, French, German, Italian, Japanese, Korean,\nPolish, Spanish) at 44.1 kHz, in the speaker's own voice cloned from the video.\n\nThe archive holds the add-on and ONNX Runtime. The model (1 GB, the official INT4\nONNX release) downloads on the first line, at a pinned revision, checked by sha256.\nIt runs on the CPU at about 0.4 to 0.5 times real time and needs about 3 GB of memory.\n\nThe add-on, Audio8 TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and upstream's\nNOTICE. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `audio8-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-audio8/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.1/audio8-26.11.1-linux-x86_64.zip",
+              "size_bytes": 58575977,
+              "sha256": "625da36ef8d6b8c109aa1b508c70318eb9b1202974647a4e2d12440ea73c6614"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.1/audio8-26.11.1-macos-arm64.zip",
+              "size_bytes": 39843277,
+              "sha256": "08e075c3df8b7fa1739ed825bd0953f820e2498b9cbfbe7a59478e0b31d4f8df"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.1/audio8-26.11.1-windows-x86_64.zip",
+              "size_bytes": 34791259,
+              "sha256": "231a0fb7e7f7db5d4f26e0f252a47d86525c250c016c1e6047cc970eb798bd4e"
             }
           ]
         }
