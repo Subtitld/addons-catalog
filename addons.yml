@@ -516,3 +516,20 @@ addons:
     compute: cpu
     languages: [ar, da, de, el, en, es, fi, fr, hi, it, ko, ms, nl, 'no', pl, pt, ru, sv, sw, tr]
     license: "Apache-2.0 (add-on); MIT (Chatterbox code and weights); preset clips public domain (LibriVox) and CC-BY-4.0 (LibriTTS-R); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: audio8
+    repo: addon-audio8
+    display_name: "Audio8 TTS (offline, voice clone, 11 languages)"
+    # Audio8 TTS Preview 0.6B (Apache-2.0 code and weights), from its
+    # official INT4 ONNX release, on ONNX Runtime; no torch, ~38-44 MB zips.
+    # A port of upstream's onnx_runtime (same codes for the same voice, line
+    # and seed) with its own Qwen2 BPE. Clones the speaker from the clip
+    # Subtitld cuts from the video, with the clip's subtitles as transcript
+    # (or from its sound alone), across languages; no presets. 44.1 kHz.
+    # Slow: about 0.4-0.5x real time on a CPU (i7-13700T), ~1.6 GB of
+    # memory, up to ~2.7 GB while it encodes a new speaker's clip (cached
+    # after). The 1 GB model downloads on first use, pinned, sha256-checked.
+    summary: "Offline TTS in 11 languages, including Chinese, Cantonese, Japanese and Korean, in the speaker's own voice cloned from a few seconds of the video, at 44.1 kHz. Slow on a CPU: a second of speech takes two to three seconds. The 1 GB model downloads on first use."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [zh, yue, nl, en, fr, de, it, ja, ko, pl, es]
+    license: "Apache-2.0 (add-on, Audio8 TTS code and weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
