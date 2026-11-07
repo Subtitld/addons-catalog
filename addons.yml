@@ -615,3 +615,20 @@ addons:
     compute: cpu
     languages: [en, es, it, fr, de, vi]
     license: "Apache-2.0 (add-on, libscyllasband, LiteRT and the Scylla's Band weights, downloaded by the user)"
+  - id: paradee
+    repo: addon-paradee
+    display_name: "Paradee (offline, lightweight English)"
+    # Sahil Mahendrakar's Paradee 1.2 (7.9M parameters, distilled from
+    # Kokoro-82M, Apache-2.0 weights), one int8 ONNX graph of 8.5 MB for four
+    # of Kokoro's voices, on ONNX Runtime, no torch, ~93 MB Linux zip. The
+    # phonemes come from misaki (Kokoro's G2P, Apache-2.0) on spaCy's small
+    # English pipeline (MIT), as upstream makes them; espeak-ng
+    # (GPL-3.0-or-later) says unknown words, which makes the add-on GPL; the
+    # Corresponding Source is attached to each release. Heart and Puck speak
+    # American English, Isabella and Fable British; no cloning. About 17-20x
+    # real time on one CPU thread, ~300 MB of memory.
+    summary: "Natural English speech from an 8M-parameter model distilled from Kokoro, many times faster than real time on a CPU. Four voices, two American and two British, from one 8.5 MB model downloaded on the first line. English only, no voice cloning."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en-us, en-gb]
+    license: "GPL-3.0-or-later (add-on, because it bundles espeak-ng); Paradee weights and misaki Apache-2.0, spaCy MIT, certifi and tqdm MPL-2.0 with source attached; the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
