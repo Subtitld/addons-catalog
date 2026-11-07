@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-07T05:03:11Z",
+  "generated": "2026-11-07T05:40:57Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1854,6 +1854,50 @@
               "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.1/scyllasband-26.11.1-windows-x86_64.zip",
               "size_bytes": 13559123,
               "sha256": "1b7059d59717fde9ca77bb77d9a8dfd5a39b8597ed702a05f52c1a0e9d8197c4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paradee",
+      "display_name": "Paradee (offline, lightweight English)",
+      "summary": "Natural English speech from an 8M-parameter model distilled from Kokoro, many times faster than real time on a CPU. Four voices, two American and two British, from one 8.5 MB model downloaded on the first line. English only, no voice cloning.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en-us",
+        "en-gb"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "GPL-3.0-or-later (add-on, because it bundles espeak-ng); Paradee weights and misaki Apache-2.0, spaCy MIT, certifi and tqdm MPL-2.0 with source attached; the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-paradee",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Offline English text-to-speech for Subtitld with Paradee 1.2: natural English\nspeech at 24 kHz from an 8M-parameter model distilled from Kokoro-82M, many times\nfaster than real time on the CPU. Four voices from one 8.5 MB model: Heart and\nPuck (American English), Isabella and Fable (British English).\n\nThe archive holds the add-on, ONNX Runtime, misaki (Kokoro's phonemizer) with\nspaCy's small English pipeline, and espeak-ng with its English data. The model\ndownloads the first time a line is spoken, at a pinned revision, checked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Paradee model and misaki are Apache-2.0, spaCy and its English pipeline MIT.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The complete corresponding source is\n`paradee-<version>-source.tar.gz` in this release. The Linux archive also carries\nlibquadmath (LGPL-2.1, with numpy); its source is\n`paradee-<version>-libquadmath-source.tar.gz`.\n\n\n## What's Changed\n* Paradee add-on: lightweight offline English text-to-speech by @jonata in https://github.com/Subtitld/addon-paradee/pull/1\n* Parity test: allow other CPUs' int8 rounding by @jonata in https://github.com/Subtitld/addon-paradee/pull/2\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-paradee/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-paradee/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-linux-x86_64.zip",
+              "size_bytes": 93481388,
+              "sha256": "0b4c9f98617933b9147caa568d6d2f04efd34e7f785b9d148ae97365c9d6c5d6"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-macos-arm64.zip",
+              "size_bytes": 75248156,
+              "sha256": "4cc454a48bfc6a07cd703db4cc19f70b0eb599be1f29a901d20c490e61dae7d8"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-windows-x86_64.zip",
+              "size_bytes": 84492335,
+              "sha256": "dd9d2e0e9570b53c3ef05ca0470c44437bb3305980a27baf91b26a6ad6a06c2a"
             }
           ]
         }
