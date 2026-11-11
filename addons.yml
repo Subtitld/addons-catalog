@@ -632,3 +632,23 @@ addons:
     compute: cpu
     languages: [en-us, en-gb]
     license: "GPL-3.0-or-later (add-on, because it bundles espeak-ng); Paradee weights and misaki Apache-2.0, spaCy MIT, certifi and tqdm MPL-2.0 with source attached; the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: parakeet-nemotron
+    repo: addon-parakeet-nemotron
+    display_name: "Parakeet & Nemotron (offline, 33 languages)"
+    # NVIDIA's Parakeet TDT 0.6B v3 (CC-BY-4.0, 25 European languages, for
+    # files) and Nemotron 3.5 ASR Streaming 0.6B (OpenMDW-1.1, 28 languages
+    # incl. ar hi ja ko nb tr vi zh; files and live captions) on NVIDIA's
+    # NeMo-Speech.cpp v0.3.0 (Apache-2.0, ggml), loaded through ctypes: no
+    # torch, ~10 MB Linux zip built from source in AlmaLinux 8 (glibc 2.28);
+    # Windows and macOS from NVIDIA's release archives, Metal on Apple
+    # Silicon. Speaker labels from Nemotron-3-Diarization (107 MB, up to 8).
+    # Nemotron's word times are corrected (cue starts within 0.5 s of a
+    # film's subtitles: 24% -> 76%). x86-64 needs AVX2.
+    summary: "NVIDIA's Parakeet and Nemotron, offline: subtitles from a file in 33 languages with accurate word timing and optional speaker labels, and live captions while recording in 28. Parakeet (714 MB) and Nemotron (742 MB) each download the first time they are needed."
+    tasks: [asr.transcribe, asr.stream]
+    compute: cpu
+    accelerators: [mps]
+    languages: [ar, bg, cs, da, de, el, en, es, et, fi, fr, hi, hr, hu, it, ja, ko, lt, lv, mt, nb, nl, pl, pt, ro, ru, sk, sl, sv, tr, uk, vi, zh]
+    license: "Apache-2.0 (add-on, NeMo-Speech.cpp); models downloaded by the user: CC-BY-4.0 (Parakeet TDT 0.6B v3), OpenMDW-1.1 (Nemotron 3.5 ASR Streaming 0.6B, Nemotron-3-Diarization)"
+    # asr.stream reached the host in v26.10.
+    min_subtitld: "26.10"
