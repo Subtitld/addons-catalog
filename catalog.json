@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-11T05:16:08Z",
+  "generated": "2026-11-11T05:17:05Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1898,6 +1898,84 @@
               "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-windows-x86_64.zip",
               "size_bytes": 84492335,
               "sha256": "dd9d2e0e9570b53c3ef05ca0470c44437bb3305980a27baf91b26a6ad6a06c2a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parakeet-nemotron",
+      "display_name": "Parakeet & Nemotron (offline, 33 languages)",
+      "summary": "NVIDIA's Parakeet and Nemotron, offline: subtitles from a file in 33 languages with accurate word timing and optional speaker labels, and live captions while recording in 28. Parakeet (714 MB) and Nemotron (742 MB) each download the first time they are needed.",
+      "tasks": [
+        "asr.transcribe",
+        "asr.stream"
+      ],
+      "languages": [
+        "ar",
+        "bg",
+        "cs",
+        "da",
+        "de",
+        "el",
+        "en",
+        "es",
+        "et",
+        "fi",
+        "fr",
+        "hi",
+        "hr",
+        "hu",
+        "it",
+        "ja",
+        "ko",
+        "lt",
+        "lv",
+        "mt",
+        "nb",
+        "nl",
+        "pl",
+        "pt",
+        "ro",
+        "ru",
+        "sk",
+        "sl",
+        "sv",
+        "tr",
+        "uk",
+        "vi",
+        "zh"
+      ],
+      "compute": "cpu",
+      "accelerators": [
+        "mps"
+      ],
+      "license": "Apache-2.0 (add-on, NeMo-Speech.cpp); models downloaded by the user: CC-BY-4.0 (Parakeet TDT 0.6B v3), OpenMDW-1.1 (Nemotron 3.5 ASR Streaming 0.6B, Nemotron-3-Diarization)",
+      "homepage": "https://github.com/Subtitld/addon-parakeet-nemotron",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "26.10",
+          "changelog": "The first release. NVIDIA's Parakeet TDT 0.6B v3 and Nemotron 3.5 ASR Streaming 0.6B, offline on your computer, on NVIDIA's NeMo-Speech.cpp runtime.\n\n- **Subtitles from a file in 33 languages.** Parakeet transcribes the 25 European languages, with punctuation, numbers as digits and accurate word timing; Nemotron transcribes Arabic, Chinese, Hindi, Japanese, Korean, Norwegian, Turkish and Vietnamese. Long files are transcribed a minute at a time, so memory stays flat (a 12-minute film peaks at about 1.3 GB), and finished subtitles appear on the timeline as they are made.\n- **Speaker labels**, when switched on in Configure: up to 8 speakers, A, B, C…, with a new subtitle at each change of speaker. The speaker model (107 MB) downloads the first time.\n- **Live captions while recording**, from Nemotron, in 28 languages, with a choice of 160 ms to 1.1 s of lookahead.\n- **One cue per sentence**, or subtitles of about two lines at most.\n\nParakeet (714 MB) and Nemotron (742 MB) each download from NVIDIA's Hugging Face repositories the first time they are needed. On a Mac with Apple Silicon the runtime uses the GPU (Metal). On x86-64 the processor needs AVX2 (Intel since 2013, AMD since 2015).\n\nNeeds Subtitld 26.10 or newer.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-parakeet-nemotron/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-parakeet-nemotron/releases/download/v26.11.1/parakeet-nemotron-26.11.1-linux-x86_64.zip",
+              "size_bytes": 10020427,
+              "sha256": "1b3d3bf9c972e067e9b4a60e4d454f0bb92f0435d1cde944c22efb1cdff66b38"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-parakeet-nemotron/releases/download/v26.11.1/parakeet-nemotron-26.11.1-macos-arm64.zip",
+              "size_bytes": 20199754,
+              "sha256": "ef4dcb7fe7568a36bb18d8feadced3bdb92a10509c24fd4ed5cbd46cc814a118"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-parakeet-nemotron/releases/download/v26.11.1/parakeet-nemotron-26.11.1-windows-x86_64.zip",
+              "size_bytes": 14420758,
+              "sha256": "daf9266dadea19d32c7372f99826b4ee936d7d2e016eb31bf8c7b5dfe336e9d4"
             }
           ]
         }
