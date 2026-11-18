@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-18T19:40:11Z",
+  "generated": "2026-11-18T19:43:54Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2025,6 +2025,91 @@
               "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-windows-x86_64.zip",
               "size_bytes": 37318614,
               "sha256": "08e5da6e651ea5a3cc3091f6018630f4b1acdc31075b55328856357d60c59bb9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zonos3",
+      "display_name": "ZONOS3-Mini (offline, voice clone, 43 languages)",
+      "summary": "Offline TTS in 43 languages, in 27 voices or the speaker's own voice cloned from a few seconds of the video. About twice as fast as real time on a CPU; the 1.1 GB model downloads on first use.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "it",
+        "pt",
+        "ja",
+        "zh",
+        "ko",
+        "ar",
+        "bn",
+        "bg",
+        "cs",
+        "da",
+        "nl",
+        "fi",
+        "ka",
+        "el",
+        "gu",
+        "he",
+        "hi",
+        "hu",
+        "id",
+        "kn",
+        "ms",
+        "ml",
+        "mr",
+        "nb",
+        "or",
+        "pl",
+        "pa",
+        "ro",
+        "ru",
+        "sk",
+        "sv",
+        "tl",
+        "ta",
+        "te",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "vi"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on; ZONOS3-Mini weights and default voices); MIT (ZONOS3-Mini runtime, ggml, nlohmann/json); MIT, Apache-2.0 and Unicode-3.0 (zyphra-textnorm); OpenLDAP (LMDB); BSD-3-Clause (pocketfft)",
+      "homepage": "https://github.com/Subtitld/addon-zonos3",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "First release. Offline text-to-speech with Zyphra's ZONOS3-Mini, on Zyphra's own ggml runtime, with no PyTorch.\n\n- 43 languages, at 44.1 kHz.\n- 27 stock voices (Zyphra's default voices). Every voice speaks every language, but with its own accent, which can be strong in another language; clone the speaker for those.\n- The speaker's own voice, cloned from 5 to 20 seconds of the video.\n- Numbers, dates, money and units are read out in each language's grammar (zyphra-textnorm).\n- Each line is checked as it is spoken (LACI, Zyphra's alignment check) and cut at the first silence once the text is read, so short lines don't run on with extra words. The cut is this add-on's own rule.\n- Runs on the CPU, about twice as fast as real time. x86-64 processors need AVX2.\n- Downloads: the model (1,115 MB) on the first line, the speaker encoder (45 MB) on the first cloned voice, pinned and checked by SHA-256.\n\nLinux builds run on glibc 2.28 and newer.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-zonos3/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-linux-x86_64.zip",
+              "size_bytes": 18999768,
+              "sha256": "a91d7e8ce0c86fae44d9602daae989898379469e8d43d16b93f23960808ce76d"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-macos-arm64.zip",
+              "size_bytes": 23984693,
+              "sha256": "f66c5dc3bf64d1c13391dc04000f4a9b3ede61e5e849a98cc44b89afeff8028f"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-windows-x86_64.zip",
+              "size_bytes": 18523940,
+              "sha256": "0d7be6d44a09abd54f8d49f09e61e3aef0431f31bd6b4bfef1490fddec5132b6"
             }
           ]
         }
