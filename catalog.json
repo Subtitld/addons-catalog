@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-18T16:19:11Z",
+  "generated": "2026-11-18T16:58:25Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1976,6 +1976,55 @@
               "url": "https://github.com/Subtitld/addon-parakeet-nemotron/releases/download/v26.11.1/parakeet-nemotron-26.11.1-windows-x86_64.zip",
               "size_bytes": 14420758,
               "sha256": "daf9266dadea19d32c7372f99826b4ee936d7d2e016eb31bf8c7b5dfe336e9d4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bluetts",
+      "display_name": "BlueTTS (offline, voice clone, Hebrew + 6 languages)",
+      "summary": "Offline TTS in Hebrew, English, German, Spanish, Italian, Russian and Yiddish, in 15 voices or the speaker's own voice cloned from about ten seconds of the video. 3 to 5 times faster than real time on a CPU; the 428 MB model downloads on first use, Hebrew and Yiddish add their own reading models.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "he",
+        "en",
+        "de",
+        "es",
+        "it",
+        "ru",
+        "yi"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on); MIT (BlueTTS code and weights); BigScience OpenRAIL-M (vocoder weights, use restrictions apply); CC-BY-4.0 (stock voices); Apache-2.0 (RenikudPlus, polyg2p); CC BY-SA (German, Italian and some Yiddish lexicons); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-bluetts",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Text-to-speech for Subtitld with BlueTTS (BlueV3 v3.0.1, by Maxim Melichov): Hebrew,\nEnglish, German, Spanish, Italian, Russian and Yiddish at 44.1 kHz, in 15 stock voices\nor in the speaker's own voice cloned from the video.\n\nThe archive holds the add-on, ONNX Runtime and the text front ends. The model (428 MB)\ndownloads on the first line; Hebrew (1.2 GB, or 312 MB compact), Yiddish (307 MB) and\ncloning (136 MB) download when a line first needs them. Every file is pinned to a\nrevision and checked by sha256. It runs on the CPU, several times faster than real time.\n\nThe add-on is Apache-2.0; BlueTTS's code is MIT. The model's vocoder weights are under\nBigScience OpenRAIL-M, whose use restrictions apply to the speech it makes; the stock\nvoices are CC-BY-4.0 (LibriTTS-R); the German, Italian and some Yiddish lexicons are\nCC BY-SA. Each archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its\ncomplete source is `bluetts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bluetts/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-linux-x86_64.zip",
+              "size_bytes": 61742406,
+              "sha256": "66cbe75088a593cb6f858a5ea7132f04e0e5056117dba28f7c3b5ae90211d7b7"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-macos-arm64.zip",
+              "size_bytes": 43801765,
+              "sha256": "f3ab75c081f71181fa4e2ef5c670376356e870dce2d87776ce53ec45643b11ac"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-windows-x86_64.zip",
+              "size_bytes": 37318614,
+              "sha256": "08e5da6e651ea5a3cc3091f6018630f4b1acdc31075b55328856357d60c59bb9"
             }
           ]
         }
