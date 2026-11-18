@@ -669,3 +669,22 @@ addons:
     compute: cpu
     languages: [he, en, de, es, it, ru, yi]
     license: "Apache-2.0 (add-on); MIT (BlueTTS code and weights); BigScience OpenRAIL-M (vocoder weights, use restrictions apply); CC-BY-4.0 (stock voices); Apache-2.0 (RenikudPlus, polyg2p); CC BY-SA (German, Italian and some Yiddish lexicons); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: zonos3
+    repo: addon-zonos3
+    display_name: "ZONOS3-Mini (offline, voice clone, 43 languages)"
+    # Zyphra's ZONOS3-Mini (MIT code, Apache-2.0 weights) on Zyphra's own ggml
+    # runtime, built from servers/ggml at a pinned commit into one C library
+    # (libzonos3_c, ctypes) without its Rust normalizer; text goes through the
+    # zyphra-textnorm wheel instead. No torch, no numpy, ~18-24 MB zips. 27
+    # stock voices (Zyphra's defaults, shipped as speaker embeddings) or the
+    # speaker cloned from the clip Subtitld cuts. Every line runs under LACI
+    # (Zyphra's alignment check, ported) plus the add-on's own cut at the first
+    # silence once the text is read, so short lines don't run on. CPU only,
+    # x86-64 needs AVX2; about 2x real time (i7-13700T). Model 1,115 MB on the
+    # first line, speaker encoder 45 MB on the first clone, pinned and
+    # sha256-checked. Linux zip runs on glibc 2.28.
+    summary: "Offline TTS in 43 languages, in 27 voices or the speaker's own voice cloned from a few seconds of the video. About twice as fast as real time on a CPU; the 1.1 GB model downloads on first use."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en, fr, de, es, it, pt, ja, zh, ko, ar, bn, bg, cs, da, nl, fi, ka, el, gu, he, hi, hu, id, kn, ms, ml, mr, nb, or, pl, pa, ro, ru, sk, sv, tl, ta, te, th, tr, uk, ur, vi]
+    license: "Apache-2.0 (add-on; ZONOS3-Mini weights and default voices); MIT (ZONOS3-Mini runtime, ggml, nlohmann/json); MIT, Apache-2.0 and Unicode-3.0 (zyphra-textnorm); OpenLDAP (LMDB); BSD-3-Clause (pocketfft)"
