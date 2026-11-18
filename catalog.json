@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-18T19:43:54Z",
+  "generated": "2026-11-18T20:04:33Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1470,30 +1470,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, Audio8 TTS code and weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
       "homepage": "https://github.com/Subtitld/addon-audio8",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Voice-cloning text-to-speech for Subtitld with Audio8 TTS Preview 0.6B: 11 languages\n(Chinese, Cantonese, Dutch, English, French, German, Italian, Japanese, Korean,\nPolish, Spanish) at 44.1 kHz, in the speaker's own voice cloned from the video.\n\nThe archive holds the add-on and ONNX Runtime. The model (1 GB, the official INT4\nONNX release) downloads on the first line, at a pinned revision, checked by sha256.\nIt runs on the CPU at about 0.4 to 0.5 times real time and needs about 3 GB of memory.\n\nThe add-on, Audio8 TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and upstream's\nNOTICE. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `audio8-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-audio8/commits/v26.11.1",
+          "changelog": "Voice-cloning text-to-speech for Subtitld with Audio8 TTS at 44.1 kHz, in the speaker's\nown voice cloned from the video. Realistic 0.6B, the default, speaks 23 languages (Arabic,\nCantonese, Chinese, Dutch, English, Finnish, French, German, Hindi, Indonesian, Italian,\nJapanese, Korean, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai,\nTurkish, Vietnamese); the earlier Preview 0.6B, in 11, can be picked in Configure.\n\nThe archive holds the add-on and ONNX Runtime. The model (1 GB) downloads on the first\nline, at pinned revisions, checked by sha256: the codec and tokenizer from Edge0's official\nPreview ONNX release, and Realistic's two transformers from an independent INT4 export\n(stephvax/audio8-tts-realistic-0.6b-onnx-int4, checked against Realistic's checkpoint with\ntools/verify_export.py). It runs on the CPU at about 0.5 times real time and needs about\n3 GB of memory.\n\nThe add-on, Audio8 TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and upstream's\nNOTICE. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `audio8-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-audio8/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.1/audio8-26.11.1-linux-x86_64.zip",
-              "size_bytes": 58575977,
-              "sha256": "625da36ef8d6b8c109aa1b508c70318eb9b1202974647a4e2d12440ea73c6614"
+              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.2/audio8-26.11.2-linux-x86_64.zip",
+              "size_bytes": 58580342,
+              "sha256": "4731c42075f6b1cd691666d9776201956e75dcd789217818ed7228c1f5969dd4"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.1/audio8-26.11.1-macos-arm64.zip",
-              "size_bytes": 39843277,
-              "sha256": "08e075c3df8b7fa1739ed825bd0953f820e2498b9cbfbe7a59478e0b31d4f8df"
+              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.2/audio8-26.11.2-macos-arm64.zip",
+              "size_bytes": 39847036,
+              "sha256": "9cc01e1e5ee13f52a17ff0e59a48e69c012e2f7de8b5549d1c87aba5d12d1950"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.1/audio8-26.11.1-windows-x86_64.zip",
-              "size_bytes": 34791259,
-              "sha256": "231a0fb7e7f7db5d4f26e0f252a47d86525c250c016c1e6047cc970eb798bd4e"
+              "url": "https://github.com/Subtitld/addon-audio8/releases/download/v26.11.2/audio8-26.11.2-windows-x86_64.zip",
+              "size_bytes": 34794912,
+              "sha256": "aa0dbc784b581116370662e3457a1b56fa2d5b2a09c93302da9b61c8d975ceec"
             }
           ]
         }
