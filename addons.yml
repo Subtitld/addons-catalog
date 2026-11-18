@@ -652,3 +652,20 @@ addons:
     license: "Apache-2.0 (add-on, NeMo-Speech.cpp); models downloaded by the user: CC-BY-4.0 (Parakeet TDT 0.6B v3), OpenMDW-1.1 (Nemotron 3.5 ASR Streaming 0.6B, Nemotron-3-Diarization)"
     # asr.stream reached the host in v26.10.
     min_subtitld: "26.10"
+  - id: bluetts
+    repo: addon-bluetts
+    display_name: "BlueTTS (offline, voice clone, Hebrew + 6 languages)"
+    # BlueV3 v3.0.1 by Maxim Melichov (BlueTTS, MIT) on ONNX Runtime 1.29,
+    # through upstream's own blue_onnx (vendored) and the bundle's Yiddish
+    # front end; no torch, ~36-52 MB zips. 15 stock voices (LibriTTS-R,
+    # CC-BY-4.0) or the speaker cloned from the clip Subtitld cuts. Files
+    # download per need, pinned and sha256-checked: model 428 MB, Hebrew G2P
+    # 1.2 GB (or 312 MB int8, a Configure choice), Yiddish 307 MB, cloning
+    # 136 MB. About 5x real time on a CPU (3x Hebrew, i7-13700T). polyg2p,
+    # the G2P of en/de/es/it/ru, is built from source on Windows and checked
+    # against the bundle's wheel. The vocoder is OpenRAIL-M (use restrictions).
+    summary: "Offline TTS in Hebrew, English, German, Spanish, Italian, Russian and Yiddish, in 15 voices or the speaker's own voice cloned from about ten seconds of the video. 3 to 5 times faster than real time on a CPU; the 428 MB model downloads on first use, Hebrew and Yiddish add their own reading models."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [he, en, de, es, it, ru, yi]
+    license: "Apache-2.0 (add-on); MIT (BlueTTS code and weights); BigScience OpenRAIL-M (vocoder weights, use restrictions apply); CC-BY-4.0 (stock voices); Apache-2.0 (RenikudPlus, polyg2p); CC BY-SA (German, Italian and some Yiddish lexicons); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
