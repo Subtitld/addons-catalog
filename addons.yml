@@ -692,3 +692,22 @@ addons:
     compute: cpu
     languages: [en, fr, de, es, it, pt, ja, zh, ko, ar, bn, bg, cs, da, nl, fi, ka, el, gu, he, hi, hu, id, kn, ms, ml, mr, nb, or, pl, pa, ro, ru, sk, sv, tl, ta, te, th, tr, uk, ur, vi]
     license: "Apache-2.0 (add-on; ZONOS3-Mini weights and default voices); MIT (ZONOS3-Mini runtime, ggml, nlohmann/json); MIT, Apache-2.0 and Unicode-3.0 (zyphra-textnorm); OpenLDAP (LMDB); BSD-3-Clause (pocketfft)"
+  - id: reverb
+    repo: addon-reverb
+    display_name: "Reverb (offline, voice clone, 7 languages, non-commercial)"
+    # Reverb-TTS v1.0.0 by Software Mansion AI Labs (Apache-2.0 code,
+    # CC BY-NC 4.0 weights), exported to ONNX by the add-on's own tool (one
+    # backbone graph with an explicit KV cache, the Higgs Audio v2 codec) and
+    # run on ONNX Runtime with Reverb's sampler ported to numpy: no torch,
+    # ~55 MB zips. 16 preset voices from Reverb's repository, or the speaker
+    # cloned from the clip Subtitld cuts AND its transcript (voice_ref_text;
+    # without one the line is refused, as Reverb drops the first words).
+    # Converted files live in the add-on's models-1 release, pinned and
+    # sha256-checked: 640 MB on the first line (Exact, fp32 maths) or 378 MB
+    # (Fast, dynamic int8, ~1.5-2x faster), encoder 327 MB on the first clone.
+    # About 1.2x / 1.6x real time on a busy i7-13700T. Linux zip needs glibc 2.35.
+    summary: "Offline TTS in English, German, French, Spanish, Italian, Polish and Portuguese, in 16 voices or the speaker's own voice cloned from a few seconds of the video and its subtitles. Runs on a CPU; the 640 MB model downloads on first use. The model is for non-commercial use only."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en, de, fr, es, it, pl, pt]
+    license: "Apache-2.0 (add-on, and Reverb's code it ports) + CC-BY-NC-4.0 (Reverb-TTS weights and preset voices, non-commercial only); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
