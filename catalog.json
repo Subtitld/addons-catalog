@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-19T00:10:58Z",
+  "generated": "2026-11-19T12:56:08Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1448,23 +1448,35 @@
     },
     {
       "id": "audio8",
-      "display_name": "Audio8 TTS (offline, voice clone, 11 languages)",
-      "summary": "Offline TTS in 11 languages, including Chinese, Cantonese, Japanese and Korean, in the speaker's own voice cloned from a few seconds of the video, at 44.1 kHz. Slow on a CPU: a second of speech takes two to three seconds. The 1 GB model downloads on first use.",
+      "display_name": "Audio8 TTS (offline, voice clone, 23 languages)",
+      "summary": "Offline TTS in 23 languages, from Arabic, Hindi and Thai to Chinese, Cantonese, Japanese and Korean, in the speaker's own voice cloned from a few seconds of the video, at 44.1 kHz. Slow on a CPU: a second of speech takes two to three seconds. The 1 GB model downloads on first use.",
       "tasks": [
         "tts.synthesize"
       ],
       "languages": [
-        "zh",
+        "ar",
         "yue",
+        "zh",
         "nl",
         "en",
+        "fi",
         "fr",
         "de",
+        "hi",
+        "id",
         "it",
         "ja",
         "ko",
+        "ms",
+        "no",
         "pl",
-        "es"
+        "pt",
+        "ru",
+        "es",
+        "sv",
+        "th",
+        "tr",
+        "vi"
       ],
       "compute": "cpu",
       "accelerators": [],
