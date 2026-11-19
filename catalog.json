@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-19T19:41:05Z",
+  "generated": "2026-11-19T20:25:09Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2122,6 +2122,55 @@
               "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-windows-x86_64.zip",
               "size_bytes": 18523940,
               "sha256": "0d7be6d44a09abd54f8d49f09e61e3aef0431f31bd6b4bfef1490fddec5132b6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reverb",
+      "display_name": "Reverb (offline, voice clone, 7 languages, non-commercial)",
+      "summary": "Offline TTS in English, German, French, Spanish, Italian, Polish and Portuguese, in 16 voices or the speaker's own voice cloned from a few seconds of the video and its subtitles. Runs on a CPU; the 640 MB model downloads on first use. The model is for non-commercial use only.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pl",
+        "pt"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, and Reverb's code it ports) + CC-BY-NC-4.0 (Reverb-TTS weights and preset voices, non-commercial only); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "homepage": "https://github.com/Subtitld/addon-reverb",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "Text-to-speech for Subtitld with Reverb-TTS v1.0.0 (Software Mansion AI Labs): English,\nGerman, French, Spanish, Italian, Polish and Portuguese at 24 kHz, in 16 preset voices or\nin the speaker's own voice, cloned from a clip of the video and its subtitles.\n\nThe archive holds the add-on, ONNX Runtime, tokenizers and Verbalis. The model (640 MB, or\n378 MB in Fast mode) downloads on the first line, and the codec encoder (327 MB) on the first\ncloned line, from this repository's `models-1` release and Reverb's own repository. Every file\nis pinned and checked by sha256. It runs on the CPU.\n\n**The model is licensed under CC BY-NC 4.0: non-commercial use only.** The add-on is\nApache-2.0, and so is Reverb's code it ports. Each archive carries `THIRD_PARTY_LICENSES/`\nwith the licence of everything frozen into it. The Linux archive carries libquadmath\n(LGPL-2.1, with numpy); its complete source is `reverb-<version>-libquadmath-source.tar.gz`\nin this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-reverb/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-reverb/releases/download/v26.11.1/reverb-26.11.1-linux-x86_64.zip",
+              "size_bytes": 64887364,
+              "sha256": "a80bc9bdf58d058579dcb3234e528d67eefc3c8e5470295e118254e1ee588b95"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-reverb/releases/download/v26.11.1/reverb-26.11.1-macos-arm64.zip",
+              "size_bytes": 45556727,
+              "sha256": "40a60b50d02a463975de4586318d8b282a93ab27653e109b6f70ffbb8b70a376"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-reverb/releases/download/v26.11.1/reverb-26.11.1-windows-x86_64.zip",
+              "size_bytes": 40456890,
+              "sha256": "35cd55d3a3dc3860aee48cd5fc1985e4fb552e661261eadd086e7f25b2ecf7c3"
             }
           ]
         }
