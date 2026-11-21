@@ -713,3 +713,64 @@ addons:
     compute: cpu
     languages: [en, de, fr, es, it, pl, pt]
     license: "Apache-2.0 (add-on, and Reverb's code it ports) + CC-BY-NC-4.0 (Reverb-TTS weights and preset voices, non-commercial only); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
+  - id: omnivoice
+    repo: addon-omnivoice
+    display_name: "OmniVoice (offline, voice clone, 646 languages, non-commercial)"
+    # k2-fsa's OmniVoice (Apache-2.0 code, CC BY-NC weights), as audio.cpp's
+    # 8-bit GGUF, run by audio.cpp through its C API with ctypes, built like
+    # voxcpm 26.11.1 (one patch: a per-step callback for progress and cancel;
+    # Metal on Apple Silicon after a one-time check in a child process). No
+    # torch, no numpy, ~17 MB zips, Linux zip on glibc 2.28. 646 languages
+    # (OmniVoice's own list; codes ISO 639-1 or -3, plus aliases such as ar,
+    # tl). Clones the speaker from the clip Subtitld cuts AND its transcript
+    # (voice_ref_text; refused without one, OmniVoice needs it), across
+    # languages; ten designed voices and one described in Configure, each
+    # made once per speaker as an anchor clip. 24 kHz. 16 diffusion steps by
+    # default: a cloned line takes ~6 s per second of speech (i7-13700T). The
+    # 1.35 GB model downloads on first use, pinned, sha256-checked; ~2.5 GB
+    # of memory.
+    summary: "Offline TTS in more than 600 languages, in the speaker's own voice cloned from the video and its subtitles, across languages, or in a voice designed from a few attributes. Slow on a CPU: several seconds per second of speech; the 1.35 GB model downloads on first use. The model is for non-commercial use only."
+    tasks: [tts.synthesize]
+    compute: cpu
+    accelerators: [mps]
+    # OmniVoice's language list, from the add-on's manifest. Quoted: bare
+    # `no` (Norwegian) is a YAML boolean.
+    languages: [
+      aae, aal, aao, ab, abb, abn, abr, abs, abv, acm, acw, acx, adf, adx, ady, aeb, aec, af,
+      afb, afo, ahl, ahs, ajg, aju, ala, aln, alo, am, amu, an, anc, ank, anp, anw, aom, apc,
+      apd, ar, arb, arq, ars, ary, arz, as, ast, avl, awo, ayl, ayp, az, ba, bag, bas, bax, bba,
+      bbj, bbl, bbu, bce, bci, bcs, bcy, bda, bde, bdm, be, beb, bew, bfd, bft, bg, bgp, bhb,
+      bhh, bho, bhp, bhr, bjj, bjk, bjn, bjt, bkh, bkm, bky, bmm, bmq, bn, bnm, bnn, bns, bo,
+      bou, bqg, br, bra, brh, bri, brx, bs, bsh, bsj, bsk, btm, btv, bug, bum, buo, bux, bwr,
+      bxf, byc, bys, byv, byx, bzc, bzw, ca, ccg, ceb, cen, cfa, cgg, chq, cjk, ckb, ckl, ckr,
+      cky, cmn, cnh, cpy, cs, cte, ctl, cut, cux, cv, cy, da, dag, dar, dav, dbd, dcc, de, deg,
+      dgh, dgo, dje, dmk, dml, dru, dty, dua, dv, dyu, dzg, ebr, ebu, ego, eiv, eko, ekr, el,
+      elm, en, eo, es, esu, et, eto, ets, etu, eu, ewo, ext, eyo, fa, fan, fat, ff, ffm, fi,
+      fia, fil, fip, fkk, fmp, fr, fub, fuc, fue, fuf, fuh, fui, fuq, fuv, fy, ga, gbm, gbr,
+      gby, gcc, gdf, gej, ges, ggg, gid, gig, giz, gjk, gju, gl, glw, gn, gol, gom, gsl, gu,
+      gui, gur, guz, gv, gwc, gwe, gwt, gya, gyz, ha, hah, hao, haw, haz, hbb, he, hem, hi, hia,
+      hkk, hla, hno, hoj, hr, hsb, ht, hu, hue, hul, hux, hwo, hy, hz, ia, ibb, id, ida, idu,
+      ig, ijc, ijn, ik, ikw, in, is, ish, iso, it, its, itw, itz, iw, ja, jal, jax, jgo, ji,
+      jmx, jns, jqr, juk, juo, jv, ka, kab, kai, kaj, kam, kbd, kbl, kbt, kcq, kdh, kea, keu,
+      kfe, kfk, kfp, khg, khw, kj, kjc, kjk, kk, kln, kls, km, kmr, kmy, kn, kna, knn, ko, kol,
+      koo, kpo, kqo, ks, ksd, ksf, kto, kuh, kvx, kw, kwm, kxp, ky, kyx, lag, lb, lcm, ldb, lg,
+      lij, lir, lkb, lla, ln, lnu, lo, loa, lrk, lss, lt, ltg, lto, lua, luo, lus, lv, lwg, mab,
+      maf, mai, mau, max, mbo, mcf, mcn, mcx, mdd, mde, mdf, mek, mer, meu, mfm, mfn, mfo, mfv,
+      mgg, mgi, mhk, mhr, mi, mig, miu, mk, mkf, mki, ml, mlq, mn, mne, mni, mqy, mr, mrj, mrr,
+      mrt, ms, mse, msh, msw, mt, mtr, mtu, mtx, mua, mug, mui, mve, mvy, mxs, mxu, mxy, my,
+      myv, mzl, nal, nan, nap, nb, nbh, ncf, nco, ncx, ndi, ng, ngi, nhg, nhi, nhn, nhq, nja,
+      nl, nla, nlv, nmg, nmz, nn, nnh, "no", noe, npi, nso, ny, nyu, oc, odk, odu, ogo, om, orc,
+      oru, ory, os, pa, pbs, pbt, pbu, pcm, pes, pex, phl, phr, pip, piy, pko, pl, plk, plt,
+      pmq, pms, pmy, pnb, poc, poe, pow, prq, ps, pst, pt, pua, pwn, qug, qum, qup, qur, qus,
+      quv, qux, quy, qva, qvi, qvj, qvl, qwa, qws, qxa, qxp, qxt, qxu, qxw, rag, rm, ro, rob,
+      rof, roo, rth, ru, rup, rw, sa, sah, sat, sau, say, sbn, sc, scl, scn, sd, sei, shu, si,
+      sip, siw, sjr, sk, skg, skr, sl, sn, snc, snk, so, sol, sps, sq, sr, src, sro, ssi, ste,
+      sua, sv, sva, sw, swh, szy, ta, tan, tar, tay, tbf, tcf, tcy, tdn, tdx, te, tg, tgc, th,
+      the, thq, thr, thv, ti, tig, tio, tk, tkg, tkt, tl, tli, tlp, tn, tok, tpl, tpz, tqp, tr,
+      trp, trq, trv, trw, tt, ttj, ttr, ttu, tui, tul, tuq, tuv, tuy, tvo, tvu, tw, twu, txs,
+      txy, udl, ug, uk, uki, umb, ur, ush, uz, uzn, vai, var, ver, vi, vmc, vmj, vmm, vmp, vmz,
+      vot, vro, wbl, wci, weo, wes, wja, wji, wo, wof, xh, xhe, xka, xmf, xmv, xmw, xpe, xti,
+      xtu, yaq, yav, yay, ydd, ydg, yer, "yes", yi, yo, yue, zga, zgh, zh, zoc, zoh, zor, zpv,
+      zpy, zsm, ztg, ztn, ztp, zts, ztu, zu, zza
+    ]
+    license: "Apache-2.0 (add-on, audio.cpp) + CC BY-NC (OmniVoice weights, non-commercial only); MIT (ggml, cJSON, libyaml, utf8proc, llama.cpp's tokenizer)"
