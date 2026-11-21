@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-21T01:32:56Z",
+  "generated": "2026-11-21T01:36:11Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -482,7 +482,7 @@
     {
       "id": "voxcpm",
       "display_name": "VoxCPM2 (offline, voice clone, 30 languages)",
-      "summary": "Neural TTS in 30 languages at 48 kHz, in the speaker's own voice cloned from the video or in a described voice. Heavy: 4.96 GB model downloaded on first use, about 7 GB of memory, several seconds per second of speech on a CPU.",
+      "summary": "Neural TTS in 30 languages at 48 kHz, in the speaker's own voice cloned from the video or in a described voice. Heavy: 2.96 GB model downloaded on first use, about 4.5 GB of memory, several seconds per second of speech on a CPU.",
       "tasks": [
         "tts.synthesize"
       ],
@@ -518,11 +518,11 @@
         "tr",
         "vi"
       ],
-      "compute": "gpu_preferred",
+      "compute": "cpu",
       "accelerators": [
         "mps"
       ],
-      "license": "Apache-2.0 (add-on, VoxCPM code and VoxCPM2 weights); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
+      "license": "Apache-2.0 (add-on, VoxCPM2 weights, audio.cpp); MIT (ggml, cJSON, libyaml)",
       "homepage": "https://github.com/Subtitld/addon-voxcpm",
       "latest_version": "26.11.1",
       "releases": [
