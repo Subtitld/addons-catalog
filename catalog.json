@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-21T04:25:16Z",
+  "generated": "2026-11-21T04:27:04Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2870,6 +2870,52 @@
               "url": "https://github.com/Subtitld/addon-omnivoice/releases/download/v26.11.1/omnivoice-26.11.1-windows-x86_64.zip",
               "size_bytes": 14015937,
               "sha256": "87364c3a6339bddc58a26a7fc246597f4e7a94c2618bfb0ac3ad85bbda7b7ac7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "voxmel",
+      "display_name": "VoxMel (offline, voice clone, 2 languages)",
+      "summary": "Offline TTS in English and Mandarin, in the speaker's own voice cloned closely from the video and its subtitles, or in eight preset voices. On a CPU a second of speech takes two to four seconds; the 1.04 GB model downloads on first use.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "compute": "cpu",
+      "accelerators": [
+        "mps"
+      ],
+      "license": "Apache-2.0 (add-on, VoxMel weights and preset voices, audio.cpp); MIT (Vocos vocoder, ggml, cJSON, libyaml, utf8proc, llama.cpp's tokenizer)",
+      "homepage": "https://github.com/Subtitld/addon-voxmel",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "The first release: text-to-speech for Subtitld with VoxDance Lab's\nVoxMel 0.6B, in English and Mandarin.\n\n- The speaker's own voice, cloned closely from the clip Subtitld cuts\n  from the video and its subtitles. VoxMel needs the clip's words, so\n  \"Clone the timbre only\" doesn't work with this add-on. It clones best\n  within a language: an English dub of a Mandarin speaker works well, a\n  Mandarin dub of an English speaker may slur some words.\n- Eight preset voices, two women and two men in each language. VoxMel\n  made them itself, with no reference recording, and every line of a\n  speaker clones the same clip, so the voice stays the same.\n- Runs on the CPU, or on the GPU of an Apple Silicon Mac once a short\n  test line shows that works there. A cloned line takes two to four\n  seconds per second of speech on a recent laptop CPU.\n- The 1.04 GB model downloads on the first line, pinned and checked;\n  about 2 GB of memory. The archives are about 17 MB, and the Linux one\n  runs on glibc 2.28 and newer.\n\nThe add-on, its preset voices, audio.cpp and the VoxMel weights are\nApache-2.0; the Vocos vocoder, ggml, cJSON, libyaml, utf8proc and\nllama.cpp's tokenizer are MIT. Each archive carries THIRD_PARTY_LICENSES/,\nwith the one change we made to audio.cpp (a step callback for cancel and\nprogress).\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-voxmel/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-voxmel/releases/download/v26.11.1/voxmel-26.11.1-linux-x86_64.zip",
+              "size_bytes": 18798655,
+              "sha256": "afcff03d98e9c0242b88e1d67c822bc11752ddf54e30405683bea04108a06ea2"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-voxmel/releases/download/v26.11.1/voxmel-26.11.1-macos-arm64.zip",
+              "size_bytes": 18084150,
+              "sha256": "faa27710acb00aca4168482af65ca1e77725c217c2707c4a5977ed0b5c9dd630"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-voxmel/releases/download/v26.11.1/voxmel-26.11.1-windows-x86_64.zip",
+              "size_bytes": 15434504,
+              "sha256": "9d601f50b37a306ad2fe46f47480c5765f765fde7333b4c809eaecd969caba29"
             }
           ]
         }
