@@ -796,3 +796,20 @@ addons:
     accelerators: [mps]
     languages: [en, zh]
     license: "Apache-2.0 (add-on, VoxMel weights and preset voices, audio.cpp); MIT (Vocos vocoder, ggml, cJSON, libyaml, utf8proc, llama.cpp's tokenizer)"
+  - id: tiny-voca
+    repo: addon-tiny-voca
+    display_name: "tiny-voca (offline, lightweight English)"
+    # tiny-voca (4.5M parameters, Apache-2.0, by n4ze3m), two American English
+    # voices (F2 woman, M2 man), 24 kHz, no cloning. Runs in llama.cpp's
+    # llama-server (MIT), built from main at 3574df8 (tiny-voca support, after
+    # the v1.0.0-b12359 release), CPU only, without its chat UI or HTTPS; the
+    # add-on drives it over HTTP on 127.0.0.1. The model's GGUF carries the
+    # dizione phonemizer port (numbers, dates, money read as words). The model
+    # (26 MB, ggml-org/tiny-voca-GGUF, pinned) is bundled: nothing to download.
+    # A line takes a few hundredths of a second on a CPU. ~43 MB zips, Linux
+    # zip on glibc 2.28.
+    summary: "Offline English TTS in two voices, a woman and a man, from a 4.5M-parameter model: dozens of times faster than real time on a CPU, with numbers, dates and money read out as words. The model is part of the add-on: nothing to download. No voice cloning."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [en]
+    license: "Apache-2.0 (add-on, tiny-voca weights); MIT (llama.cpp and ggml, cpp-httplib, nlohmann/json); MIT-0 or public domain (miniaudio, stb_image); Unlicense (subprocess.h)"
