@@ -774,3 +774,25 @@ addons:
       zpy, zsm, ztg, ztn, ztp, zts, ztu, zu, zza
     ]
     license: "Apache-2.0 (add-on, audio.cpp) + CC BY-NC (OmniVoice weights, non-commercial only); MIT (ggml, cJSON, libyaml, utf8proc, llama.cpp's tokenizer)"
+  - id: voxmel
+    repo: addon-voxmel
+    display_name: "VoxMel (offline, voice clone, 2 languages)"
+    # VoxDance Lab's VoxMel 0.6B (Apache-2.0 code and weights; Vocos vocoder
+    # MIT), as audio.cpp's 8-bit GGUF, run by audio.cpp through its C API with
+    # ctypes, built like voxcpm and omnivoice (audio.cpp pinned to main after
+    # v0.9.5, 0906d8f, where VoxMel arrived; one patch: a per-Mel-frame
+    # callback for progress and cancel; Metal on Apple Silicon after a
+    # one-time check). No torch, no numpy, ~17 MB zips, Linux zip on glibc
+    # 2.28. English and Mandarin. Clones the speaker from the clip Subtitld
+    # cuts AND its transcript (voice_ref_text; refused without one), closest
+    # within a language (en from a zh clip works, zh from an en clip slurs);
+    # eight preset voices, clips VoxMel made itself from fixed seeds, shipped
+    # in the add-on. 24 kHz. 2-4 s per second of speech when cloning
+    # (i7-13700T). The 1.04 GB model downloads on first use, pinned,
+    # sha256-checked; ~2 GB of memory.
+    summary: "Offline TTS in English and Mandarin, in the speaker's own voice cloned closely from the video and its subtitles, or in eight preset voices. On a CPU a second of speech takes two to four seconds; the 1.04 GB model downloads on first use."
+    tasks: [tts.synthesize]
+    compute: cpu
+    accelerators: [mps]
+    languages: [en, zh]
+    license: "Apache-2.0 (add-on, VoxMel weights and preset voices, audio.cpp); MIT (Vocos vocoder, ggml, cJSON, libyaml, utf8proc, llama.cpp's tokenizer)"
