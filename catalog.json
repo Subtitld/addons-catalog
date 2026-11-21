@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-21T10:44:01Z",
+  "generated": "2026-11-21T10:45:52Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2916,6 +2916,49 @@
               "url": "https://github.com/Subtitld/addon-voxmel/releases/download/v26.11.1/voxmel-26.11.1-windows-x86_64.zip",
               "size_bytes": 15434504,
               "sha256": "9d601f50b37a306ad2fe46f47480c5765f765fde7333b4c809eaecd969caba29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiny-voca",
+      "display_name": "tiny-voca (offline, lightweight English)",
+      "summary": "Offline English TTS in two voices, a woman and a man, from a 4.5M-parameter model: dozens of times faster than real time on a CPU, with numbers, dates and money read out as words. The model is part of the add-on: nothing to download. No voice cloning.",
+      "tasks": [
+        "tts.synthesize"
+      ],
+      "languages": [
+        "en"
+      ],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, tiny-voca weights); MIT (llama.cpp and ggml, cpp-httplib, nlohmann/json); MIT-0 or public domain (miniaudio, stb_image); Unlicense (subprocess.h)",
+      "homepage": "https://github.com/Subtitld/addon-tiny-voca",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "The first release: lightweight English text-to-speech for Subtitld with\ntiny-voca, a 4.5-million-parameter model by Muhammed Nazeem.\n\n- Two American English voices, a woman and a man, at 24 kHz. No voice\n  cloning.\n- Dozens of times faster than real time on a CPU: a line takes a few\n  hundredths of a second.\n- Numbers, prices, dates, times and units are read out as words.\n- The model (26 MB) is part of the add-on: nothing to download.\n- A Speed setting, which a speaker's Rate in Subtitld scales further.\n- English only: a line in another project language gets a message saying\n  so.\n- Runs in llama.cpp's server, which the add-on starts on 127.0.0.1 and\n  stops when it exits. The Linux archive runs on glibc 2.28 and newer.\n\nThe add-on and the tiny-voca weights are Apache-2.0; llama.cpp and ggml\nare MIT. Each archive carries THIRD_PARTY_LICENSES/, including the\nlicences of the pronunciation data in the model (CMU Pronouncing\nDictionary, Wikipedia Homograph Data).\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-tiny-voca/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-tiny-voca/releases/download/v26.11.1/tiny-voca-26.11.1-linux-x86_64.zip",
+              "size_bytes": 42620247,
+              "sha256": "c777af00e7c3fc5aff9e8096c411f9c22097a8f67f55bfbaa956f1a3720d6423"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-tiny-voca/releases/download/v26.11.1/tiny-voca-26.11.1-macos-arm64.zip",
+              "size_bytes": 40080492,
+              "sha256": "4b1222932ee21d2f3c473fb99f459deb171a13f92e1c3cff5718e1689e2363da"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-tiny-voca/releases/download/v26.11.1/tiny-voca-26.11.1-windows-x86_64.zip",
+              "size_bytes": 33080183,
+              "sha256": "16fa1f78d8ad6ec130d1018838e3b6a59ca7f7fa4fee8f058d886e25283ec35e"
             }
           ]
         }
