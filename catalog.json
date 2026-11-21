@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-21T10:45:52Z",
+  "generated": "2026-11-21T14:52:23Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -793,30 +793,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms",
       "homepage": "https://github.com/Subtitld/addon-assemblyai",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-assemblyai/compare/v1.0.2...v26.11.1",
+          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-assemblyai/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.1/assemblyai-26.11.1-linux-x86_64.zip",
-              "size_bytes": 17839401,
-              "sha256": "5284214a21c19967044edccfae83b2c81b593d5b123f1c0d050c83445d596121"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.2/assemblyai-26.11.2-linux-x86_64.zip",
+              "size_bytes": 17832475,
+              "sha256": "06360eacc65709a65673e62684181650ce48669df66da8f1bd363cd45fcb0653"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.1/assemblyai-26.11.1-macos-arm64.zip",
-              "size_bytes": 14671580,
-              "sha256": "87695df314ec600aeab0e8d4e5bbf2e85fe7862fd5814185343fa5fbd196c15c"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.2/assemblyai-26.11.2-macos-arm64.zip",
+              "size_bytes": 14670242,
+              "sha256": "9c8cfa98be43c943f0b014b1ee26d791bac3d81f0071e39a4fcb728667c3fe23"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.1/assemblyai-26.11.1-windows-x86_64.zip",
-              "size_bytes": 8769133,
-              "sha256": "bb256f9d00a67421f00fd1883b1b3a6d57928ea55d63feabf90d599e3db4a6ed"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.2/assemblyai-26.11.2-windows-x86_64.zip",
+              "size_bytes": 8761918,
+              "sha256": "2f0be58e1b35f6477fded58fa60b9cdd5e38ee5bd22c0a702f8452279d25b1f4"
             }
           ]
         }
