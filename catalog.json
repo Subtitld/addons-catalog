@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-23T01:11:06Z",
+  "generated": "2026-11-23T02:55:11Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2098,30 +2098,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on; ZONOS3-Mini weights and default voices); MIT (ZONOS3-Mini runtime, ggml, nlohmann/json); MIT, Apache-2.0 and Unicode-3.0 (zyphra-textnorm); OpenLDAP (LMDB); BSD-3-Clause (pocketfft)",
       "homepage": "https://github.com/Subtitld/addon-zonos3",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "First release. Offline text-to-speech with Zyphra's ZONOS3-Mini, on Zyphra's own ggml runtime, with no PyTorch.\n\n- 43 languages, at 44.1 kHz.\n- 27 stock voices (Zyphra's default voices). Every voice speaks every language, but with its own accent, which can be strong in another language; clone the speaker for those.\n- The speaker's own voice, cloned from 5 to 20 seconds of the video.\n- Numbers, dates, money and units are read out in each language's grammar (zyphra-textnorm).\n- Each line is checked as it is spoken (LACI, Zyphra's alignment check) and cut at the first silence once the text is read, so short lines don't run on with extra words. The cut is this add-on's own rule.\n- Runs on the CPU, about twice as fast as real time. x86-64 processors need AVX2.\n- Downloads: the model (1,115 MB) on the first line, the speaker encoder (45 MB) on the first cloned voice, pinned and checked by SHA-256.\n\nLinux builds run on glibc 2.28 and newer.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-zonos3/commits/v26.11.1",
+          "changelog": "A cloned voice in a language its clip isn't in often came out silent:\nwith an English clip, Gujarati said nothing in 10 seeds of 16, and 26.11.1\ngave up after 3 seeds and wrote the silence.\n\n- A take is taken again with the next seed when it is silent or when LACI\n  gave up on it (\"capped\": its own retries ran out and the reading still\n  skipped or stopped short), up to 12 takes, of which at most 3 capped\n  ones; then the longest take with voice is kept.\n- When every take is silent the line fails with a message instead.\n- Stock voices are unchanged: in 8 languages every line took one take.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-zonos3/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-linux-x86_64.zip",
-              "size_bytes": 18999768,
-              "sha256": "a91d7e8ce0c86fae44d9602daae989898379469e8d43d16b93f23960808ce76d"
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.2/zonos3-26.11.2-linux-x86_64.zip",
+              "size_bytes": 19001597,
+              "sha256": "85c37c7650d6e45f54aeebb193ea8af3e315c49ec4a8b4281b76335f41b61463"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-macos-arm64.zip",
-              "size_bytes": 23984693,
-              "sha256": "f66c5dc3bf64d1c13391dc04000f4a9b3ede61e5e849a98cc44b89afeff8028f"
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.2/zonos3-26.11.2-macos-arm64.zip",
+              "size_bytes": 23986926,
+              "sha256": "47ce46bba941cd3566ca0fb88c69178f0c96778344a51d548dc0134a564bcfb5"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.1/zonos3-26.11.1-windows-x86_64.zip",
-              "size_bytes": 18523940,
-              "sha256": "0d7be6d44a09abd54f8d49f09e61e3aef0431f31bd6b4bfef1490fddec5132b6"
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.2/zonos3-26.11.2-windows-x86_64.zip",
+              "size_bytes": 18525546,
+              "sha256": "2680f96e79446dc71d66a8d06ce3a867bf2b62f131caea97bc7d3e79e37f3fec"
             }
           ]
         }
