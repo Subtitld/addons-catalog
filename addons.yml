@@ -813,3 +813,19 @@ addons:
     compute: cpu
     languages: [en]
     license: "Apache-2.0 (add-on, tiny-voca weights); MIT (llama.cpp and ggml, cpp-httplib, nlohmann/json); MIT-0 or public domain (miniaudio, stb_image); Unlicense (subprocess.h)"
+  - id: ytdlp
+    repo: addon-ytdlp
+    display_name: "Videos from websites (yt-dlp)"
+    # Serves media.download, the task behind Subtitld's "Open a link" on the
+    # start screen: a link to a web page (YouTube, Vimeo, ...) is handed here
+    # and yt-dlp (Unlicense) gets its video, one per link, H.264/AAC MP4 up to
+    # 1080p by default. Runs yt-dlp's official release file, bundled and
+    # pinned, and fetches a newer one at most once a day (a setting). YouTube
+    # needs Deno (MIT), downloaded once, sha256-pinned, on the first YouTube
+    # link. A Subtitld before 26.12 does not know the task: the floor keeps it
+    # out of their add-ons panel.
+    summary: "Opens the video of a web page from its link: YouTube, Vimeo and the many other websites yt-dlp knows. Keeps yt-dlp up to date by itself, as websites change. Use it only for videos you have the right to work on."
+    tasks: [media.download]
+    compute: cpu
+    license: "Apache-2.0 (add-on); Unlicense (yt-dlp); MIT (Deno, downloaded for YouTube)"
+    min_subtitld: "26.12"
