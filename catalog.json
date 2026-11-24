@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-24T15:30:22Z",
+  "generated": "2026-11-24T16:18:00Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2959,6 +2959,47 @@
               "url": "https://github.com/Subtitld/addon-tiny-voca/releases/download/v26.11.1/tiny-voca-26.11.1-windows-x86_64.zip",
               "size_bytes": 33080183,
               "sha256": "16fa1f78d8ad6ec130d1018838e3b6a59ca7f7fa4fee8f058d886e25283ec35e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ytdlp",
+      "display_name": "Videos from websites (yt-dlp)",
+      "summary": "Opens the video of a web page from its link: YouTube, Vimeo and the many other websites yt-dlp knows. Keeps yt-dlp up to date by itself, as websites change. Use it only for videos you have the right to work on.",
+      "tasks": [
+        "media.download"
+      ],
+      "languages": [],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on); Unlicense (yt-dlp); MIT (Deno, downloaded for YouTube)",
+      "homepage": "https://github.com/Subtitld/addon-ytdlp",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "26.12",
+          "changelog": "The first release. In Subtitld, \"Open a link\" on the start screen sends a\nweb page's link here, and the add-on gets its video with yt-dlp: YouTube,\nVimeo and the many other websites yt-dlp knows. Use it only for videos you\nhave the right to work on.\n\n- One video per link, H.264 with AAC sound when the website has it, up to\n  1080p by default (a setting), saved as MP4. Video and sound are put\n  together with the ffmpeg Subtitld ships.\n- Keeps itself working: once a day at most, it fetches yt-dlp's latest\n  release, checked against the sums published with it (a setting). It ships\n  yt-dlp 2026.11.23 to fall back on.\n- YouTube needs Deno, which is downloaded once (about 40 MB, sha256-pinned)\n  the first time a YouTube link is opened.\n- Playlists and live streams are refused, a video shown only to signed-in\n  people is said to be so, and a cancelled download leaves nothing behind.\n\nLinux x86-64, Windows x86-64 and macOS on Apple Silicon. Needs a Subtitld\nthat knows the media.download task.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-ytdlp/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.1/ytdlp-26.11.1-linux-x86_64.zip",
+              "size_bytes": 12916746,
+              "sha256": "0f2793d695a9cae86585764b77eddf806ec79a220d65dd7e6e3db388393b8ee8"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.1/ytdlp-26.11.1-macos-arm64.zip",
+              "size_bytes": 19064142,
+              "sha256": "c6b9cc2a6be3e5f47460fe5f615f1608d09aa5d8037d995d83149c5595e7f7ae"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.1/ytdlp-26.11.1-windows-x86_64.zip",
+              "size_bytes": 13446848,
+              "sha256": "2001edc62e10b3a4e2e92f8449d76dc2a1d4d7bcbd34bc015371b6216e9335f6"
             }
           ]
         }
