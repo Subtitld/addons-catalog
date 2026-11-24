@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-24T16:18:00Z",
+  "generated": "2026-11-24T16:33:17Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2976,30 +2976,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on); Unlicense (yt-dlp); MIT (Deno, downloaded for YouTube)",
       "homepage": "https://github.com/Subtitld/addon-ytdlp",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "26.12",
-          "changelog": "The first release. In Subtitld, \"Open a link\" on the start screen sends a\nweb page's link here, and the add-on gets its video with yt-dlp: YouTube,\nVimeo and the many other websites yt-dlp knows. Use it only for videos you\nhave the right to work on.\n\n- One video per link, H.264 with AAC sound when the website has it, up to\n  1080p by default (a setting), saved as MP4. Video and sound are put\n  together with the ffmpeg Subtitld ships.\n- Keeps itself working: once a day at most, it fetches yt-dlp's latest\n  release, checked against the sums published with it (a setting). It ships\n  yt-dlp 2026.11.23 to fall back on.\n- YouTube needs Deno, which is downloaded once (about 40 MB, sha256-pinned)\n  the first time a YouTube link is opened.\n- Playlists and live streams are refused, a video shown only to signed-in\n  people is said to be so, and a cancelled download leaves nothing behind.\n\nLinux x86-64, Windows x86-64 and macOS on Apple Silicon. Needs a Subtitld\nthat knows the media.download task.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-ytdlp/commits/v26.11.1",
+          "changelog": "Choose the kind of file and the codecs, as Parabolic does. Three new\nsettings, beside Largest video:\n\n- File type: MP4, MKV or WebM. Video and sound that don't fit in MP4 or WebM\n  are saved as MKV, which takes any.\n- Video codec: H.264 (plays everywhere), Any (the best there is, whatever\n  its codec), AV1, VP9 or H.265.\n- Audio codec: AAC (plays everywhere), Any or Opus.\n\nA codec is a preference: when the website has nothing in it, the best there\nis is taken. For the best a website has, choose MKV, Any, Any and the\nlargest video. The defaults are as before: H.264 and AAC in an MP4.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-ytdlp/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.1/ytdlp-26.11.1-linux-x86_64.zip",
-              "size_bytes": 12916746,
-              "sha256": "0f2793d695a9cae86585764b77eddf806ec79a220d65dd7e6e3db388393b8ee8"
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.2/ytdlp-26.11.2-linux-x86_64.zip",
+              "size_bytes": 12921671,
+              "sha256": "569129ea5eebf98106dc452260d5dd03da5f4aaa624480bba08aebd60cbe3ace"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.1/ytdlp-26.11.1-macos-arm64.zip",
-              "size_bytes": 19064142,
-              "sha256": "c6b9cc2a6be3e5f47460fe5f615f1608d09aa5d8037d995d83149c5595e7f7ae"
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.2/ytdlp-26.11.2-macos-arm64.zip",
+              "size_bytes": 19067455,
+              "sha256": "3dc085e1f20ffc907480eb939645d51c69d64d072ebd6a48abd3a1bb1df3265c"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.1/ytdlp-26.11.1-windows-x86_64.zip",
-              "size_bytes": 13446848,
-              "sha256": "2001edc62e10b3a4e2e92f8449d76dc2a1d4d7bcbd34bc015371b6216e9335f6"
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.2/ytdlp-26.11.2-windows-x86_64.zip",
+              "size_bytes": 13448102,
+              "sha256": "653294ccd63f9e3511e22c28c024e42a41940ba67c33e0b7c16968657acce581"
             }
           ]
         }
