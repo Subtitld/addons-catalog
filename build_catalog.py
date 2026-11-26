@@ -57,8 +57,9 @@ DEFAULT_MIN_SUBTITLD = '0.6.0'
 
 # Asset filename convention: <id>-<version>-<platform>.zip
 # `version` matches the release tag with an optional `v` prefix stripped.
-# Platform is one of linux-x86_64 / macos-universal / windows-x86_64; we map
-# back to the short `linux`/`macos`/`windows` keys the host expects.
+# Platform is one of linux-x86_64 / macos-universal / windows-x86_64 /
+# haiku-x86_64; we map back to the short `linux`/`macos`/`windows`/`haiku`
+# keys the host expects.
 PLATFORM_FROM_SUFFIX = {
     'linux-x86_64':    'linux',
     'linux-aarch64':   'linux',
@@ -66,6 +67,7 @@ PLATFORM_FROM_SUFFIX = {
     'macos-x86_64':    'macos',
     'macos-arm64':     'macos',
     'windows-x86_64':  'windows',
+    'haiku-x86_64':    'haiku',
 }
 # Anchor `plat` to the closed set of known platform suffixes. We can't use
 # a permissive `[a-z0-9_-]+` here because SemVer pre-release versions
