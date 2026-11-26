@@ -829,3 +829,21 @@ addons:
     compute: cpu
     license: "Apache-2.0 (add-on); Unlicense (yt-dlp); MIT (Deno, downloaded for YouTube)"
     min_subtitld: "26.12"
+  - id: libra-tts
+    repo: addon-libra-tts
+    display_name: "Libra TTS (offline, 16 languages)"
+    # Libra TTS (Apache-2.0 code and weights, ekambrar100/Libra-TTS), a 0.3B
+    # distillation of Qwen3-TTS 1.7B on the Qwen3-TTS 12 Hz codec: 8 built-in
+    # voices, each speaking all 16 languages, 24 kHz, no cloning. A style
+    # (whispering, cheerful, documentary...) and pace from Configure, and the
+    # model's own sounds (<laugh>, <sigh>...) written in a line. Upstream's
+    # ONNX path vendored, with its own Qwen3 BPE and the decoder overlapped
+    # with generation (same audio as upstream's library). About 0.6x real
+    # time on a CPU (i7-13700T), ~2.5 GB of memory. The 1.75 GB fp32 model
+    # downloads on first use, and the 24 MB OpenJTalk dictionary on the first
+    # Japanese line, pinned, sha256-checked. 35-65 MB zips.
+    summary: "Offline TTS in 16 languages, from Arabic, Hindi, Bengali and Urdu to Chinese, Japanese and Korean, in 8 voices that each speak them all, with an optional style (whispering, cheerful, documentary...) and sounds like <laugh> written in a line. On a CPU a second of speech takes about a second and a half; the 1.75 GB model downloads on first use. No voice cloning."
+    tasks: [tts.synthesize]
+    compute: cpu
+    languages: [ar, bn, de, en, es, fr, hi, id, it, ja, ko, pa, pt, ru, ur, zh]
+    license: "Apache-2.0 (add-on, Libra TTS code and weights); MIT (pyopenjtalk) with Modified BSD (Open JTalk, HTS Engine, MeCab, the downloaded NAIST dictionary); the Linux zip carries numpy's LGPL libquadmath, source attached to the release"
