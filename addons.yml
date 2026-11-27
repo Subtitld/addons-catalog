@@ -289,6 +289,61 @@ addons:
     # the empty-languages row passes through and the user sees it.
     license: "MIT (wrapper) + MIT (python-audio-separator) + per-model licenses (some UVR/MDX checkpoints are CC-BY-NC for non-commercial use)"
 
+  - id: htdemucs
+    repo: addon-htdemucs
+    display_name: "HTDemucs (offline voice and music separation)"
+    # Meta's HTDemucs on audio.cpp (ggml, through its C API; no torch), the
+    # audio.cpp sibling of audio-separator's Demucs option. The 8-bit GGUF,
+    # 62 MB, downloads on first use, pinned and sha256-checked. The video's
+    # sound goes through in 30 s pieces overlapping by 1 s, crossfaded: about
+    # 1.5 GB of memory for any length, a cancel between pieces. Vocals stem as
+    # the voice, the mix minus it as the background, 48 kHz mono FLAC like the
+    # built-in. About as long as the video plays on an i7-13700T (RTF ~1.2).
+    summary: "Splits a video's sound into the voice and the background (music and effects) with Meta's HTDemucs, offline, on the CPU, with no PyTorch. A 62 MB model downloads on first use; about 1.5 GB of memory, about as long as the video plays."
+    tasks: [audio.separate]
+    compute: cpu
+    license: "Apache-2.0 (add-on, audio.cpp) + MIT (HTDemucs weights)"
+
+  - id: rnnoise
+    repo: addon-rnnoise
+    display_name: "RNNoise (offline speech cleanup)"
+    # Xiph's RNNoise on audio.cpp's built-in audio utilities; its 11 MB of
+    # weights ship in the zip. A noise suppressor offered as a separator:
+    # what it keeps is the voice, the rest of the mix the background. Its
+    # 20 ms lag is taken back so the background holds no echo of the voice.
+    # Steady noise goes; music mostly stays with the voice (HTDemucs for
+    # that). RTF ~0.02, about 100 MB.
+    summary: "Keeps the voice of a video and takes out steady noise (hum, hiss, fans, wind, traffic), offline, on the CPU, in a small fraction of the time the video plays. Tiny: the 11 MB model is included. Made for noise, not music."
+    tasks: [audio.separate]
+    compute: cpu
+    license: "Apache-2.0 (add-on, audio.cpp) + BSD-3-Clause (RNNoise weights)"
+
+  - id: deepfilternet
+    repo: addon-deepfilternet
+    display_name: "DeepFilterNet (offline speech cleanup)"
+    # DeepFilterNet2 on audio.cpp's built-in audio utilities; its 9 MB of
+    # weights ship in the zip. Like rnnoise, a noise suppressor offered as a
+    # separator, cleaner than RNNoise. Pieces under 2.1 s are padded:
+    # audio.cpp 0.9.5 overflows its graph on 1-2 s input. RTF ~0.09, about
+    # 200 MB.
+    summary: "Keeps the voice of a video and takes out background noise with DeepFilterNet2, offline, on the CPU, in about a tenth of the time the video plays; cleaner than RNNoise. The 9 MB model is included. Made for noise, not music."
+    tasks: [audio.separate]
+    compute: cpu
+    license: "Apache-2.0 (add-on, audio.cpp) + MIT or Apache-2.0 (DeepFilterNet2 weights)"
+
+  - id: mossformer2
+    repo: addon-mossformer2
+    display_name: "MossFormer2 (offline speech enhancement, 48 kHz)"
+    # ClearerVoice-Studio's MossFormer2_SE_48K on audio.cpp: a 48 kHz speech
+    # enhancer offered as a separator. The f32 GGUF, 221 MB, downloads on
+    # first use, pinned and sha256-checked. Noise, room and much of the music
+    # go to the background; singing is not speech to it. RTF ~0.18, about
+    # 400 MB.
+    summary: "Keeps the voice of a video at 48 kHz and takes out noise and much of what is not speech, with Alibaba's MossFormer2, offline, on the CPU, with no PyTorch, in about a fifth of the time the video plays. A 221 MB model downloads on first use."
+    tasks: [audio.separate]
+    compute: cpu
+    license: "Apache-2.0 (add-on, MossFormer2 weights, audio.cpp)"
+
   - id: vosk
     repo: addon-vosk
     display_name: "Vosk (offline ASR)"
