@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T21:01:14Z",
+  "generated": "2026-11-27T23:43:35Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -597,30 +597,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on) + MIT (Pocket TTS binary); CC-BY-4.0 weights; voices CC0 or CC-BY-4.0",
       "homepage": "https://github.com/Subtitld/addon-pocket-tts",
-      "latest_version": "26.10.1",
+      "latest_version": "26.11.1",
       "releases": [
         {
-          "version": "26.10.1",
+          "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "The first release: offline text-to-speech with Kyutai's Pocket TTS.\n\n- Speaks English, French, German, Portuguese, Italian, Spanish and Dutch at\n  24 kHz, in 23 built-in voices; every voice speaks every language.\n- Runs on the CPU, about three times faster than real time, with about\n  660 MB of memory. No GPU, no torch.\n- Each language's model, about 220 MB (CC-BY-4.0), downloads on its first\n  line, checked by sha256, and resumes if interrupted.\n- Model sizes in Configure: Standard; Small, English only (112 MB, about\n  twice as fast); and Kyutai's large previews.\n- No voice cloning: Kyutai gates that model.\n- On x86, needs a processor with AVX2 and FMA (Intel since 2013, AMD since\n  2015).\n\nBuilt on Kyutai's pocket-tts binary from release v4.0.0 (MIT).\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-pocket-tts/commits/v26.10.1",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. Kyutai publishes no Haiku binary, so pocket-tts is built on Haiku from the same v4.0.0 release the other platforms use, with no source changes. The add-on runs on HaikuPorts' Python 3.14 and needs no other Haiku package. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: pocket-tts built on Haiku by @jonata in https://github.com/Subtitld/addon-pocket-tts/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-pocket-tts/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-pocket-tts/compare/v26.10.1...v26.11.1",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.11.1/pocket-tts-26.11.1-haiku-x86_64.zip",
+              "size_bytes": 7708578,
+              "sha256": "b61eb23b44c2308d54569125197e753daffe10557e88b4d655a88bd115ee8f14"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.10.1/pocket-tts-26.10.1-linux-x86_64.zip",
-              "size_bytes": 25300949,
-              "sha256": "9937fee17c58a94e8ccef9ff78b2dddeb2438221d3a290f99e7e8c2c11bc3ca5"
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.11.1/pocket-tts-26.11.1-linux-x86_64.zip",
+              "size_bytes": 25307548,
+              "sha256": "07c1f468d19bd77f3edb95a8f8fdd06873ebb8b04145a058630de51b32db816b"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.10.1/pocket-tts-26.10.1-macos-arm64.zip",
-              "size_bytes": 21887152,
-              "sha256": "1a22cb90a73fa42bc1c1b5b41a16b4d1d9f2b7d17561d58c65a85b67700e9aff"
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.11.1/pocket-tts-26.11.1-macos-arm64.zip",
+              "size_bytes": 21888433,
+              "sha256": "83d3f64cfaae3ebdf8c8d4fae3b9754d20ca61e9ae4e1e7e6d8343e998a458f6"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.10.1/pocket-tts-26.10.1-windows-x86_64.zip",
-              "size_bytes": 16437488,
-              "sha256": "36eb22593d4980b1423cdda6f3c520d93844183a59944bfd2057e048f2cf3c11"
+              "url": "https://github.com/Subtitld/addon-pocket-tts/releases/download/v26.11.1/pocket-tts-26.11.1-windows-x86_64.zip",
+              "size_bytes": 16437384,
+              "sha256": "8805bea3004197d2f2f06dbc8591228e4b6b3d32915e0d0649d83faa134a3de0"
             }
           ]
         }
