@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T19:43:08Z",
+  "generated": "2026-11-27T21:01:14Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -687,6 +687,12 @@
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-htdemucs/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.2/htdemucs-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 9006126,
+              "sha256": "638be258077898a5ed96d6f0859a6cf5dcbb1a99e6f6f7797320cc486894dfad"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.2/htdemucs-26.11.2-linux-x86_64.zip",
               "size_bytes": 16892405,
@@ -727,6 +733,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-rnnoise/compare/v26.11.2...v26.11.3",
           "downloads": [
+            {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.3/rnnoise-26.11.3-haiku-x86_64.zip",
+              "size_bytes": 13334061,
+              "sha256": "5325608ce6ef00cfef7643cb665cf4a6b05bc166bbd5f5e8eb5e0cd5f8d5fe04"
+            },
             {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.3/rnnoise-26.11.3-linux-x86_64.zip",
@@ -769,6 +781,12 @@
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-deepfilternet/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.2/deepfilternet-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 17470115,
+              "sha256": "c016524b5ff38d50e1be40d91f5c33bc54e156700b913bc9eb04d80e5508fcdc"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.2/deepfilternet-26.11.2-linux-x86_64.zip",
               "size_bytes": 25346504,
@@ -809,6 +827,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-mossformer2/compare/v26.11.1...v26.11.2",
           "downloads": [
+            {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.2/mossformer2-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 8998286,
+              "sha256": "86cd7d6d89cbf0cd0022cc87126a7b99e803ee19fa3f4d3b3c7163f680260156"
+            },
             {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.2/mossformer2-26.11.2-linux-x86_64.zip",
