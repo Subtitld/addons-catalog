@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T19:38:46Z",
+  "generated": "2026-11-27T19:41:30Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -761,30 +761,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, audio.cpp) + MIT or Apache-2.0 (DeepFilterNet2 weights)",
       "homepage": "https://github.com/Subtitld/addon-deepfilternet",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "The voice of a video, cleaned of background noise, offline, with\nDeepFilterNet2 run by audio.cpp on the CPU.\n\n- Serves audio.separate: what DeepFilterNet2 keeps is the voice, the rest\n  of the mix the background. Cleaner than RNNoise; music partly stays with\n  the voice (for that, use the HTDemucs add-on).\n- The 9 MB model is in the add-on: nothing downloads.\n- The sound goes through in 30-second pieces, crossfaded: about 200 MB of\n  memory for any length, and Cancel stops between two pieces.\n- The voice and the background come back as 48 kHz mono FLAC.\n- A minute of video takes about 5 seconds on an Intel Core i7-13700T.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-deepfilternet/commits/v26.11.1",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-deepfilternet/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.1/deepfilternet-26.11.1-linux-x86_64.zip",
-              "size_bytes": 25346023,
-              "sha256": "fcf5d90d814f7303cc7855c6b2f741d70a50b1f27d4e470daf265cb819acd30b"
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.2/deepfilternet-26.11.2-linux-x86_64.zip",
+              "size_bytes": 25346504,
+              "sha256": "7cc3359f379e531fb13ee169050fe394a3a8de713e53aee8c54b87bf1e555f83"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.1/deepfilternet-26.11.1-macos-arm64.zip",
-              "size_bytes": 24614178,
-              "sha256": "c08f44078283a919c675c45498230a729784d5655f9027b81ef385c97238d7d0"
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.2/deepfilternet-26.11.2-macos-arm64.zip",
+              "size_bytes": 24616135,
+              "sha256": "216f9b1d6076dfc21cbcf6236679c68c7f6271cd8df585edef0062ad3ec125f0"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.1/deepfilternet-26.11.1-windows-x86_64.zip",
-              "size_bytes": 22005859,
-              "sha256": "37a9eca14d71fd6929d8a6d75d02eff0e2a5b5d175f6f8d99efdf3a3a2d87177"
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.2/deepfilternet-26.11.2-windows-x86_64.zip",
+              "size_bytes": 22007479,
+              "sha256": "93c0c38792dc0c0cc9268e7c3dc12cb8e0ace50b8e096fa755f9206e30329f07"
             }
           ]
         }
@@ -802,30 +802,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, MossFormer2 weights, audio.cpp)",
       "homepage": "https://github.com/Subtitld/addon-mossformer2",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "The voice of a video at 48 kHz, kept offline by the speech enhancement\nmodel of Alibaba's ClearerVoice-Studio, MossFormer2_SE_48K, run by\naudio.cpp on the CPU: no PyTorch.\n\n- Serves audio.separate: what MossFormer2 keeps is the voice, the rest of\n  the mix the background. Noise, room and much of the music go; singing\n  is not speech to it (for songs, use the HTDemucs add-on).\n- The model, 221 MB, downloads on the first separation, pinned and checked\n  by sha256; an interrupted download resumes.\n- The sound goes through in 30-second pieces, crossfaded: about 400 MB of\n  memory for any length, and Cancel stops between two pieces.\n- The voice and the background come back as 48 kHz mono FLAC.\n- A minute of video takes about 11 seconds on an Intel Core i7-13700T.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-mossformer2/commits/v26.11.1",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-mossformer2/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.1/mossformer2-26.11.1-linux-x86_64.zip",
-              "size_bytes": 16879281,
-              "sha256": "c78bcaf8ac9b100c854536439d43b155278b5e46b8ae9b2966dbc618b194a1f9"
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.2/mossformer2-26.11.2-linux-x86_64.zip",
+              "size_bytes": 16881446,
+              "sha256": "cd86b693a5ecfbfbeaf6d1f0558879881575256c68206ed7afe721ba4777f062"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.1/mossformer2-26.11.1-macos-arm64.zip",
-              "size_bytes": 16096516,
-              "sha256": "e27f78411744056739b8f3ae62a1298a88c1a3f1eb8e9549eab76be5896e6531"
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.2/mossformer2-26.11.2-macos-arm64.zip",
+              "size_bytes": 16095165,
+              "sha256": "e614a7be265d8f8ef4b37b6558cd078a6072aecbcc9e224247cf04d66ab853a6"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.1/mossformer2-26.11.1-windows-x86_64.zip",
-              "size_bytes": 13602656,
-              "sha256": "293faf09a44c3ef871ff2646997d67f142a465ef5de3b215ec8ea901e06b7639"
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.2/mossformer2-26.11.2-windows-x86_64.zip",
+              "size_bytes": 13601563,
+              "sha256": "f004fededeed875ba85545f83e531760e4748fb81bcf31ae119af0866020ff87"
             }
           ]
         }
