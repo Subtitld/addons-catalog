@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T14:57:32Z",
+  "generated": "2026-11-27T18:23:01Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -80,7 +80,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for piper-tts v26.11.1.",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nAutomated release for piper-tts v26.11.1.",
           "downloads": [
             {
               "platform": "haiku",
@@ -411,7 +411,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Automated release for supertonic v26.11.1.",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms. The version moves to the YY.MM.N scheme of Subtitld's other add-ons.\n\nAutomated release for supertonic v26.11.1.",
           "downloads": [
             {
               "platform": "haiku",
@@ -473,7 +473,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "The Haiku archive holds the add-on and its pure-Python dependencies: it runs on\nHaikuPorts' Python 3.14, with numpy from HaikuPorts and regex, rpds-py and espeak-ng\n1.52.0 from hpkg.subtitld.org, which Subtitld offers to install.\n\n## Source for the GPL components\n\nThis add-on is distributed under the GNU General Public License v3.0\nor later. Complete Corresponding Source for the GPL-licensed parts\n(espeak-ng, phonemizer-fork) is attached to this release as\n`*-corresponding-source.tar.gz`, at no charge, per GPL-3.0 section 6(d).\n\nEach binary archive also contains a `THIRD_PARTY_LICENSES/` directory\nwith the full licence texts and the exact upstream revisions used.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-sanotts/compare/v0.1.0...v26.11.1",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms. The version moves to the YY.MM.N scheme of Subtitld's other add-ons.\n\nThe Haiku archive holds the add-on and its pure-Python dependencies: it runs on\nHaikuPorts' Python 3.14, with numpy from HaikuPorts and regex, rpds-py and espeak-ng\n1.52.0 from hpkg.subtitld.org, which Subtitld offers to install.\n\n## Source for the GPL components\n\nThis add-on is distributed under the GNU General Public License v3.0\nor later. Complete Corresponding Source for the GPL-licensed parts\n(espeak-ng, phonemizer-fork) is attached to this release as\n`*-corresponding-source.tar.gz`, at no charge, per GPL-3.0 section 6(d).\n\nEach binary archive also contains a `THIRD_PARTY_LICENSES/` directory\nwith the full licence texts and the exact upstream revisions used.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-sanotts/compare/v0.1.0...v26.11.1",
           "downloads": [
             {
               "platform": "haiku",
@@ -975,30 +975,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (wrapper); the AssemblyAI service is governed by its own terms",
       "homepage": "https://github.com/Subtitld/addon-assemblyai",
-      "latest_version": "26.11.2",
+      "latest_version": "26.11.3",
       "releases": [
         {
-          "version": "26.11.2",
+          "version": "26.11.3",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-assemblyai/compare/v26.11.1...v26.11.2",
+          "changelog": "## What's Changed\n* Build a Haiku zip: launcher on HaikuPorts' Python, no freezing by @jonata in https://github.com/Subtitld/addon-assemblyai/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-assemblyai/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-assemblyai/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.3/assemblyai-26.11.3-haiku-x86_64.zip",
+              "size_bytes": 27992,
+              "sha256": "f020454693ec74bbd5608a2a0b2ce324742e1ab5df3c52d2609bb7e3bd770197"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.2/assemblyai-26.11.2-linux-x86_64.zip",
-              "size_bytes": 17832475,
-              "sha256": "06360eacc65709a65673e62684181650ce48669df66da8f1bd363cd45fcb0653"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.3/assemblyai-26.11.3-linux-x86_64.zip",
+              "size_bytes": 17832388,
+              "sha256": "cf3a9935baa4eeafa02614638849c6b48f9684f210f1d956d747c9ad99f8aaec"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.2/assemblyai-26.11.2-macos-arm64.zip",
-              "size_bytes": 14670242,
-              "sha256": "9c8cfa98be43c943f0b014b1ee26d791bac3d81f0071e39a4fcb728667c3fe23"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.3/assemblyai-26.11.3-macos-arm64.zip",
+              "size_bytes": 14660668,
+              "sha256": "4ea59dac12c1824b5276f68fa5015bb1906a2c5dcb4d0480808e4c27a8d912d8"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.2/assemblyai-26.11.2-windows-x86_64.zip",
-              "size_bytes": 8761918,
-              "sha256": "2f0be58e1b35f6477fded58fa60b9cdd5e38ee5bd22c0a702f8452279d25b1f4"
+              "url": "https://github.com/Subtitld/addon-assemblyai/releases/download/v26.11.3/assemblyai-26.11.3-windows-x86_64.zip",
+              "size_bytes": 8761813,
+              "sha256": "f2f3de36b56dd7e31807d2efcde1469cfb221242bd070e6a86b4e49ae6b97e88"
             }
           ]
         }
@@ -1116,30 +1122,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on glue) + MIT (whisper.cpp, pywhispercpp, pybind11 BSD-3); Whisper GGML weights MIT",
       "homepage": "https://github.com/Subtitld/addon-whispercpp",
-      "latest_version": "0.0.1",
+      "latest_version": "26.11.1",
       "releases": [
         {
-          "version": "0.0.1",
+          "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline speech-to-text for Subtitld with whisper.cpp (pywhispercpp 1.5.1).\n\nModels are not included: the selected GGML model downloads once on first\nuse into Subtitld's shared model cache, so models downloaded by earlier\nSubtitld versions are reused.\n\nThe add-on is Apache-2.0. Each archive contains `THIRD_PARTY_LICENSES/`\nwith the licences of the third-party components frozen into it:\nwhisper.cpp and pywhispercpp are MIT, pybind11 and numpy are\nBSD-3-Clause, and the Python runtime and its libraries are under their\nown permissive licences.\n\nThe Linux archive also ships, inside numpy's OpenBLAS, the GCC Fortran\nruntime (GPL-3.0 with the GCC Runtime Library Exception) and\nlibquadmath (LGPL-2.1-or-later). The complete source of that\nlibquadmath build is attached here as\n`whispercpp-addon-<version>-libquadmath-source.tar.gz`; the add-on's own\nsource is `whispercpp-addon-<version>-source.tar.gz`.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-whispercpp/commits/v0.0.1",
+          "changelog": "Offline speech-to-text for Subtitld with whisper.cpp (pywhispercpp 1.5.1).\n\nModels are not included: the selected GGML model downloads once on first\nuse into Subtitld's shared model cache, so models downloaded by earlier\nSubtitld versions are reused.\n\nThe add-on is Apache-2.0. Each archive contains `THIRD_PARTY_LICENSES/`\nwith the licences of the third-party components frozen into it:\nwhisper.cpp and pywhispercpp are MIT, pybind11 and numpy are\nBSD-3-Clause, and the Python runtime and its libraries are under their\nown permissive licences.\n\nThe Linux archive also ships, inside numpy's OpenBLAS, the GCC Fortran\nruntime (GPL-3.0 with the GCC Runtime Library Exception) and\nlibquadmath (LGPL-2.1-or-later). The complete source of that\nlibquadmath build is attached here as\n`whispercpp-addon-<version>-libquadmath-source.tar.gz`; the add-on's own\nsource is `whispercpp-addon-<version>-source.tar.gz`.\n\n\n## What's Changed\n* Haiku: pywhispercpp built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-whispercpp/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-whispercpp/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-whispercpp/compare/v0.0.1...v26.11.1",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v0.0.1/whispercpp-0.0.1-linux-x86_64.zip",
-              "size_bytes": 46283611,
-              "sha256": "199e24087d00763b0c65f97f51dd75e94a3d0224023fe32b1bccc69931274e74"
+              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v26.11.1/whispercpp-26.11.1-linux-x86_64.zip",
+              "size_bytes": 46342351,
+              "sha256": "3e44b9d3b760e9d73ba0899047655e9ab47c741a523b2bfa239095c7667f27b9"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v0.0.1/whispercpp-0.0.1-macos-arm64.zip",
-              "size_bytes": 21411197,
-              "sha256": "80a14693922439b75006572430141bc63d6252de7bd98a34634a83907a04c1f4"
+              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v26.11.1/whispercpp-26.11.1-macos-arm64.zip",
+              "size_bytes": 21458195,
+              "sha256": "aedb221aabd0ec5491704a9c775c1d0a132a79b285f98bf0dcf58b76319b68d4"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v0.0.1/whispercpp-0.0.1-windows-x86_64.zip",
-              "size_bytes": 21707681,
-              "sha256": "ebf1b02dc6a5a2bc127c57279d3a493b5b6abb7e24ccbebeac2c7c4d1fca326c"
+              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v26.11.1/whispercpp-26.11.1-windows-x86_64.zip",
+              "size_bytes": 21733369,
+              "sha256": "0598674c022031c040a9bbee6bb8d5025be8213953fcd79c33a8f805b2a17fa3"
             }
           ]
         }
@@ -1309,7 +1315,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-wav2lip/compare/v0.1.0...v26.11.1",
+          "changelog": "**New: Haiku, and a lighter add-on everywhere.** This release adds a Haiku archive (x86-64): there the add-on runs on HaikuPorts' Python 3.14 with ONNX Runtime and OpenCV from hpkg.subtitld.org, which Subtitld offers to install. Its ffmpeg has no H.264 encoder, so the video comes out as MPEG-4 at its best quality.\n\nOn every platform the mel spectrogram is now computed with numpy alone: the same numbers as before, and identical videos, but the archives no longer carry librosa, numba, LLVM, scikit-learn or soundfile. The version moves to the YY.MM.N scheme of Subtitld's other add-ons.\n\n**Full Changelog**: https://github.com/Subtitld/addon-wav2lip/compare/v0.1.0...v26.11.1",
           "downloads": [
             {
               "platform": "haiku",
@@ -1398,7 +1404,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Voice-cloning text-to-speech for Subtitld with Sopro V2 Turbo: English, European\nPortuguese, French and German at 24 kHz, in the speaker's own voice cloned from\nthe video, or in a preset voice.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org, which Subtitld offers\nto install.\n\nThe archive holds the add-on, ONNX Runtime and the preset voice clips. The 336 MB\nmodel downloads on the first line, at a pinned revision, checked by sha256. It\nruns on the CPU, about twice as fast as real time.\n\nThe add-on and the Sopro model are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and the\npreset clips are credited in `bin/_internal/sopro_addon/presets/README.md`. The\nLinux archive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`sopro-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-sopro/compare/v26.10.1...v26.11.1",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nVoice-cloning text-to-speech for Subtitld with Sopro V2 Turbo: English, European\nPortuguese, French and German at 24 kHz, in the speaker's own voice cloned from\nthe video, or in a preset voice.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org, which Subtitld offers\nto install.\n\nThe archive holds the add-on, ONNX Runtime and the preset voice clips. The 336 MB\nmodel downloads on the first line, at a pinned revision, checked by sha256. It\nruns on the CPU, about twice as fast as real time.\n\nThe add-on and the Sopro model are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and the\npreset clips are credited in `bin/_internal/sopro_addon/presets/README.md`. The\nLinux archive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`sopro-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-sopro/compare/v26.10.1...v26.11.1",
           "downloads": [
             {
               "platform": "haiku",
@@ -1505,7 +1511,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline English speech-to-text for Subtitld with Conway Research's Bark 3.0, a\nfine-tune of NVIDIA's parakeet-tdt-0.6b-v3, with word times. On the CPU, no torch.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime and constriction from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and the encoder's graph without\nweights. The chosen model (Bark 3.0 163 MB by default; Plus 180 MB, Clean 179 MB,\nPro 1.25 GB) downloads from Conway Research's Hugging Face repositories on first\nuse, at a pinned revision, checked by sha256, and is converted once for the graph.\n\nThe add-on is Apache-2.0; the Bark 3.0 models and NVIDIA's tokenizer are CC-BY-4.0.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything frozen\ninto it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `bark3-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bark3/compare/v26.10.2...v26.11.1",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nOffline English speech-to-text for Subtitld with Conway Research's Bark 3.0, a\nfine-tune of NVIDIA's parakeet-tdt-0.6b-v3, with word times. On the CPU, no torch.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime and constriction from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and the encoder's graph without\nweights. The chosen model (Bark 3.0 163 MB by default; Plus 180 MB, Clean 179 MB,\nPro 1.25 GB) downloads from Conway Research's Hugging Face repositories on first\nuse, at a pinned revision, checked by sha256, and is converted once for the graph.\n\nThe add-on is Apache-2.0; the Bark 3.0 models and NVIDIA's tokenizer are CC-BY-4.0.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything frozen\ninto it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `bark3-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bark3/compare/v26.10.2...v26.11.1",
           "downloads": [
             {
               "platform": "haiku",
@@ -1622,7 +1628,7 @@
         {
           "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "Voice-cloning text-to-speech for Subtitld with Resemble AI's Chatterbox: 20\nlanguages at 24 kHz with Chatterbox Multilingual, or English with Chatterbox Turbo,\nin the speaker's own voice cloned from the video, or in a preset voice.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org, which Subtitld offers\nto install.\n\nThe archive holds the add-on, ONNX Runtime and the preset voice clips. A model\n(Multilingual 1.3 GB, Turbo 0.7 GB) downloads on its first line, at a pinned\nrevision, checked by sha256. It runs on the CPU at about real time.\n\nThe add-on is Apache-2.0; the Chatterbox models are MIT. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and the\npreset clips are credited in `bin/_internal/chatterbox_addon/presets/README.md`. The\nLinux archive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`chatterbox-<version>-libquadmath-source.tar.gz` in this release.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python and onnxruntime 1.31 by @jonata in https://github.com/Subtitld/addon-chatterbox/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-chatterbox/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-chatterbox/compare/v26.10.1...v26.11.1",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nVoice-cloning text-to-speech for Subtitld with Resemble AI's Chatterbox: 20\nlanguages at 24 kHz with Chatterbox Multilingual, or English with Chatterbox Turbo,\nin the speaker's own voice cloned from the video, or in a preset voice.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org, which Subtitld offers\nto install.\n\nThe archive holds the add-on, ONNX Runtime and the preset voice clips. A model\n(Multilingual 1.3 GB, Turbo 0.7 GB) downloads on its first line, at a pinned\nrevision, checked by sha256. It runs on the CPU at about real time.\n\nThe add-on is Apache-2.0; the Chatterbox models are MIT. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and the\npreset clips are credited in `bin/_internal/chatterbox_addon/presets/README.md`. The\nLinux archive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`chatterbox-<version>-libquadmath-source.tar.gz` in this release.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python and onnxruntime 1.31 by @jonata in https://github.com/Subtitld/addon-chatterbox/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-chatterbox/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-chatterbox/compare/v26.10.1...v26.11.1",
           "downloads": [
             {
               "platform": "haiku",
@@ -1693,7 +1699,7 @@
         {
           "version": "26.11.3",
           "min_subtitld": "0.6.0",
-          "changelog": "Voice-cloning text-to-speech for Subtitld with Audio8 TTS at 44.1 kHz, in the speaker's\nown voice cloned from the video. Realistic 0.6B, the default, speaks 23 languages (Arabic,\nCantonese, Chinese, Dutch, English, Finnish, French, German, Hindi, Indonesian, Italian,\nJapanese, Korean, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai,\nTurkish, Vietnamese); the earlier Preview 0.6B, in 11, can be picked in Configure.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org, which Subtitld offers\nto install.\n\nThe archive holds the add-on and ONNX Runtime. The model (1 GB) downloads on the first\nline, at pinned revisions, checked by sha256: the codec and tokenizer from Edge0's official\nPreview ONNX release, and Realistic's two transformers from an independent INT4 export\n(stephvax/audio8-tts-realistic-0.6b-onnx-int4, checked against Realistic's checkpoint with\ntools/verify_export.py). It runs on the CPU at about 0.5 times real time and needs about\n3 GB of memory.\n\nThe add-on, Audio8 TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and upstream's\nNOTICE. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `audio8-<version>-libquadmath-source.tar.gz` in this release.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python and onnxruntime 1.31 by @jonata in https://github.com/Subtitld/addon-audio8/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-audio8/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-audio8/compare/v26.11.2...v26.11.3",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nVoice-cloning text-to-speech for Subtitld with Audio8 TTS at 44.1 kHz, in the speaker's\nown voice cloned from the video. Realistic 0.6B, the default, speaks 23 languages (Arabic,\nCantonese, Chinese, Dutch, English, Finnish, French, German, Hindi, Indonesian, Italian,\nJapanese, Korean, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai,\nTurkish, Vietnamese); the earlier Preview 0.6B, in 11, can be picked in Configure.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org, which Subtitld offers\nto install.\n\nThe archive holds the add-on and ONNX Runtime. The model (1 GB) downloads on the first\nline, at pinned revisions, checked by sha256: the codec and tokenizer from Edge0's official\nPreview ONNX release, and Realistic's two transformers from an independent INT4 export\n(stephvax/audio8-tts-realistic-0.6b-onnx-int4, checked against Realistic's checkpoint with\ntools/verify_export.py). It runs on the CPU at about 0.5 times real time and needs about\n3 GB of memory.\n\nThe add-on, Audio8 TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it, and upstream's\nNOTICE. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its complete\nsource is `audio8-<version>-libquadmath-source.tar.gz` in this release.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python and onnxruntime 1.31 by @jonata in https://github.com/Subtitld/addon-audio8/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-audio8/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-audio8/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
               "platform": "haiku",
@@ -1742,7 +1748,7 @@
         {
           "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline English text-to-speech for Subtitld with Inflect v2: a natural American\nEnglish voice at 24 kHz from a model of under 10M parameters, many times faster\nthan real time on the CPU. Two voices: Inflect Micro (best quality, 38 MB) and\nInflect Nano (16 MB, faster).\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime and espeak-ng 1.52.0 from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and espeak-ng with its English data.\nEach model downloads the first time its voice speaks, at a pinned revision,\nchecked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Inflect v2 models are Apache-2.0. Each archive carries `THIRD_PARTY_LICENSES/`\nwith the licence of everything frozen into it. The complete corresponding source\nis `inflect-<version>-source.tar.gz` in this release. The Linux archive also\ncarries libquadmath (LGPL-2.1, with numpy); its source is\n`inflect-<version>-libquadmath-source.tar.gz`.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-inflect/compare/v26.11.1...v26.11.2",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nOffline English text-to-speech for Subtitld with Inflect v2: a natural American\nEnglish voice at 24 kHz from a model of under 10M parameters, many times faster\nthan real time on the CPU. Two voices: Inflect Micro (best quality, 38 MB) and\nInflect Nano (16 MB, faster).\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime and espeak-ng 1.52.0 from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and espeak-ng with its English data.\nEach model downloads the first time its voice speaks, at a pinned revision,\nchecked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Inflect v2 models are Apache-2.0. Each archive carries `THIRD_PARTY_LICENSES/`\nwith the licence of everything frozen into it. The complete corresponding source\nis `inflect-<version>-source.tar.gz` in this release. The Linux archive also\ncarries libquadmath (LGPL-2.1, with numpy); its source is\n`inflect-<version>-libquadmath-source.tar.gz`.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-inflect/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "haiku",
@@ -1867,7 +1873,7 @@
         {
           "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline OCR of picture subtitles for Subtitld: DVD's VobSub and Blu-ray's PGS,\nas files or as tracks inside a video, read as text with PaddleOCR's PP-OCRv5 mobile\nrecognition models on ONNX Runtime. On the CPU, no torch, nothing downloads.\n\nThe archive holds the add-on, ONNX Runtime and all twelve recognition models\n(Latin script, English, Chinese and Japanese, Korean, East Slavic, Cyrillic, Greek,\nArabic script, Devanagari, Thai, Tamil, Telugu), unchanged from RapidAI's ONNX\nconversion (ModelScope RapidAI/RapidOCR, tag v3.10.0) and checked by sha256.\n\nThe add-on and the models are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it. The Linux\narchive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`ppocr-<version>-libquadmath-source.tar.gz` in this release.\n\nThe Haiku archive holds the add-on and the models only: it runs on HaikuPorts'\nPython 3.14, with numpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python and onnxruntime 1.31 by @jonata in https://github.com/Subtitld/addon-ppocr/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-ppocr/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-ppocr/compare/v26.11.1...v26.11.2",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nOffline OCR of picture subtitles for Subtitld: DVD's VobSub and Blu-ray's PGS,\nas files or as tracks inside a video, read as text with PaddleOCR's PP-OCRv5 mobile\nrecognition models on ONNX Runtime. On the CPU, no torch, nothing downloads.\n\nThe archive holds the add-on, ONNX Runtime and all twelve recognition models\n(Latin script, English, Chinese and Japanese, Korean, East Slavic, Cyrillic, Greek,\nArabic script, Devanagari, Thai, Tamil, Telugu), unchanged from RapidAI's ONNX\nconversion (ModelScope RapidAI/RapidOCR, tag v3.10.0) and checked by sha256.\n\nThe add-on and the models are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it. The Linux\narchive carries libquadmath (LGPL-2.1, with numpy); its complete source is\n`ppocr-<version>-libquadmath-source.tar.gz` in this release.\n\nThe Haiku archive holds the add-on and the models only: it runs on HaikuPorts'\nPython 3.14, with numpy from HaikuPorts and ONNX Runtime from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python and onnxruntime 1.31 by @jonata in https://github.com/Subtitld/addon-ppocr/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-ppocr/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-ppocr/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "haiku",
@@ -2115,7 +2121,7 @@
         {
           "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline English text-to-speech for Subtitld with Paradee 1.2: natural English\nspeech at 24 kHz from an 8M-parameter model distilled from Kokoro-82M, many times\nfaster than real time on the CPU. Four voices from one 8.5 MB model: Heart and\nPuck (American English), Isabella and Fable (British English).\n\nThe Haiku archive holds the add-on and its pure-Python dependencies: it runs on\nHaikuPorts' Python 3.14, with numpy and MarkupSafe from HaikuPorts and ONNX Runtime,\nespeak-ng 1.52.0, spaCy's compiled stack, pydantic-core and regex from\nhpkg.subtitld.org, which Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime, misaki (Kokoro's phonemizer) with\nspaCy's small English pipeline, and espeak-ng with its English data. The model\ndownloads the first time a line is spoken, at a pinned revision, checked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Paradee model and misaki are Apache-2.0, spaCy and its English pipeline MIT.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The complete corresponding source is\n`paradee-<version>-source.tar.gz` in this release. The Linux archive also carries\nlibquadmath (LGPL-2.1, with numpy); its source is\n`paradee-<version>-libquadmath-source.tar.gz`.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-paradee/compare/v26.11.1...v26.11.2",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nOffline English text-to-speech for Subtitld with Paradee 1.2: natural English\nspeech at 24 kHz from an 8M-parameter model distilled from Kokoro-82M, many times\nfaster than real time on the CPU. Four voices from one 8.5 MB model: Heart and\nPuck (American English), Isabella and Fable (British English).\n\nThe Haiku archive holds the add-on and its pure-Python dependencies: it runs on\nHaikuPorts' Python 3.14, with numpy and MarkupSafe from HaikuPorts and ONNX Runtime,\nespeak-ng 1.52.0, spaCy's compiled stack, pydantic-core and regex from\nhpkg.subtitld.org, which Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime, misaki (Kokoro's phonemizer) with\nspaCy's small English pipeline, and espeak-ng with its English data. The model\ndownloads the first time a line is spoken, at a pinned revision, checked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Paradee model and misaki are Apache-2.0, spaCy and its English pipeline MIT.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The complete corresponding source is\n`paradee-<version>-source.tar.gz` in this release. The Linux archive also carries\nlibquadmath (LGPL-2.1, with numpy); its source is\n`paradee-<version>-libquadmath-source.tar.gz`.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-paradee/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "haiku",
@@ -2248,7 +2254,7 @@
         {
           "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Text-to-speech for Subtitld with BlueTTS (BlueV3 v3.0.1, by Maxim Melichov): Hebrew,\nEnglish, German, Spanish, Italian, Russian and Yiddish at 44.1 kHz, in 15 stock voices\nor in the speaker's own voice cloned from the video.\n\nThe Haiku archive holds the add-on and its pure-Python text front ends: it runs on\nHaikuPorts' Python 3.14, with numpy from HaikuPorts and ONNX Runtime and polyg2p from\nhpkg.subtitld.org, which Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and the text front ends. The model (428 MB)\ndownloads on the first line; Hebrew (1.2 GB, or 312 MB compact), Yiddish (307 MB) and\ncloning (136 MB) download when a line first needs them. Every file is pinned to a\nrevision and checked by sha256. It runs on the CPU, several times faster than real time.\n\nThe add-on is Apache-2.0; BlueTTS's code is MIT. The model's vocoder weights are under\nBigScience OpenRAIL-M, whose use restrictions apply to the speech it makes; the stock\nvoices are CC-BY-4.0 (LibriTTS-R); the German, Italian and some Yiddish lexicons are\nCC BY-SA. Each archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its\ncomplete source is `bluetts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bluetts/compare/v26.11.1...v26.11.2",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nText-to-speech for Subtitld with BlueTTS (BlueV3 v3.0.1, by Maxim Melichov): Hebrew,\nEnglish, German, Spanish, Italian, Russian and Yiddish at 44.1 kHz, in 15 stock voices\nor in the speaker's own voice cloned from the video.\n\nThe Haiku archive holds the add-on and its pure-Python text front ends: it runs on\nHaikuPorts' Python 3.14, with numpy from HaikuPorts and ONNX Runtime and polyg2p from\nhpkg.subtitld.org, which Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and the text front ends. The model (428 MB)\ndownloads on the first line; Hebrew (1.2 GB, or 312 MB compact), Yiddish (307 MB) and\ncloning (136 MB) download when a line first needs them. Every file is pinned to a\nrevision and checked by sha256. It runs on the CPU, several times faster than real time.\n\nThe add-on is Apache-2.0; BlueTTS's code is MIT. The model's vocoder weights are under\nBigScience OpenRAIL-M, whose use restrictions apply to the speech it makes; the stock\nvoices are CC-BY-4.0 (LibriTTS-R); the German, Italian and some Yiddish lexicons are\nCC BY-SA. Each archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its\ncomplete source is `bluetts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bluetts/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "haiku",
@@ -2388,7 +2394,7 @@
         {
           "version": "26.11.3",
           "min_subtitld": "0.6.0",
-          "changelog": "Text-to-speech for Subtitld with Reverb-TTS v1.0.0 (Software Mansion AI Labs): English,\nGerman, French, Spanish, Italian, Polish and Portuguese at 24 kHz, in 16 preset voices or\nin the speaker's own voice, cloned from a clip of the video and its subtitles.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime, tokenizers and Verbalis from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime, tokenizers and Verbalis. The model (640 MB, or\n378 MB in Fast mode) downloads on the first line, and the codec encoder (327 MB) on the first\ncloned line, from this repository's `models-1` release and Reverb's own repository. Every file\nis pinned and checked by sha256. It runs on the CPU.\n\n**The model is licensed under CC BY-NC 4.0: non-commercial use only.** The add-on is\nApache-2.0, and so is Reverb's code it ports. Each archive carries `THIRD_PARTY_LICENSES/`\nwith the licence of everything frozen into it. The Linux archive carries libquadmath\n(LGPL-2.1, with numpy); its complete source is `reverb-<version>-libquadmath-source.tar.gz`\nin this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-reverb/compare/v26.11.2...v26.11.3",
+          "changelog": "**New: Haiku.** This release adds a Haiku archive (x86-64). There the add-on runs on HaikuPorts' Python 3.14, with the native packages it needs from HaikuPorts and hpkg.subtitld.org, which Subtitld offers to install. Nothing changes on the other platforms.\n\nText-to-speech for Subtitld with Reverb-TTS v1.0.0 (Software Mansion AI Labs): English,\nGerman, French, Spanish, Italian, Polish and Portuguese at 24 kHz, in 16 preset voices or\nin the speaker's own voice, cloned from a clip of the video and its subtitles.\n\nThe Haiku archive holds the add-on only: it runs on HaikuPorts' Python 3.14, with\nnumpy from HaikuPorts and ONNX Runtime, tokenizers and Verbalis from hpkg.subtitld.org,\nwhich Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime, tokenizers and Verbalis. The model (640 MB, or\n378 MB in Fast mode) downloads on the first line, and the codec encoder (327 MB) on the first\ncloned line, from this repository's `models-1` release and Reverb's own repository. Every file\nis pinned and checked by sha256. It runs on the CPU.\n\n**The model is licensed under CC BY-NC 4.0: non-commercial use only.** The add-on is\nApache-2.0, and so is Reverb's code it ports. Each archive carries `THIRD_PARTY_LICENSES/`\nwith the licence of everything frozen into it. The Linux archive carries libquadmath\n(LGPL-2.1, with numpy); its complete source is `reverb-<version>-libquadmath-source.tar.gz`\nin this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-reverb/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
               "platform": "haiku",
@@ -3218,30 +3224,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on); Unlicense (yt-dlp); MIT (Deno, downloaded for YouTube)",
       "homepage": "https://github.com/Subtitld/addon-ytdlp",
-      "latest_version": "26.11.2",
+      "latest_version": "26.11.3",
       "releases": [
         {
-          "version": "26.11.2",
+          "version": "26.11.3",
           "min_subtitld": "26.12",
-          "changelog": "Choose the kind of file and the codecs, as Parabolic does. Three new\nsettings, beside Largest video:\n\n- File type: MP4, MKV or WebM. Video and sound that don't fit in MP4 or WebM\n  are saved as MKV, which takes any.\n- Video codec: H.264 (plays everywhere), Any (the best there is, whatever\n  its codec), AV1, VP9 or H.265.\n- Audio codec: AAC (plays everywhere), Any or Opus.\n\nA codec is a preference: when the website has nothing in it, the best there\nis is taken. For the best a website has, choose MKV, Any, Any and the\nlargest video. The defaults are as before: H.264 and AAC in an MP4.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-ytdlp/compare/v26.11.1...v26.11.2",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. On Haiku the add-on runs on HaikuPorts' Python 3.14, and YouTube's challenges are solved with Node.js from HaikuPorts instead of Deno, which has no Haiku build. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: run on HaikuPorts' Python, Node for YouTube by @jonata in https://github.com/Subtitld/addon-ytdlp/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-ytdlp/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-ytdlp/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.3/ytdlp-26.11.3-haiku-x86_64.zip",
+              "size_bytes": 2977363,
+              "sha256": "49b8e915bf44eb1b86a1335927cce2917765acf758a88afbe05ffed63f21e25c"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.2/ytdlp-26.11.2-linux-x86_64.zip",
-              "size_bytes": 12921671,
-              "sha256": "569129ea5eebf98106dc452260d5dd03da5f4aaa624480bba08aebd60cbe3ace"
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.3/ytdlp-26.11.3-linux-x86_64.zip",
+              "size_bytes": 12921874,
+              "sha256": "94cdc7158b9406ab10795ea4d31575ca85799a9db72123da3bd52b2a4c2ee89e"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.2/ytdlp-26.11.2-macos-arm64.zip",
-              "size_bytes": 19067455,
-              "sha256": "3dc085e1f20ffc907480eb939645d51c69d64d072ebd6a48abd3a1bb1df3265c"
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.3/ytdlp-26.11.3-macos-arm64.zip",
+              "size_bytes": 19060353,
+              "sha256": "329cb62a1dd76a939114e1340380253b4a446fc7eb2366425a3af7243242b277"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.2/ytdlp-26.11.2-windows-x86_64.zip",
-              "size_bytes": 13448102,
-              "sha256": "653294ccd63f9e3511e22c28c024e42a41940ba67c33e0b7c16968657acce581"
+              "url": "https://github.com/Subtitld/addon-ytdlp/releases/download/v26.11.3/ytdlp-26.11.3-windows-x86_64.zip",
+              "size_bytes": 13448318,
+              "sha256": "592a5e43f7da82c14e200a43fc6f0e8a2fe65a9bc4b2fba3421a151285f01ac7"
             }
           ]
         }
