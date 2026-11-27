@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T08:40:32Z",
+  "generated": "2026-11-27T08:44:01Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -638,6 +638,170 @@
               "url": "https://github.com/Subtitld/addon-audio-separator/releases/download/v0.0.5/audio-separator-0.0.5-windows-x86_64.zip",
               "size_bytes": 295499546,
               "sha256": "b5845c28914373d5944e512a6fc13a7c82dec086b3ba6abf743172749f205a71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "htdemucs",
+      "display_name": "HTDemucs (offline voice and music separation)",
+      "summary": "Splits a video's sound into the voice and the background (music and effects) with Meta's HTDemucs, offline, on the CPU, with no PyTorch. A 62 MB model downloads on first use; about 1.5 GB of memory, about as long as the video plays.",
+      "tasks": [
+        "audio.separate"
+      ],
+      "languages": [],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, audio.cpp) + MIT (HTDemucs weights)",
+      "homepage": "https://github.com/Subtitld/addon-htdemucs",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "The voice and the background of a video, separated offline by Meta's\nHTDemucs, run by audio.cpp on the CPU: no PyTorch.\n\n- Serves audio.separate, like Subtitld's built-in ffmpeg separator, with a\n  neural model instead of the mid/side trick: a centred voice no longer\n  takes the bass and lead instruments with it, and mono videos work too.\n- The 8-bit model, 62 MB, downloads on the first separation, pinned and\n  checked by sha256; an interrupted download resumes.\n- The sound goes through in 30-second pieces, crossfaded: about 1.5 GB of\n  memory for any length of video, and Cancel stops between two pieces.\n- The voice and the background come back as 48 kHz mono FLAC.\n- About as long as the video plays, on an Intel Core i7-13700T.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-htdemucs/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.1/htdemucs-26.11.1-linux-x86_64.zip",
+              "size_bytes": 16889794,
+              "sha256": "818fcb8ec77a110a47db84b164c153c1e51a6f5a5aaf3f6c1fe2aa028cc8042f"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.1/htdemucs-26.11.1-macos-arm64.zip",
+              "size_bytes": 16101277,
+              "sha256": "f585b39e9b60c8dd44c64fe6873a7476e10d8ce8fba96b85fad39f9a64bd69e4"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.1/htdemucs-26.11.1-windows-x86_64.zip",
+              "size_bytes": 13583748,
+              "sha256": "86c23fe752069a5ad39e14421e344cde25e50fea7559c88608d3de9abca95634"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rnnoise",
+      "display_name": "RNNoise (offline speech cleanup)",
+      "summary": "Keeps the voice of a video and takes out steady noise (hum, hiss, fans, wind, traffic), offline, on the CPU, in a small fraction of the time the video plays. Tiny: the 11 MB model is included. Made for noise, not music.",
+      "tasks": [
+        "audio.separate"
+      ],
+      "languages": [],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, audio.cpp) + BSD-3-Clause (RNNoise weights)",
+      "homepage": "https://github.com/Subtitld/addon-rnnoise",
+      "latest_version": "26.11.2",
+      "releases": [
+        {
+          "version": "26.11.2",
+          "min_subtitld": "0.6.0",
+          "changelog": "- Fast on computers with fewer than four cores: 26.11.1 ran RNNoise on\n  four threads whatever the computer had, which on a 3-core Mac (a virtual\n  one, at least) made it some thousand times slower. It now runs on the\n  threads it is given; a minute of video takes a few seconds there, and\n  about a second on an Intel Core i7-13700T, as before.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-rnnoise/compare/v26.11.1...v26.11.2",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.2/rnnoise-26.11.2-linux-x86_64.zip",
+              "size_bytes": 21190159,
+              "sha256": "87c42c321e6e5fa10041cb05859e2df9ec47315675dfcf4ef1e69c0d3d49d769"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.2/rnnoise-26.11.2-macos-arm64.zip",
+              "size_bytes": 20459430,
+              "sha256": "1a952b84e030816d7ee2300efc2c34c26e4b630821f0b4911baa203684f994d7"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.2/rnnoise-26.11.2-windows-x86_64.zip",
+              "size_bytes": 17848865,
+              "sha256": "ab925e8c4583056d0b250db216790ac61bd3647e39921134eeeed7a5d9a5dba6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepfilternet",
+      "display_name": "DeepFilterNet (offline speech cleanup)",
+      "summary": "Keeps the voice of a video and takes out background noise with DeepFilterNet2, offline, on the CPU, in about a tenth of the time the video plays; cleaner than RNNoise. The 9 MB model is included. Made for noise, not music.",
+      "tasks": [
+        "audio.separate"
+      ],
+      "languages": [],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, audio.cpp) + MIT or Apache-2.0 (DeepFilterNet2 weights)",
+      "homepage": "https://github.com/Subtitld/addon-deepfilternet",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "The voice of a video, cleaned of background noise, offline, with\nDeepFilterNet2 run by audio.cpp on the CPU.\n\n- Serves audio.separate: what DeepFilterNet2 keeps is the voice, the rest\n  of the mix the background. Cleaner than RNNoise; music partly stays with\n  the voice (for that, use the HTDemucs add-on).\n- The 9 MB model is in the add-on: nothing downloads.\n- The sound goes through in 30-second pieces, crossfaded: about 200 MB of\n  memory for any length, and Cancel stops between two pieces.\n- The voice and the background come back as 48 kHz mono FLAC.\n- A minute of video takes about 5 seconds on an Intel Core i7-13700T.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-deepfilternet/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.1/deepfilternet-26.11.1-linux-x86_64.zip",
+              "size_bytes": 25346023,
+              "sha256": "fcf5d90d814f7303cc7855c6b2f741d70a50b1f27d4e470daf265cb819acd30b"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.1/deepfilternet-26.11.1-macos-arm64.zip",
+              "size_bytes": 24614178,
+              "sha256": "c08f44078283a919c675c45498230a729784d5655f9027b81ef385c97238d7d0"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-deepfilternet/releases/download/v26.11.1/deepfilternet-26.11.1-windows-x86_64.zip",
+              "size_bytes": 22005859,
+              "sha256": "37a9eca14d71fd6929d8a6d75d02eff0e2a5b5d175f6f8d99efdf3a3a2d87177"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mossformer2",
+      "display_name": "MossFormer2 (offline speech enhancement, 48 kHz)",
+      "summary": "Keeps the voice of a video at 48 kHz and takes out noise and much of what is not speech, with Alibaba's MossFormer2, offline, on the CPU, with no PyTorch, in about a fifth of the time the video plays. A 221 MB model downloads on first use.",
+      "tasks": [
+        "audio.separate"
+      ],
+      "languages": [],
+      "compute": "cpu",
+      "accelerators": [],
+      "license": "Apache-2.0 (add-on, MossFormer2 weights, audio.cpp)",
+      "homepage": "https://github.com/Subtitld/addon-mossformer2",
+      "latest_version": "26.11.1",
+      "releases": [
+        {
+          "version": "26.11.1",
+          "min_subtitld": "0.6.0",
+          "changelog": "The voice of a video at 48 kHz, kept offline by the speech enhancement\nmodel of Alibaba's ClearerVoice-Studio, MossFormer2_SE_48K, run by\naudio.cpp on the CPU: no PyTorch.\n\n- Serves audio.separate: what MossFormer2 keeps is the voice, the rest of\n  the mix the background. Noise, room and much of the music go; singing\n  is not speech to it (for songs, use the HTDemucs add-on).\n- The model, 221 MB, downloads on the first separation, pinned and checked\n  by sha256; an interrupted download resumes.\n- The sound goes through in 30-second pieces, crossfaded: about 400 MB of\n  memory for any length, and Cancel stops between two pieces.\n- The voice and the background come back as 48 kHz mono FLAC.\n- A minute of video takes about 11 seconds on an Intel Core i7-13700T.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-mossformer2/commits/v26.11.1",
+          "downloads": [
+            {
+              "platform": "linux",
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.1/mossformer2-26.11.1-linux-x86_64.zip",
+              "size_bytes": 16879281,
+              "sha256": "c78bcaf8ac9b100c854536439d43b155278b5e46b8ae9b2966dbc618b194a1f9"
+            },
+            {
+              "platform": "macos",
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.1/mossformer2-26.11.1-macos-arm64.zip",
+              "size_bytes": 16096516,
+              "sha256": "e27f78411744056739b8f3ae62a1298a88c1a3f1eb8e9549eab76be5896e6531"
+            },
+            {
+              "platform": "windows",
+              "url": "https://github.com/Subtitld/addon-mossformer2/releases/download/v26.11.1/mossformer2-26.11.1-windows-x86_64.zip",
+              "size_bytes": 13602656,
+              "sha256": "293faf09a44c3ef871ff2646997d67f142a465ef5de3b215ec8ea901e06b7639"
             }
           ]
         }
