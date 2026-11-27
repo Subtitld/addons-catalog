@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T18:36:32Z",
+  "generated": "2026-11-27T19:38:46Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -720,30 +720,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, audio.cpp) + BSD-3-Clause (RNNoise weights)",
       "homepage": "https://github.com/Subtitld/addon-rnnoise",
-      "latest_version": "26.11.2",
+      "latest_version": "26.11.3",
       "releases": [
         {
-          "version": "26.11.2",
+          "version": "26.11.3",
           "min_subtitld": "0.6.0",
-          "changelog": "- Fast on computers with fewer than four cores: 26.11.1 ran RNNoise on\n  four threads whatever the computer had, which on a 3-core Mac (a virtual\n  one, at least) made it some thousand times slower. It now runs on the\n  threads it is given; a minute of video takes a few seconds there, and\n  about a second on an Intel Core i7-13700T, as before.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-rnnoise/compare/v26.11.1...v26.11.2",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-rnnoise/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.2/rnnoise-26.11.2-linux-x86_64.zip",
-              "size_bytes": 21190159,
-              "sha256": "87c42c321e6e5fa10041cb05859e2df9ec47315675dfcf4ef1e69c0d3d49d769"
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.3/rnnoise-26.11.3-linux-x86_64.zip",
+              "size_bytes": 21190022,
+              "sha256": "5eba2fe33bb5b96054ffda27103c1a95525a41fe6f4a300613c9dbc1d2bebb46"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.2/rnnoise-26.11.2-macos-arm64.zip",
-              "size_bytes": 20459430,
-              "sha256": "1a952b84e030816d7ee2300efc2c34c26e4b630821f0b4911baa203684f994d7"
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.3/rnnoise-26.11.3-macos-arm64.zip",
+              "size_bytes": 20460998,
+              "sha256": "3c1b3fb0bbe9ad0ee233207cad2682a95d36f9bd3acdd003affe5d6a7a318b38"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.2/rnnoise-26.11.2-windows-x86_64.zip",
-              "size_bytes": 17848865,
-              "sha256": "ab925e8c4583056d0b250db216790ac61bd3647e39921134eeeed7a5d9a5dba6"
+              "url": "https://github.com/Subtitld/addon-rnnoise/releases/download/v26.11.3/rnnoise-26.11.3-windows-x86_64.zip",
+              "size_bytes": 17852973,
+              "sha256": "02736bfa22efe2413e956357061f7489e26df89a452cc1ff423c099bde9bcc97"
             }
           ]
         }
