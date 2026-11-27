@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T19:41:30Z",
+  "generated": "2026-11-27T19:43:08Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -679,30 +679,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, audio.cpp) + MIT (HTDemucs weights)",
       "homepage": "https://github.com/Subtitld/addon-htdemucs",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "The voice and the background of a video, separated offline by Meta's\nHTDemucs, run by audio.cpp on the CPU: no PyTorch.\n\n- Serves audio.separate, like Subtitld's built-in ffmpeg separator, with a\n  neural model instead of the mid/side trick: a centred voice no longer\n  takes the bass and lead instruments with it, and mono videos work too.\n- The 8-bit model, 62 MB, downloads on the first separation, pinned and\n  checked by sha256; an interrupted download resumes.\n- The sound goes through in 30-second pieces, crossfaded: about 1.5 GB of\n  memory for any length of video, and Cancel stops between two pieces.\n- The voice and the background come back as 48 kHz mono FLAC.\n- About as long as the video plays, on an Intel Core i7-13700T.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-htdemucs/commits/v26.11.1",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph. The add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the model has run, so there ffmpeg is started through a shell with no file actions. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-htdemucs/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.1/htdemucs-26.11.1-linux-x86_64.zip",
-              "size_bytes": 16889794,
-              "sha256": "818fcb8ec77a110a47db84b164c153c1e51a6f5a5aaf3f6c1fe2aa028cc8042f"
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.2/htdemucs-26.11.2-linux-x86_64.zip",
+              "size_bytes": 16892405,
+              "sha256": "c8aa14165280895457f3159644e8eca11e12a80d72ccc424bbd68566eb0b6778"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.1/htdemucs-26.11.1-macos-arm64.zip",
-              "size_bytes": 16101277,
-              "sha256": "f585b39e9b60c8dd44c64fe6873a7476e10d8ce8fba96b85fad39f9a64bd69e4"
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.2/htdemucs-26.11.2-macos-arm64.zip",
+              "size_bytes": 16103152,
+              "sha256": "c7fcd71c10a676166eb079d05ed36b1cf52e37c02cd7c22d0ca3f97463a32b4b"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.1/htdemucs-26.11.1-windows-x86_64.zip",
-              "size_bytes": 13583748,
-              "sha256": "86c23fe752069a5ad39e14421e344cde25e50fea7559c88608d3de9abca95634"
+              "url": "https://github.com/Subtitld/addon-htdemucs/releases/download/v26.11.2/htdemucs-26.11.2-windows-x86_64.zip",
+              "size_bytes": 13584688,
+              "sha256": "09a5a1068fd95ec53d1feea4bf89fcdbe971b6855c694c6cd84d9bd39c441970"
             }
           ]
         }
