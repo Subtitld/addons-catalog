@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T14:53:23Z",
+  "generated": "2026-11-27T14:55:01Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2104,30 +2104,36 @@
       "accelerators": [],
       "license": "GPL-3.0-or-later (add-on, because it bundles espeak-ng); Paradee weights and misaki Apache-2.0, spaCy MIT, certifi and tqdm MPL-2.0 with source attached; the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
       "homepage": "https://github.com/Subtitld/addon-paradee",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Offline English text-to-speech for Subtitld with Paradee 1.2: natural English\nspeech at 24 kHz from an 8M-parameter model distilled from Kokoro-82M, many times\nfaster than real time on the CPU. Four voices from one 8.5 MB model: Heart and\nPuck (American English), Isabella and Fable (British English).\n\nThe archive holds the add-on, ONNX Runtime, misaki (Kokoro's phonemizer) with\nspaCy's small English pipeline, and espeak-ng with its English data. The model\ndownloads the first time a line is spoken, at a pinned revision, checked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Paradee model and misaki are Apache-2.0, spaCy and its English pipeline MIT.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The complete corresponding source is\n`paradee-<version>-source.tar.gz` in this release. The Linux archive also carries\nlibquadmath (LGPL-2.1, with numpy); its source is\n`paradee-<version>-libquadmath-source.tar.gz`.\n\n\n## What's Changed\n* Paradee add-on: lightweight offline English text-to-speech by @jonata in https://github.com/Subtitld/addon-paradee/pull/1\n* Parity test: allow other CPUs' int8 rounding by @jonata in https://github.com/Subtitld/addon-paradee/pull/2\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-paradee/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-paradee/commits/v26.11.1",
+          "changelog": "Offline English text-to-speech for Subtitld with Paradee 1.2: natural English\nspeech at 24 kHz from an 8M-parameter model distilled from Kokoro-82M, many times\nfaster than real time on the CPU. Four voices from one 8.5 MB model: Heart and\nPuck (American English), Isabella and Fable (British English).\n\nThe Haiku archive holds the add-on and its pure-Python dependencies: it runs on\nHaikuPorts' Python 3.14, with numpy and MarkupSafe from HaikuPorts and ONNX Runtime,\nespeak-ng 1.52.0, spaCy's compiled stack, pydantic-core and regex from\nhpkg.subtitld.org, which Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime, misaki (Kokoro's phonemizer) with\nspaCy's small English pipeline, and espeak-ng with its English data. The model\ndownloads the first time a line is spoken, at a pinned revision, checked by sha256.\n\nThe add-on is GPL-3.0-or-later, because it bundles espeak-ng (GPL-3.0-or-later);\nthe Paradee model and misaki are Apache-2.0, spaCy and its English pipeline MIT.\nEach archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The complete corresponding source is\n`paradee-<version>-source.tar.gz` in this release. The Linux archive also carries\nlibquadmath (LGPL-2.1, with numpy); its source is\n`paradee-<version>-libquadmath-source.tar.gz`.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-paradee/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.2/paradee-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 20744635,
+              "sha256": "7a0c552e5f25ca364ecb6d770a3c4b77895910aadc20ba405fad66b878a9c577"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-linux-x86_64.zip",
-              "size_bytes": 93481388,
-              "sha256": "0b4c9f98617933b9147caa568d6d2f04efd34e7f785b9d148ae97365c9d6c5d6"
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.2/paradee-26.11.2-linux-x86_64.zip",
+              "size_bytes": 93486989,
+              "sha256": "d249c3f78c2010b262815be4ae0b2149ea6497b00e6fac0a212761394db9c1cf"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-macos-arm64.zip",
-              "size_bytes": 75248156,
-              "sha256": "4cc454a48bfc6a07cd703db4cc19f70b0eb599be1f29a901d20c490e61dae7d8"
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.2/paradee-26.11.2-macos-arm64.zip",
+              "size_bytes": 75245549,
+              "sha256": "0abdf0c9129fd563ffad01bda9d7e4602e03edff01dae4bbcbc0c4c4c3a9c4b9"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.1/paradee-26.11.1-windows-x86_64.zip",
-              "size_bytes": 84492335,
-              "sha256": "dd9d2e0e9570b53c3ef05ca0470c44437bb3305980a27baf91b26a6ad6a06c2a"
+              "url": "https://github.com/Subtitld/addon-paradee/releases/download/v26.11.2/paradee-26.11.2-windows-x86_64.zip",
+              "size_bytes": 84491217,
+              "sha256": "4e9473747ff6175a59831472fe83953a77ddb3febb0c266945b09a7b83bf63b7"
             }
           ]
         }
@@ -2231,30 +2237,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on); MIT (BlueTTS code and weights); BigScience OpenRAIL-M (vocoder weights, use restrictions apply); CC-BY-4.0 (stock voices); Apache-2.0 (RenikudPlus, polyg2p); CC BY-SA (German, Italian and some Yiddish lexicons); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
       "homepage": "https://github.com/Subtitld/addon-bluetts",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Text-to-speech for Subtitld with BlueTTS (BlueV3 v3.0.1, by Maxim Melichov): Hebrew,\nEnglish, German, Spanish, Italian, Russian and Yiddish at 44.1 kHz, in 15 stock voices\nor in the speaker's own voice cloned from the video.\n\nThe archive holds the add-on, ONNX Runtime and the text front ends. The model (428 MB)\ndownloads on the first line; Hebrew (1.2 GB, or 312 MB compact), Yiddish (307 MB) and\ncloning (136 MB) download when a line first needs them. Every file is pinned to a\nrevision and checked by sha256. It runs on the CPU, several times faster than real time.\n\nThe add-on is Apache-2.0; BlueTTS's code is MIT. The model's vocoder weights are under\nBigScience OpenRAIL-M, whose use restrictions apply to the speech it makes; the stock\nvoices are CC-BY-4.0 (LibriTTS-R); the German, Italian and some Yiddish lexicons are\nCC BY-SA. Each archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its\ncomplete source is `bluetts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bluetts/commits/v26.11.1",
+          "changelog": "Text-to-speech for Subtitld with BlueTTS (BlueV3 v3.0.1, by Maxim Melichov): Hebrew,\nEnglish, German, Spanish, Italian, Russian and Yiddish at 44.1 kHz, in 15 stock voices\nor in the speaker's own voice cloned from the video.\n\nThe Haiku archive holds the add-on and its pure-Python text front ends: it runs on\nHaikuPorts' Python 3.14, with numpy from HaikuPorts and ONNX Runtime and polyg2p from\nhpkg.subtitld.org, which Subtitld offers to install.\n\nThe archive holds the add-on, ONNX Runtime and the text front ends. The model (428 MB)\ndownloads on the first line; Hebrew (1.2 GB, or 312 MB compact), Yiddish (307 MB) and\ncloning (136 MB) download when a line first needs them. Every file is pinned to a\nrevision and checked by sha256. It runs on the CPU, several times faster than real time.\n\nThe add-on is Apache-2.0; BlueTTS's code is MIT. The model's vocoder weights are under\nBigScience OpenRAIL-M, whose use restrictions apply to the speech it makes; the stock\nvoices are CC-BY-4.0 (LibriTTS-R); the German, Italian and some Yiddish lexicons are\nCC BY-SA. Each archive carries `THIRD_PARTY_LICENSES/` with the licence of everything\nfrozen into it. The Linux archive carries libquadmath (LGPL-2.1, with numpy); its\ncomplete source is `bluetts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-bluetts/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.2/bluetts-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 643308,
+              "sha256": "57a289c6a303d6e179e42ed6b41b88d8fc6ebd41e94c984073839b3f92035ad1"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-linux-x86_64.zip",
-              "size_bytes": 61742406,
-              "sha256": "66cbe75088a593cb6f858a5ea7132f04e0e5056117dba28f7c3b5ae90211d7b7"
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.2/bluetts-26.11.2-linux-x86_64.zip",
+              "size_bytes": 61741664,
+              "sha256": "972d40b5577d5145c94561becbc0bbe1bf09a6359ea3d4312e80f6e9a321c79d"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-macos-arm64.zip",
-              "size_bytes": 43801765,
-              "sha256": "f3ab75c081f71181fa4e2ef5c670376356e870dce2d87776ce53ec45643b11ac"
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.2/bluetts-26.11.2-macos-arm64.zip",
+              "size_bytes": 43804026,
+              "sha256": "0db26ddae2d8187e9900e0e5c7216f20767d1902d810402fe197a17d897606cc"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.1/bluetts-26.11.1-windows-x86_64.zip",
-              "size_bytes": 37318614,
-              "sha256": "08e5da6e651ea5a3cc3091f6018630f4b1acdc31075b55328856357d60c59bb9"
+              "url": "https://github.com/Subtitld/addon-bluetts/releases/download/v26.11.2/bluetts-26.11.2-windows-x86_64.zip",
+              "size_bytes": 37321193,
+              "sha256": "d19fcedd0734cc78cc4fb8c1fbb9e7aa9add6b39bab5d7178af360f4d8beaad3"
             }
           ]
         }
