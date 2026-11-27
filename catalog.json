@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T18:24:08Z",
+  "generated": "2026-11-27T18:26:56Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2346,30 +2346,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on; ZONOS3-Mini weights and default voices); MIT (ZONOS3-Mini runtime, ggml, nlohmann/json); MIT, Apache-2.0 and Unicode-3.0 (zyphra-textnorm); OpenLDAP (LMDB); BSD-3-Clause (pocketfft)",
       "homepage": "https://github.com/Subtitld/addon-zonos3",
-      "latest_version": "26.11.2",
+      "latest_version": "26.11.3",
       "releases": [
         {
-          "version": "26.11.2",
+          "version": "26.11.3",
           "min_subtitld": "0.6.0",
-          "changelog": "A cloned voice in a language its clip isn't in often came out silent:\nwith an English clip, Gujarati said nothing in 10 seeds of 16, and 26.11.1\ngave up after 3 seeds and wrote the silence.\n\n- A take is taken again with the next seed when it is silent or when LACI\n  gave up on it (\"capped\": its own retries ran out and the reading still\n  skipped or stopped short), up to 12 takes, of which at most 3 capped\n  ones; then the longest take with voice is kept.\n- When every take is silent the line fails with a message instead.\n- Stock voices are unchanged: in 8 languages every line took one take.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-zonos3/compare/v26.11.1...v26.11.2",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. The ZONOS3 library and the text normalizer (a Rust extension) are built on Haiku and go in the archive; the add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: libzonos3 and textnorm built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-zonos3/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-zonos3/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-zonos3/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.2/zonos3-26.11.2-linux-x86_64.zip",
-              "size_bytes": 19001597,
-              "sha256": "85c37c7650d6e45f54aeebb193ea8af3e315c49ec4a8b4281b76335f41b61463"
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.3/zonos3-26.11.3-linux-x86_64.zip",
+              "size_bytes": 19004759,
+              "sha256": "c00c2267ab27c9be9cae0eaf54b29667e30d90565fb500076a92e45b5d8303eb"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.2/zonos3-26.11.2-macos-arm64.zip",
-              "size_bytes": 23986926,
-              "sha256": "47ce46bba941cd3566ca0fb88c69178f0c96778344a51d548dc0134a564bcfb5"
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.3/zonos3-26.11.3-macos-arm64.zip",
+              "size_bytes": 23987775,
+              "sha256": "ce57264ff45c507761460f51ccb5dfd69ad95650cc381dfed48ebaf4730c14f5"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.2/zonos3-26.11.2-windows-x86_64.zip",
-              "size_bytes": 18525546,
-              "sha256": "2680f96e79446dc71d66a8d06ce3a867bf2b62f131caea97bc7d3e79e37f3fec"
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.3/zonos3-26.11.3-windows-x86_64.zip",
+              "size_bytes": 18525836,
+              "sha256": "93eb248b06ddfeb93f8d39ace6c6b420a7440d93e826b28a93cb40f56f7c5efe"
             }
           ]
         }
