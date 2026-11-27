@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T18:34:17Z",
+  "generated": "2026-11-27T18:36:32Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -549,6 +549,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph, so speaking many lines no longer grows the process. On Haiku the nine model contexts also reserve 64 MB each instead of up to 3 GB, which Haiku, unlike Linux, would really set aside. The add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: audio.cpp built on Haiku with three patches, small ggml contexts there by @jonata in https://github.com/Subtitld/addon-voxcpm/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-voxcpm/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-voxcpm/compare/v26.11.1...v26.11.2",
           "downloads": [
+            {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-voxcpm/releases/download/v26.11.2/voxcpm-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 9079223,
+              "sha256": "eeec599f6a9eecaa6dd94335652e53ce2d3206777eea54411eb2aac5d7a213e2"
+            },
             {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-voxcpm/releases/download/v26.11.2/voxcpm-26.11.2-linux-x86_64.zip",
@@ -2038,6 +2044,12 @@
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. libtesseract 5.5.4 is built on Haiku and goes in the archive with the English model, as on the other platforms; HaikuPorts' own Tesseract 3.05 is left alone. The add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: libtesseract built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-tesseract/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-tesseract/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-tesseract/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.2/tesseract-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 4041159,
+              "sha256": "91a64335ddb8c1d942b28d6b5ae25dcce00bd3829b6ac4da1f525bf48ad1b3de"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.2/tesseract-26.11.2-linux-x86_64.zip",
               "size_bytes": 12499010,
@@ -2214,6 +2226,12 @@
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. NeMo-Speech.cpp is built on Haiku and goes in the archive; the add-on runs on HaikuPorts' Python 3.14. Haiku cannot fork a process once the models have run, so there ffmpeg is started through a shell with no file actions and writes its samples to a temporary file. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: NeMo-Speech built on Haiku; ffmpeg started without fork() there by @jonata in https://github.com/Subtitld/addon-parakeet-nemotron/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-parakeet-nemotron/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-parakeet-nemotron/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-parakeet-nemotron/releases/download/v26.11.2/parakeet-nemotron-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 2052683,
+              "sha256": "7a47e3cf5cc39bebaa3894b7f30c81d305288e0375b3c837cfc95de37b35a1bc"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-parakeet-nemotron/releases/download/v26.11.2/parakeet-nemotron-26.11.2-linux-x86_64.zip",
               "size_bytes": 10026387,
@@ -2353,6 +2371,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. The ZONOS3 library and the text normalizer (a Rust extension) are built on Haiku and go in the archive; the add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: libzonos3 and textnorm built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-zonos3/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-zonos3/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-zonos3/compare/v26.11.2...v26.11.3",
           "downloads": [
+            {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.3/zonos3-26.11.3-haiku-x86_64.zip",
+              "size_bytes": 10879664,
+              "sha256": "c5b42524ea395c342600f8dbd78edfe57f1e532a1dd55e7c05be9d19d0256e3e"
+            },
             {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-zonos3/releases/download/v26.11.3/zonos3-26.11.3-linux-x86_64.zip",
@@ -3108,6 +3132,12 @@
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph, so speaking many lines no longer grows the process. The add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: audio.cpp built on Haiku with three patches, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-omnivoice/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-omnivoice/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-omnivoice/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-omnivoice/releases/download/v26.11.2/omnivoice-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 9400040,
+              "sha256": "59f361b0f19af060252995bd86ca341d51e8c0d2772a9bcea4ae7caa682ac33a"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-omnivoice/releases/download/v26.11.2/omnivoice-26.11.2-linux-x86_64.zip",
               "size_bytes": 17310337,
@@ -3154,6 +3184,12 @@
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. audio.cpp is built on Haiku and goes in the archive, with three Haiku fixes: the model is mapped, not read whole into memory; the memory of each tensor is given back once it is loaded; and one thread pool serves every graph, so speaking many lines no longer grows the process. The add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: audio.cpp built on Haiku with three patches, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-voxmel/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-voxmel/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-voxmel/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-voxmel/releases/download/v26.11.2/voxmel-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 10889640,
+              "sha256": "0e96f3dfd10e665244700814da92afffcf03d26b01cdb0a8698bb2b2e4579cb1"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-voxmel/releases/download/v26.11.2/voxmel-26.11.2-linux-x86_64.zip",
               "size_bytes": 18802289,
@@ -3196,6 +3232,12 @@
           "min_subtitld": "0.6.0",
           "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. llama.cpp's llama-server is built on Haiku and goes in the archive with the model; the add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: llama-server built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-tiny-voca/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-tiny-voca/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-tiny-voca/compare/v26.11.1...v26.11.2",
           "downloads": [
+            {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-tiny-voca/releases/download/v26.11.2/tiny-voca-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 34858403,
+              "sha256": "f0e777c1c1638f9785629a37182cf4ecb3cc2d44add88bcaec8580440515dac3"
+            },
             {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-tiny-voca/releases/download/v26.11.2/tiny-voca-26.11.2-linux-x86_64.zip",
