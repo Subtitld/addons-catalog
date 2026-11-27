@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-27T18:23:01Z",
+  "generated": "2026-11-27T18:24:08Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -1130,6 +1130,12 @@
           "changelog": "Offline speech-to-text for Subtitld with whisper.cpp (pywhispercpp 1.5.1).\n\nModels are not included: the selected GGML model downloads once on first\nuse into Subtitld's shared model cache, so models downloaded by earlier\nSubtitld versions are reused.\n\nThe add-on is Apache-2.0. Each archive contains `THIRD_PARTY_LICENSES/`\nwith the licences of the third-party components frozen into it:\nwhisper.cpp and pywhispercpp are MIT, pybind11 and numpy are\nBSD-3-Clause, and the Python runtime and its libraries are under their\nown permissive licences.\n\nThe Linux archive also ships, inside numpy's OpenBLAS, the GCC Fortran\nruntime (GPL-3.0 with the GCC Runtime Library Exception) and\nlibquadmath (LGPL-2.1-or-later). The complete source of that\nlibquadmath build is attached here as\n`whispercpp-addon-<version>-libquadmath-source.tar.gz`; the add-on's own\nsource is `whispercpp-addon-<version>-source.tar.gz`.\n\n\n## What's Changed\n* Haiku: pywhispercpp built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-whispercpp/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-whispercpp/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-whispercpp/compare/v0.0.1...v26.11.1",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v26.11.1/whispercpp-26.11.1-haiku-x86_64.zip",
+              "size_bytes": 1302658,
+              "sha256": "75ad91345adb0de65436668cd2b0511df8e12c6d0886527f5e4ed8b23154db06"
+            },
+            {
               "platform": "linux",
               "url": "https://github.com/Subtitld/addon-whispercpp/releases/download/v26.11.1/whispercpp-26.11.1-linux-x86_64.zip",
               "size_bytes": 46342351,
@@ -2024,30 +2030,30 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, Tesseract, tessdata_fast models); BSD-2-Clause (Leptonica); GCC runtime library exception (static C++ runtime)",
       "homepage": "https://github.com/Subtitld/addon-tesseract",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "The first release. Subtitld decodes DVD VobSub (.idx/.sub) and Blu-ray\nPGS (.sup) subtitles, and the picture tracks of videos, into one picture\nper subtitle; this add-on reads the text in each with Tesseract 5.5.4\n(LSTM engine, tessdata_fast models). It reads several pictures at once,\nreports progress after each, and stops when cancelled.\n\nEnglish is included. Any of 100 other languages downloads the first time\na subtitle needs it (1 to 12 MB each), checked against a pinned sha256.\nStraight quotes in place of curly ones are a setting.\n\nRuns on the CPU, on Linux x86-64, Windows x86-64 and macOS on Apple\nSilicon. Needs a Subtitld that knows the ocr.recognize task.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-tesseract/commits/v26.11.1",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. libtesseract 5.5.4 is built on Haiku and goes in the archive with the English model, as on the other platforms; HaikuPorts' own Tesseract 3.05 is left alone. The add-on runs on HaikuPorts' Python 3.14. Subtitld installs it there and offers to install the Haiku packages it needs. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: libtesseract built on Haiku, the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-tesseract/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-tesseract/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-tesseract/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.1/tesseract-26.11.1-linux-x86_64.zip",
-              "size_bytes": 21569187,
-              "sha256": "53da3b821750883f79b8f728b7b09c2ad56b3e7a2e9f49e4ee7ea32a8b3d82c4"
+              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.2/tesseract-26.11.2-linux-x86_64.zip",
+              "size_bytes": 12499010,
+              "sha256": "84ed02bbc922936b71a90190de681944020b970f0fedcfe796f27040c2a1726b"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.1/tesseract-26.11.1-macos-arm64.zip",
-              "size_bytes": 17960969,
-              "sha256": "5e50097fa356d303e75166412ade964c479e6f8afdfab38bc7c556b290aca76c"
+              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.2/tesseract-26.11.2-macos-arm64.zip",
+              "size_bytes": 17954585,
+              "sha256": "990ede5cd81dd35c901760db7435ee9cbce82c643db7d1cfdfbf455564850afd"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.1/tesseract-26.11.1-windows-x86_64.zip",
-              "size_bytes": 12854593,
-              "sha256": "451cd00c76a5cc1a790dba1578bf3a4d0067043b3ce3b967601b3e1b572b2e07"
+              "url": "https://github.com/Subtitld/addon-tesseract/releases/download/v26.11.2/tesseract-26.11.2-windows-x86_64.zip",
+              "size_bytes": 12847684,
+              "sha256": "635902bfc8f344f7e74ffa8d814ffc982d587c216be571e3a82db07fd3118d81"
             }
           ]
         }
