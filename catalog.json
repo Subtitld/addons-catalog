@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-28T10:13:25Z",
+  "generated": "2026-11-28T10:40:35Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -2132,30 +2132,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, libscyllasband, LiteRT and the Scylla's Band weights, downloaded by the user)",
       "homepage": "https://github.com/Subtitld/addon-scyllasband",
-      "latest_version": "26.11.2",
+      "latest_version": "26.11.3",
       "releases": [
         {
-          "version": "26.11.2",
+          "version": "26.11.3",
           "min_subtitld": "0.6.0",
-          "changelog": "The Linux archive now runs on glibc 2.28 and newer: Ubuntu 20.04 and later, Debian 10 and later, RHEL and AlmaLinux 8 and later, Fedora and Arch. The 26.11.1 Linux archive needed glibc 2.35, so it did not start on Ubuntu 20.04, Debian 11, or RHEL and AlmaLinux 8 and 9.\n\n- The Linux add-on is now built on AlmaLinux 8, and the build refuses an archive in which any file needs a newer glibc.\n- Voices, model and speech are unchanged. The macOS and Windows archives are the same add-on, rebuilt.\n\nLinux x86_64, macOS arm64 and Windows x86_64.\n\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-scyllasband/compare/v26.11.1...v26.11.2",
+          "changelog": "A Haiku archive (x86-64) joins the Linux, macOS and Windows ones. Google ships LiteRT for those three systems only, so on Haiku the Scylla's Band runtime runs on ONNX Runtime, built on Haiku and carried in the archive, and the add-on downloads the release's ONNX model files (about 305 MB) instead of the LiteRT ones. The voices, languages and settings are the same. The add-on runs on HaikuPorts' Python 3.14. Nothing changes on the other platforms.\n\n\n\n## What's Changed\n* Haiku: libscyllasband on ONNX Runtime by @jonata in https://github.com/Subtitld/addon-scyllasband/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-scyllasband/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-scyllasband/compare/v26.11.2...v26.11.3",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.3/scyllasband-26.11.3-haiku-x86_64.zip",
+              "size_bytes": 11224824,
+              "sha256": "52567878c0448e273598e383e681c896980de66b463084e6114a2961178ef844"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.2/scyllasband-26.11.2-linux-x86_64.zip",
-              "size_bytes": 13337856,
-              "sha256": "160ab26757f981b3c3a1395ef3d759942c030a8270e844f9a59ef31677a1af80"
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.3/scyllasband-26.11.3-linux-x86_64.zip",
+              "size_bytes": 13341767,
+              "sha256": "2a0ed2c0e865e4acfe4513e79aff1a340c080d5e9cd583a7f345af1c4b028583"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.2/scyllasband-26.11.2-macos-arm64.zip",
-              "size_bytes": 18482703,
-              "sha256": "b7d8859bf15ebc312098336ccb9dc7bce288c56988f70aaf0442169358697ee7"
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.3/scyllasband-26.11.3-macos-arm64.zip",
+              "size_bytes": 18484625,
+              "sha256": "f321e1f9fa455317c67ff8e02a6a544111416a0bdaf7c9d9fd254e02969468ba"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.2/scyllasband-26.11.2-windows-x86_64.zip",
-              "size_bytes": 13560509,
-              "sha256": "89278995c4b9c9aad4509fa9808ce7273df29317fcad469878a9ed92f5894ee6"
+              "url": "https://github.com/Subtitld/addon-scyllasband/releases/download/v26.11.3/scyllasband-26.11.3-windows-x86_64.zip",
+              "size_bytes": 13560718,
+              "sha256": "c5108b5b751cd3953841e7dae3f35f81c92cbbe6f93005f0290b61eff1f9c480"
             }
           ]
         }
