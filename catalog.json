@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated": "2026-11-28T07:27:45Z",
+  "generated": "2026-11-28T10:13:25Z",
   "min_subtitld": "0.6.0",
   "addons": [
     {
@@ -890,30 +890,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (wrapper + Vosk); some full models are GPL-3.0",
       "homepage": "https://github.com/Subtitld/addon-vosk",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-vosk/compare/v1.0.0...v26.11.1",
+          "changelog": "## What's Changed\n* Haiku: the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-vosk/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-vosk/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-vosk/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.2/vosk-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 20348,
+              "sha256": "c2dc3f5b2eef31911e62c2089f524247b70702d6443980f23a063ce7186d46f0"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.1/vosk-26.11.1-linux-x86_64.zip",
-              "size_bytes": 30735272,
-              "sha256": "60a5771bccebc13582ce02a1710f18589a558fc68a264c2e314c302efa8eebf6"
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.2/vosk-26.11.2-linux-x86_64.zip",
+              "size_bytes": 30743473,
+              "sha256": "6f66710935cd74b95418539444f597b4ed5632964817b6eef39b499fbc81fcb3"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.1/vosk-26.11.1-macos-arm64.zip",
-              "size_bytes": 18038597,
-              "sha256": "ba09c4077198d74d442fe92a8ba734b99ea999573276429bf6ad4a958684f56c"
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.2/vosk-26.11.2-macos-arm64.zip",
+              "size_bytes": 18052561,
+              "sha256": "48fabb1c91c5fcf4f58728b411b869ea6ec6be904b0137694c273c2b15efbc1c"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.1/vosk-26.11.1-windows-x86_64.zip",
-              "size_bytes": 24085452,
-              "sha256": "3d37d5b9516e1361637d0ea3c57ab4db2a0df01b1a6ae6467a3941bd6e924a9f"
+              "url": "https://github.com/Subtitld/addon-vosk/releases/download/v26.11.2/vosk-26.11.2-windows-x86_64.zip",
+              "size_bytes": 24079492,
+              "sha256": "8f4c81ec8f47bd3c3ad8d2e4615e2ba3da00f02215dfa56047e351be33cccfca"
             }
           ]
         }
@@ -1311,30 +1317,36 @@
       "accelerators": [],
       "license": "MIT (wrapper); OPUS-MT/Argos models MIT/CC",
       "homepage": "https://github.com/Subtitld/addon-translate-offline",
-      "latest_version": "0.1.0",
+      "latest_version": "26.11.1",
       "releases": [
         {
-          "version": "0.1.0",
+          "version": "26.11.1",
           "min_subtitld": "0.6.0",
-          "changelog": "**Full Changelog**: https://github.com/Subtitld/addon-translate-offline/commits/v0.1.0",
+          "changelog": "## What's Changed\n* Haiku: the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-translate-offline/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-translate-offline/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-translate-offline/compare/v0.1.0...v26.11.1",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v26.11.1/translate-offline-26.11.1-haiku-x86_64.zip",
+              "size_bytes": 6835,
+              "sha256": "b980ed9f6991e6c944b8635d90d3d94ed7500401773cd46fbbb4af2eb2b1fc7a"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-linux-x86_64.zip",
-              "size_bytes": 110811832,
-              "sha256": "35b85a8c70e93437259b9723f78101cbe7deb784b4bab0144b13c2643dcb336e"
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v26.11.1/translate-offline-26.11.1-linux-x86_64.zip",
+              "size_bytes": 104266683,
+              "sha256": "725fb570e8d99b050618a11df4f0918e173269a8e42c676666db41e4a09b8037"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-macos-arm64.zip",
-              "size_bytes": 22760799,
-              "sha256": "61b35e571b35d1950c35a6549ffdb47a4b738aa5c2332f8350feb215f98a9813"
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v26.11.1/translate-offline-26.11.1-macos-arm64.zip",
+              "size_bytes": 23581507,
+              "sha256": "d8756567b5304fa98cfc30c11288f2de37799be03ea8306db858d5a467aa1e58"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v0.1.0/translate-offline-0.1.0-windows-x86_64.zip",
-              "size_bytes": 40955600,
-              "sha256": "06e0fb3b1820913290fd7d862d1d1228bb8618801218aef51bc2ef2c776e7335"
+              "url": "https://github.com/Subtitld/addon-translate-offline/releases/download/v26.11.1/translate-offline-26.11.1-windows-x86_64.zip",
+              "size_bytes": 45091891,
+              "sha256": "a16e048854f90e30295b35f49aa38a4882217d42ede770c7cbc002b79dfb3ca8"
             }
           ]
         }
@@ -3366,30 +3378,36 @@
       "accelerators": [],
       "license": "Apache-2.0 (add-on, Libra TTS code and weights); MIT (pyopenjtalk) with Modified BSD (Open JTalk, HTS Engine, MeCab, the downloaded NAIST dictionary); the Linux zip carries numpy's LGPL libquadmath, source attached to the release",
       "homepage": "https://github.com/Subtitld/addon-libra-tts",
-      "latest_version": "26.11.1",
+      "latest_version": "26.11.2",
       "releases": [
         {
-          "version": "26.11.1",
+          "version": "26.11.2",
           "min_subtitld": "0.6.0",
-          "changelog": "Text-to-speech for Subtitld with Libra TTS at 24 kHz: 8 voices, each speaking all 16\nof its languages (Arabic, Bengali, Chinese, English, French, German, Hindi, Indonesian,\nItalian, Japanese, Korean, Portuguese, Punjabi, Russian, Spanish, Urdu), in one of 12\nstyles if picked in Configure, with inline sounds like `<laugh>` and `<sigh>`.\n\nThe archive holds the add-on, ONNX Runtime and pyopenjtalk. The model (1.75 GB, the\nofficial ONNX release of Ekam/Libra-TTS) downloads on the first line, and the OpenJTalk\ndictionary (24 MB) on the first Japanese line, at pinned revisions, checked by sha256. It\nruns on the CPU at about 0.6 times real time and needs about 3 GB of memory.\n\nThe add-on, Libra TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it. The Linux archive\ncarries libquadmath (LGPL-2.1, with numpy); its complete source is\n`libra-tts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n**Full Changelog**: https://github.com/Subtitld/addon-libra-tts/commits/v26.11.1",
+          "changelog": "Text-to-speech for Subtitld with Libra TTS at 24 kHz: 8 voices, each speaking all 16\nof its languages (Arabic, Bengali, Chinese, English, French, German, Hindi, Indonesian,\nItalian, Japanese, Korean, Portuguese, Punjabi, Russian, Spanish, Urdu), in one of 12\nstyles if picked in Configure, with inline sounds like `<laugh>` and `<sigh>`.\n\nThe archive holds the add-on, ONNX Runtime and pyopenjtalk. The model (1.75 GB, the\nofficial ONNX release of Ekam/Libra-TTS) downloads on the first line, and the OpenJTalk\ndictionary (24 MB) on the first Japanese line, at pinned revisions, checked by sha256. It\nruns on the CPU at about 0.6 times real time and needs about 3 GB of memory.\n\nThe add-on, Libra TTS's code and its weights are Apache-2.0. Each archive carries\n`THIRD_PARTY_LICENSES/` with the licence of everything frozen into it. The Linux archive\ncarries libquadmath (LGPL-2.1, with numpy); its complete source is\n`libra-tts-<version>-libquadmath-source.tar.gz` in this release.\n\n\n## What's Changed\n* Haiku: the add-on on HaikuPorts' Python by @jonata in https://github.com/Subtitld/addon-libra-tts/pull/1\n\n## New Contributors\n* @jonata made their first contribution in https://github.com/Subtitld/addon-libra-tts/pull/1\n\n**Full Changelog**: https://github.com/Subtitld/addon-libra-tts/compare/v26.11.1...v26.11.2",
           "downloads": [
             {
+              "platform": "haiku",
+              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.2/libra-tts-26.11.2-haiku-x86_64.zip",
+              "size_bytes": 136358,
+              "sha256": "33fd1665b4285ab5d6662cd682b86b0cda14a703390e51538bd7b1ef79296cd7"
+            },
+            {
               "platform": "linux",
-              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.1/libra-tts-26.11.1-linux-x86_64.zip",
-              "size_bytes": 64552511,
-              "sha256": "2b2c8838f0c8188d774e3ec1c45cc8f212d27d1e738899cb9f26c8d460029d12"
+              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.2/libra-tts-26.11.2-linux-x86_64.zip",
+              "size_bytes": 64552944,
+              "sha256": "667226ef6f858af986b09da5337a83c765578550b3c79d611f140e4b96913524"
             },
             {
               "platform": "macos",
-              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.1/libra-tts-26.11.1-macos-arm64.zip",
-              "size_bytes": 40415194,
-              "sha256": "c7495843e97d5c446f2255f33f3c502d0db0ced555f713edeba550046c3b6a6e"
+              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.2/libra-tts-26.11.2-macos-arm64.zip",
+              "size_bytes": 40414954,
+              "sha256": "a7782dfea8b103b3ef3aff3487a85166beebb632b10f1ce893833b520b4f1849"
             },
             {
               "platform": "windows",
-              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.1/libra-tts-26.11.1-windows-x86_64.zip",
-              "size_bytes": 35270621,
-              "sha256": "03bf096a98785f598e833f133d8c3017875ce5f62163cfc865da4fd4f13d8b58"
+              "url": "https://github.com/Subtitld/addon-libra-tts/releases/download/v26.11.2/libra-tts-26.11.2-windows-x86_64.zip",
+              "size_bytes": 35271791,
+              "sha256": "740b733d552725eb9431a3e1dc8f69af8ac65b9291299178390a9aca5aecf00e"
             }
           ]
         }
